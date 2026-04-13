@@ -1,28 +1,72 @@
-# SBTI Test
+# SBTI Test: Free SBTI Personality Test
 
 [English](./README.md) | [简体中文](./README.zh-CN.md) | [繁體中文](./README.zh-Hant.md) | [日本語](./README.ja.md) | [한국어](./README.ko.md) | [Español](./README.es.md) | [Русский](./README.ru.md) | [हिन्दी](./README.hi.md) | [Deutsch](./README.de.md) | [ภาษาไทย](./README.th.md) | [Tiếng Việt](./README.vi.md) | [Bahasa Indonesia](./README.id.md) | [Bahasa Melayu](./README.ms.md)
 
 ## Overview
 
-`SBTI Test` is a standalone multilingual static site built with a simple Vite-based workflow on top of plain HTML/CSS/JS.
+The SBTI test is a free, joke-first SBTI personality test available at [sbti-test.org](https://www.sbti-test.org/en/test). This repository packages that experience as a multilingual static site with English-first documentation, plain HTML/CSS/JS templates, and repo-local content for every supported locale.
 
-This repository is English-first for documentation and the root page, while the site output supports 13 locales:
-
-- `zh`
-- `zh-hant`
-- `en`
-- `ja`
-- `ko`
-- `es`
-- `ru`
-- `hi`
-- `de`
-- `th`
-- `vi`
-- `id`
-- `ms`
+If you found this repository while searching for `sbti test` or `sbti personality test`, the short version is simple: SBTI is an entertainment-first personality quiz, openly framed as a humorous MBTI parody, and built for quick results, screenshots, and easy sharing rather than science or diagnosis.
 
 Separate project introductions are available in dedicated language files linked above. `README.md` remains the primary project document.
+
+## What Is the SBTI Test?
+
+The SBTI personality test expands to `Silly Big Personality Test`. In product terms, it is a joke-first personality quiz that keeps the familiar "answer questions -> get a result" flow while deliberately leaning into absurdity, satire, and self-mockery.
+
+This repository follows the same public framing already used in the site content:
+
+- SBTI is free to take
+- SBTI is built for entertainment
+- SBTI is designed for easy sharing
+- SBTI is not medical, psychological, or scientific guidance
+
+## How SBTI Relates to MBTI
+
+SBTI is explicitly positioned as a humorous parody of MBTI. The SBTI personality test borrows the recognizable quiz-to-result format that people expect from MBTI-style personality content, but it does not present itself as a serious personality framework.
+
+In practice, that means:
+
+- MBTI is the comparison point most users already recognize
+- SBTI uses parody framing instead of scientific framing
+- SBTI aims for entertainment, replayability, and shareable results
+- SBTI can feel familiar, but the repo docs should treat it as humor first
+
+For the official public experience, see the live English site at [sbti-test.org/en](https://www.sbti-test.org/en) and the live test at [sbti-test.org/en/test](https://www.sbti-test.org/en/test).
+
+## SBTI Personality Dimensions
+
+The SBTI personality test scores 15 dimensions. The site content groups those dimensions into five broader models: self, emotion, attitude, action drive, and social expression. The docs do not need to reverse-engineer the scoring logic, but they should explain that the quiz is broader than a simple one-axis joke result.
+
+| Code | Dimension | Group |
+| --- | --- | --- |
+| `S1` | Self-esteem and confidence | Self model |
+| `S2` | Self clarity | Self model |
+| `S3` | Core values | Self model |
+| `E1` | Attachment security | Emotion model |
+| `E2` | Emotional involvement | Emotion model |
+| `E3` | Boundaries and dependencies | Emotion model |
+| `A1` | Worldview tendency | Attitude model |
+| `A2` | Rules and flexibility | Attitude model |
+| `A3` | Sense of meaning in life | Attitude model |
+| `Ac1` | Motivation orientation | Action drive model |
+| `Ac2` | Decision-making style | Action drive model |
+| `Ac3` | Execution mode | Action drive model |
+| `So1` | Social initiative | Social model |
+| `So2` | Sense of interpersonal boundaries | Social model |
+| `So3` | Expression and authenticity | Social model |
+
+This 15-dimension structure is why the SBTI personality test feels richer than a simple "pick one letter" joke. Even though SBTI is parody content, the quiz still organizes results across multiple behavioral lenses before mapping them to a final type.
+
+## Why People Take the SBTI Personality Test
+
+People usually take the SBTI test for the same reasons they share memes, roast their friends, or compare quiz results in group chats:
+
+- the SBTI personality test is quick
+- the result types are easy to screenshot and share
+- the MBTI parody angle is immediately understandable
+- the 15-dimension setup makes the result feel more personal
+- the entire SBTI test is free and requires no sign-up
 
 ## Languages
 
@@ -109,7 +153,6 @@ For a production build:
 ```bash
 npm run build
 npm run preview
-# equivalent Vite command
 vite preview
 ```
 
@@ -154,6 +197,29 @@ Localization in this repository is file-based and repo-local.
 - Localized image assets live in `public/sbti/types/<locale>/`
 - Vite serves and builds the public assets without duplicating `sbti/` at the repo root
 - Localized project introductions live in `README.<locale>.md` files
+- `SBTI` stays untranslated across all README files and site-facing naming
+
+## FAQ
+
+### What is SBTI?
+
+SBTI is a joke-first personality quiz and an SBTI personality test built for satire, self-mockery, and easy sharing. It uses the familiar quiz structure people associate with MBTI, but its public framing is explicitly humorous.
+
+### Is the SBTI result accurate?
+
+The SBTI test can feel uncomfortably familiar, but it is still an entertainment-first SBTI personality test. Treat the result as satire, self-observation, and shareable fun, not as a serious decision tool.
+
+### How long does the SBTI test take?
+
+The SBTI test usually takes about as long as a coffee break. The SBTI personality test has no time limit, so first-instinct answers are usually enough.
+
+### How is SBTI different from MBTI?
+
+MBTI is the serious comparison point. SBTI is the parody version: same broad "take a personality quiz" shape, but with a joke-first tone, more absurd results, and no claim to scientific rigor.
+
+### Why are there 15 dimensions in the SBTI personality test?
+
+The site content uses 15 dimensions to organize results across self, emotion, attitude, action drive, and social expression. That structure makes the SBTI personality test feel more layered before it resolves to a final type.
 
 ## License
 

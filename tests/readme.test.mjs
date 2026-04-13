@@ -38,13 +38,19 @@ test('README is English-first and includes multilingual jump links plus official
     'README.id.md',
     'README.ms.md',
   ];
+  const h1Matches = [...readme.matchAll(/^# /gm)];
 
-  assert.match(readme, /^# SBTI Test/m);
+  assert.equal(h1Matches.length, 1);
+  assert.match(readme, /^# SBTI Test: Free SBTI Personality Test$/m);
   assert.match(readme, /\[English\]\(\.\/README\.md\)/);
   assert.match(readme, /\[简体中文\]\(\.\/README\.zh-CN\.md\)/);
   assert.match(readme, /\[繁體中文\]\(\.\/README\.zh-Hant\.md\)/);
   assert.match(readme, /\[日本語\]\(\.\/README\.ja\.md\)/);
   assert.match(readme, /## Overview/);
+  assert.match(readme, /## What Is the SBTI Test\?/);
+  assert.match(readme, /## How SBTI Relates to MBTI/);
+  assert.match(readme, /## SBTI Personality Dimensions/);
+  assert.match(readme, /## Why People Take the SBTI Personality Test/);
   assert.match(readme, /## Languages/);
   assert.match(readme, /## Official Website Links/);
   assert.match(readme, /## Features/);
@@ -53,8 +59,13 @@ test('README is English-first and includes multilingual jump links plus official
   assert.match(readme, /## Development \/ Build/);
   assert.match(readme, /## Project Contents/);
   assert.match(readme, /## Localization/);
+  assert.match(readme, /## FAQ/);
   assert.match(readme, /## License/);
   assert.match(readme, /## Acknowledgments/);
+  assert.match(readme, /sbti test/i);
+  assert.match(readme, /sbti personality test/i);
+  assert.match(readme, /MBTI/);
+  assert.match(readme, /15 dimensions/i);
   assert.match(readme, /https:\/\/www\.sbti-test\.org\/test/);
   assert.match(readme, /https:\/\/www\.sbti-test\.org\/en\/test/);
   assert.match(readme, /https:\/\/www\.sbti-test\.org\/zh-hant\/test/);
@@ -90,8 +101,11 @@ test('localized README files exist and keep official locale links', () => {
 
   for (const [file, officialTestUrl] of docs) {
     const contents = readFileSync(path.join(repoRoot, file), 'utf8');
-    assert.match(contents, /^# SBTI Test/m);
+    assert.match(contents, /^# .*SBTI/m);
     assert.match(contents, /\[English\]\(\.\/README\.md\)/);
+    assert.match(contents, /MBTI/);
+    assert.match(contents, /15/);
+    assert.match(contents, /## FAQ/);
     assert.match(contents, /npm run dev/);
     assert.match(contents, new RegExp(officialTestUrl.replaceAll('.', '\\.').replaceAll('/', '\\/')));
     assert.doesNotMatch(contents, /python3 -m http\.server/);
