@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="__HTML_LANG__">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>__PAGE_TITLE__</title>
+    <meta name="description" content="__META_DESCRIPTION__" />
+    <link rel="stylesheet" href="__ASSET_PREFIX__/assets/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="shell-header">
+        <a class="brand" href="__ASSET_PREFIX__/">SBTI Test</a>
+        <nav class="locale-nav" aria-label="Languages">__LOCALE_NAV__</nav>
+      </header>
+
+      <section id="intro" class="screen active">
+        <div class="card hero">
+          <div class="eyebrow">__HERO_EYEBROW__</div>
+          <h1>__HERO_TITLE__</h1>
+          <p class="sub">__HERO_SUBTITLE__</p>
+          <div class="hero-actions">
+            <button id="heroStartBtn" class="btn-primary">__PRIMARY_CTA__</button>
+            <a class="btn-secondary link-button" href="__OFFICIAL_TEST_URL__" target="_blank" rel="noreferrer">__OFFICIAL_TEST_LABEL__</a>
+          </div>
+          <div class="hero-grid">
+            <div class="mini-panel">
+              <h3>__CREDIT_TITLE__</h3>
+              <ul>__CREDIT_ITEMS__</ul>
+            </div>
+            <div class="mini-panel">
+              <h3>__OFFICIAL_SITE_TITLE__</h3>
+              <ul>
+                <li><a href="__OFFICIAL_HOME_URL__" target="_blank" rel="noreferrer">__LOCALIZED_HOME_LABEL__</a></li>
+                <li><a href="__OFFICIAL_TEST_URL__" target="_blank" rel="noreferrer">__LOCALIZED_TEST_LABEL__</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <section class="card section-block">
+          <div class="section-heading">
+            <div class="eyebrow">__GUIDE_EYEBROW__</div>
+            <h2>__ABOUT_TITLE__</h2>
+          </div>
+          <div class="info-grid">__INFO_CARDS__</div>
+        </section>
+
+        <section class="card section-block">
+          <div class="section-heading">
+            <div class="eyebrow">__TYPES_EYEBROW__</div>
+            <h2>__TYPES_TITLE__</h2>
+            <p>__TYPES_DESCRIPTION__</p>
+          </div>
+          <div class="hero-actions">
+            <button id="startBtn" class="btn-primary">__PRIMARY_CTA__</button>
+            <a class="btn-secondary link-button" href="__OFFICIAL_HOME_URL__" target="_blank" rel="noreferrer">__OFFICIAL_HOME_LABEL__</a>
+          </div>
+        </section>
+
+        <section class="card section-block">
+          <div class="section-heading">
+            <div class="eyebrow">FAQ</div>
+            <h2>__FAQ_TITLE__</h2>
+          </div>
+          <div class="faq-list">__FAQ_ITEMS__</div>
+        </section>
+      </section>
+
+      <section id="test" class="screen">
+        <div class="test-wrap card">
+          <div class="topbar">
+            <button id="backIntroBtn" class="btn-secondary">__TEST_BACK_LABEL__</button>
+            <div class="progress" aria-label="Progress"><span id="progressBar"></span></div>
+            <div id="progressText" class="progress-text">0 / 0</div>
+          </div>
+          <p id="testHint" class="subtle-hint">__TEST_HINT__</p>
+          <div id="questionList" class="question-list"></div>
+          <div class="hero-actions">
+            <button id="submitBtn" class="btn-primary" disabled>__TEST_SUBMIT_LABEL__</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="result" class="screen">
+        <div class="result-wrap card">
+          <div class="result-layout">
+            <div class="result-top">
+              <div id="posterBox" class="poster-box">
+                <img id="posterImage" alt="" />
+                <div id="posterCaption" class="poster-caption"></div>
+              </div>
+              <div class="type-box">
+                <div id="resultModeKicker" class="type-kicker"></div>
+                <div id="resultTypeName" class="type-name"></div>
+                <div id="matchBadge" class="match-badge"></div>
+                <div id="resultTypeSub" class="type-subname"></div>
+              </div>
+            </div>
+
+            <div class="analysis-box">
+              <h3>__RESULT_PROFILE_TITLE__</h3>
+              <p id="resultDesc" class="type-desc"></p>
+            </div>
+
+            <div class="dim-box">
+              <h3>__DIMENSIONS_TITLE__</h3>
+              <div id="dimList" class="dim-list"></div>
+            </div>
+
+            <div class="note-box">
+              <h3>__NOTE_TITLE__</h3>
+              <p id="funNote"></p>
+            </div>
+
+            <div class="result-actions">
+              <button id="restartBtn" class="btn-primary">__RESTART_LABEL__</button>
+              <button id="toTopBtn" class="btn-secondary">__BACK_TO_INTRO_LABEL__</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script id="sbti-page-data" type="application/json">__JSON_DATA__</script>
+    <script type="module" src="__ASSET_PREFIX__/assets/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+[
+  {
+    "htmlLang": "zh-CN",
+    "locale": "zh",
+    "nativeName": "简体中文",
+    "officialHomeUrl": "https://www.sbti-test.org/",
+    "officialTestUrl": "https://www.sbti-test.org/test",
+    "repoPath": "/zh/"
+  },
+  {
+    "htmlLang": "zh-Hant",
+    "locale": "zh-hant",
+    "nativeName": "繁體中文",
+    "officialHomeUrl": "https://www.sbti-test.org/zh-hant",
+    "officialTestUrl": "https://www.sbti-test.org/zh-hant/test",
+    "repoPath": "/zh-hant/"
+  },
+  {
+    "htmlLang": "en",
+    "locale": "en",
+    "nativeName": "English",
+    "officialHomeUrl": "https://www.sbti-test.org/en",
+    "officialTestUrl": "https://www.sbti-test.org/en/test",
+    "repoPath": "/"
+  },
+  {
+    "htmlLang": "ja",
+    "locale": "ja",
+    "nativeName": "日本語",
+    "officialHomeUrl": "https://www.sbti-test.org/ja",
+    "officialTestUrl": "https://www.sbti-test.org/ja/test",
+    "repoPath": "/ja/"
+  },
+  {
+    "htmlLang": "ko",
+    "locale": "ko",
+    "nativeName": "한국어",
+    "officialHomeUrl": "https://www.sbti-test.org/ko",
+    "officialTestUrl": "https://www.sbti-test.org/ko/test",
+    "repoPath": "/ko/"
+  },
+  {
+    "htmlLang": "es",
+    "locale": "es",
+    "nativeName": "Español",
+    "officialHomeUrl": "https://www.sbti-test.org/es",
+    "officialTestUrl": "https://www.sbti-test.org/es/test",
+    "repoPath": "/es/"
+  },
+  {
+    "htmlLang": "ru",
+    "locale": "ru",
+    "nativeName": "Русский",
+    "officialHomeUrl": "https://www.sbti-test.org/ru",
+    "officialTestUrl": "https://www.sbti-test.org/ru/test",
+    "repoPath": "/ru/"
+  },
+  {
+    "htmlLang": "hi",
+    "locale": "hi",
+    "nativeName": "हिन्दी",
+    "officialHomeUrl": "https://www.sbti-test.org/hi",
+    "officialTestUrl": "https://www.sbti-test.org/hi/test",
+    "repoPath": "/hi/"
+  },
+  {
+    "htmlLang": "de",
+    "locale": "de",
+    "nativeName": "Deutsch",
+    "officialHomeUrl": "https://www.sbti-test.org/de",
+    "officialTestUrl": "https://www.sbti-test.org/de/test",
+    "repoPath": "/de/"
+  },
+  {
+    "htmlLang": "th",
+    "locale": "th",
+    "nativeName": "ภาษาไทย",
+    "officialHomeUrl": "https://www.sbti-test.org/th",
+    "officialTestUrl": "https://www.sbti-test.org/th/test",
+    "repoPath": "/th/"
+  },
+  {
+    "htmlLang": "vi",
+    "locale": "vi",
+    "nativeName": "Tiếng Việt",
+    "officialHomeUrl": "https://www.sbti-test.org/vi",
+    "officialTestUrl": "https://www.sbti-test.org/vi/test",
+    "repoPath": "/vi/"
+  },
+  {
+    "htmlLang": "id",
+    "locale": "id",
+    "nativeName": "Bahasa Indonesia",
+    "officialHomeUrl": "https://www.sbti-test.org/id",
+    "officialTestUrl": "https://www.sbti-test.org/id/test",
+    "repoPath": "/id/"
+  },
+  {
+    "htmlLang": "ms",
+    "locale": "ms",
+    "nativeName": "Bahasa Melayu",
+    "officialHomeUrl": "https://www.sbti-test.org/ms",
+    "officialTestUrl": "https://www.sbti-test.org/ms/test",
+    "repoPath": "/ms/"
+  }
+]
