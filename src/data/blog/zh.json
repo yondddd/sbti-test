@@ -1,0 +1,18 @@
+{
+  "page": {
+    "title": "SBTI 博客",
+    "sections": {
+      "blog": {
+        "id": "blog",
+        "title": "博客",
+        "description": "阅读SBTI人格测试相关文章，了解 SBTI 与 MBTI 的区别，以及如何解读测试结果。"
+      }
+    }
+  },
+  "messages": {
+    "all": "全部",
+    "no_content": "当前语言暂无文章。",
+    "crumb": "博客",
+    "toc": "本页目录"
+  }
+}

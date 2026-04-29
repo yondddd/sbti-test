@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SBTI hoạt động như thế nào? Mô hình 15 chiều, ghép mẫu và luật ẩn</title>
+    <meta name="description" content="Giải thích cách SBTI vận hành: 30 câu hỏi chuẩn, 15 chiều, 25 nguyên mẫu, quy tắc đặc biệt DRUNK và kết quả dự phòng HHHH." />
+    <link rel="stylesheet" href="../../../assets/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="shell-header">
+        <a class="brand" href="../../../">SBTI Test</a>
+        <nav class="locale-nav" aria-label="Languages"><a href="/zh/">简体中文</a><a href="/zh-hant/">繁體中文</a><a href="/">English</a><a href="/ja/">日本語</a><a href="/ko/">한국어</a><a href="/es/">Español</a><a href="/fr/">Français</a><a href="/ru/">Русский</a><a href="/de/">Deutsch</a><a href="/th/">ภาษาไทย</a><a href="/vi/" aria-current="page">Tiếng Việt</a><a href="/id/">Bahasa Indonesia</a><a href="/ms/">Bahasa Melayu</a><a href="/ar/">العربية</a></nav>
+      </header>
+      <main class="blog-page" data-locale="vi">
+        
+    <article class="card blog-detail">
+      <a class="blog-back" href="/vi/blog/">Blog</a>
+      <header>
+        <div class="blog-date">13 thg 4, 2026</div>
+        <h1>SBTI hoạt động như thế nào? Mô hình 15 chiều, ghép mẫu và luật ẩn</h1>
+        <p class="sub">Giải thích cách SBTI vận hành: 30 câu hỏi chuẩn, 15 chiều, 25 nguyên mẫu, quy tắc đặc biệt DRUNK và kết quả dự phòng HHHH.</p>
+        <img class="blog-cover" src="https://file.sbti-test.org/imgs/blog-covers/how-sbti-works-cover.vi.png" alt="" loading="lazy" />
+      </header>
+      <div class="blog-content"><p>Lần đầu tiên nhiều người thi SBTI, họ cho rằng đây chỉ là một bài kiểm tra ngẫu nhiên với khả năng viết quảng cáo khắc nghiệt hơn. Trong thực tế, công cụ kết quả thực sự là <strong>khá rõ ràng và không đặc biệt phức tạp</strong>.</p>
+<p>Đây là phiên bản ngắn:</p>
+<p><strong>SBTI không phải là bói toán bằng AI và cũng không phải là phép đo tâm lý sâu sắc. Nó hoạt động giống như một bộ phân loại giải trí được xây dựng xung quanh một vectơ rời rạc 15 chiều và một thư viện các nguyên mẫu được xác định trước.</strong></p>
+<p>Hệ thống thực hiện ba việc:</p>
+<ol><li>Nó ánh xạ câu trả lời của bạn vào 15 chiều</li><li>Nó nén 15 chiều đó thành mẫu <code>L/M/H</code></li><li>Nó so sánh mẫu đó với các nguyên mẫu tính cách được cài sẵn và trả về kết quả trùng khớp nhất</li></ol>
+<p>Nếu điều bạn quan tâm là <strong>tại sao thiết lập này có thể mang lại cảm giác chính xác một cách bất thường</strong>, hãy tiếp tục <a href="/blog/why-sbti-feels-accurate">Tại sao SBTI cảm thấy chính xác</a>. Bài viết này vẫn tập trung vào <strong>cơ chế hoạt động như thế nào</strong>.</p>
+<h2>Bắt đầu với cấu trúc cơ bản</h2>
+<p>Về cốt lõi, cấu trúc chính có ba lớp:</p>
+<ul><li><strong>15 kích thước</strong></li><li><strong>30 câu hỏi tiêu chuẩn</strong></li><li><strong>25 nguyên mẫu tính cách tiêu chuẩn</strong></li></ul>
+<p>Ngoài ra còn có:</p>
+<ul><li><strong>1 câu hỏi liên quan đến uống rượu luôn xuất hiện</strong></li><li><strong>Thêm 1 câu hỏi về uống rượu chỉ xuất hiện với một điều kiện</strong></li><li><strong>2 kết quả đặc biệt</strong>: <code>DRUNK</code> và <code>HHHH</code></li></ul>
+<p>Đó là lý do tại sao nhiều mô tả lại nói &quot;31 câu hỏi&quot;. Nhưng sự phân chia thực sự là:</p>
+<ul><li><code>30</code> câu hỏi tính điểm chuẩn</li><li><code>1</code> đã sửa câu hỏi cổng đặc biệt</li><li><code>1</code> câu hỏi tiếp theo chỉ xuất hiện đối với một số người dùng</li></ul>
+<p>Vì vậy <strong>hầu hết người dùng nhìn thấy 31 câu hỏi và một số người dùng được chuyển đến 32 câu hỏi</strong>.</p>
+<h2>15 chiều không được gộp lại một cách ngẫu nhiên</h2>
+<p>15 thứ nguyên được nhóm thành 5 mô hình, trong đó có 3 thứ nguyên phụ:</p>
+
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Người mẫu</th><th>Kích thước</th></tr></thead>
+        <tbody>
+          <tr><td>Tự làm người mẫu</td><td><code>S1 self-esteem and confidence</code>, <code>S2 self-clarity</code>, <code>S3 core values</code></td></tr><tr><td>Mô hình cảm xúc</td><td><code>E1 attachment security</code>, <code>E2 emotional investment</code>, <code>E3 boundaries and dependence</code></td></tr><tr><td>Mô hình thái độ</td><td><code>A1 worldview tendency</code>, <code>A2 rules vs flexibility</code>, <code>A3 sense of life meaning</code></td></tr><tr><td>Mô hình truyền động hành động</td><td><code>Ac1 motivational orientation</code>, <code>Ac2 decision style</code>, <code>Ac3 execution pattern</code></td></tr><tr><td>Mô hình xã hội</td><td><code>So1 social initiative</code>, <code>So2 interpersonal boundaries</code>, <code>So3 expression and authenticity</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  
+<p>Điểm quan trọng nhất ở đây là:</p>
+<p><strong>SBTI không sử dụng lại bốn trục nhị phân của MBTI. Thay vào đó, nó chia các cảnh tâm lý của cuộc sống trên mạng thành các chiều nhỏ hơn, đời thường hơn.</strong></p>
+<p>Điều đó không làm cho nó khoa học hơn. Nhưng nó làm cho đầu ra có cảm giác chi tiết hơn.</p>
+<h2>Mỗi chiều được tính điểm như thế nào?</h2>
+<p>Mỗi chiều được gắn với hai câu hỏi tiêu chuẩn. Mỗi câu trả lời được gán một giá trị <code>1</code>, <code>2</code> hoặc <code>3</code>.</p>
+<p>Điều đó có nghĩa là tổng phạm vi điểm cho một chiều là:</p>
+<ul><li>tối thiểu <code>2</code></li><li>tối đa <code>6</code></li></ul>
+<p>Sau đó, hệ thống sẽ nén tổng số đó thành ba nhóm:</p>
+<ul><li><code>&lt;= 3</code> trở thành <code>L</code></li><li><code>= 4</code> trở thành <code>M</code></li><li><code>&gt;= 5</code> trở thành <code>H</code></li></ul>
+<p>Vì vậy SBTI không giữ điểm liên tục ở cuối. Nó rời rạc hóa mọi chiều thành ba cấp độ. Đầu ra cuối cùng là mẫu <code>L/M/H</code> gồm 15 ký tự, chẳng hạn như <code>HHH-HMH-MHH-HHH-MHM</code>.</p>
+<p>Mẫu đó là <strong>vectơ cá tính</strong> của người dùng.</p>
+<h2>Nó không hỏi &quot;bạn chọn loại nào?&quot; Nó hỏi &quot;bạn thân với kiểu người nào nhất?&quot;</h2>
+<p>Đây là phần mà SBTI giống một bộ phân loại thực sự nhất.</p>
+<p>SBTI bao gồm <code>25</code> nguyên mẫu tính cách tiêu chuẩn và mỗi nguyên mẫu có mẫu 15 chiều riêng. Ví dụ bao gồm:</p>
+<ul><li><code>CTRL</code></li><li><code>BOSS</code></li><li><code>SEXY</code></li><li><code>OJBK</code></li><li><code>MALO</code></li><li><code>THIN-K</code></li><li><code>SHIT</code></li><li><code>ZZZZ</code></li><li><code>DEAD</code></li><li><code>IMFW</code></li></ul>
+<p>Những nguyên mẫu này không được tạo nhanh chóng cho mỗi người dùng. Họ đã <strong>trung tâm tính cách do tác giả xác định</strong> chuẩn bị trước. Những gì hệ thống làm là so sánh từng vectơ của bạn với tất cả chúng.</p>
+<h2>Thuật toán khoảng cách rất đơn giản</h2>
+<p>Phương pháp so sánh rất dễ giải thích:</p>
+<ul><li>Bản đồ đầu tiên <code>L/M/H</code> tới <code>1/2/3</code></li><li>Trừ vectơ của người dùng khỏi mỗi chiều vectơ nguyên mẫu theo chiều</li><li>Lấy giá trị tuyệt đối của từng hiệu rồi tính tổng</li></ul>
+<p>Thực chất đó là <strong>Khoảng cách L1</strong> hay còn gọi là <strong>khoảng cách Manhattan</strong>.</p>
+<p>Nói một cách tình cờ hơn, nó có nghĩa là:</p>
+<p><strong>Bạn còn cách nguyên mẫu đó bao nhiêu bước trên tất cả 15 chiều?</strong></p>
+<p>Khoảng cách càng nhỏ thì trận đấu càng gần. Khoảng cách càng lớn thì bạn càng ít giống nó.</p>
+<p>SBTI cũng sử dụng công thức hiển thị độ tương tự: **tương tự = max(0, round((1 - distance / 30) * 100))**.</p>
+<p>Vì vậy, khi một trang kết quả hiển thị nội dung như &quot;khớp 92%&quot;, con số đó không phải là khoảng tin cậy tâm lý. Đó là <strong>một giá trị hiển thị xuất phát tuyến tính từ khoảng cách</strong>.</p>
+<h2>Điều gì xảy ra nếu hai loại trông giống nhau?</h2>
+<p>Logic sắp xếp trong mã đại khái là:</p>
+<ol><li>So sánh tổng khoảng cách trước và ưu tiên giá trị nhỏ hơn</li><li>Nếu tổng khoảng cách bằng nhau, hãy so sánh <code>exact</code>, nghĩa là có bao nhiêu trong số 15 chiều khớp chính xác</li><li>Chỉ sau đó nó mới tiếp tục sử dụng giá trị tương tự được hiển thị</li></ol>
+<p>Điều đó cho bạn biết SBTI không sử dụng quy tắc thô thiển &quot;điều kiện đầu tiên vượt qua sẽ thắng&quot;. Nó thực hiện một quá trình xếp hạng cơ bản nhưng khá rõ ràng.</p>
+<h2>Tại sao <code>DRUNK</code> lại là loại ẩn?</h2>
+<p>Đây là phần SBTI bộc lộ rõ ​​ràng nhất động cơ cá nhân của người sáng tạo.</p>
+<p>SBTI bao gồm chuỗi logic dành riêng cho việc uống rượu:</p>
+<ol><li>Hệ thống chèn một câu hỏi cố định hỏi về sở thích thường ngày của bạn</li><li>Nếu bạn chọn “uống” trong câu hỏi đó</li><li>Hệ thống chèn câu hỏi thứ hai về thái độ của bạn đối với việc uống rượu</li><li>Nếu bạn chọn một câu trả lời cụ thể trong câu hỏi thứ hai đó, hệ thống <strong>trả về [[[1000]]] ngay lập tức</strong></li></ol>
+<p>Điểm quan trọng là thế này:</p>
+<p><strong>[[[1000]]] không được tính toán thông qua quy trình khoảng cách 15 chiều thông thường. Nó ghi đè kết quả tiêu chuẩn thông qua quy tắc kích hoạt có mức độ ưu tiên cao hơn.</strong></p>
+<p>Điều đó cũng phù hợp với động cơ sáng tạo ban đầu đã trở thành một phần bản sắc của dự án: ban đầu tác giả muốn câu đố để thúc đẩy một người bạn uống ít hơn.</p>
+<p>Vì vậy <code>DRUNK</code> không chỉ là một mục thông thường khác trong thư viện nguyên mẫu. Nó giống <strong>một nhánh phán đoán giá trị được ưu tiên có chủ ý</strong> hơn.</p>
+<h2>Vậy thì <code>HHHH</code> là gì?</h2>
+<p><code>HHHH</code> là một kết quả đặc biệt khác, nhưng nó hoạt động khác với <code>DRUNK</code>.</p>
+<p>Nó không được kích hoạt bởi hành vi. Đó là <strong>một phương án dự phòng khi kết hợp nguyên mẫu quá yếu</strong>.</p>
+<p>SBTI sử dụng ngưỡng rõ ràng:</p>
+<ul><li>nếu người phù hợp nhất về tính cách tiêu chuẩn có điểm tương đồng <strong>dưới 60%</strong></li><li>hệ thống không ép bạn vào loại bình thường</li><li>thay vào đó nó trả về <code>HHHH</code> trực tiếp</li></ul>
+<p>Điều đó có nghĩa là <code>HHHH</code> không phải là một nguyên mẫu tính cách được xác định rõ ràng. Nó có nghĩa là:</p>
+<p><strong>thư viện nguyên mẫu hiện tại không giải thích rõ mẫu câu trả lời của bạn.</strong></p>
+<p>Về mặt kinh nghiệm, điều này thực sự có thể làm cho hệ thống có cảm giác thuyết phục hơn. Thay vì ép buộc phải phù hợp yếu, nó nói một cách hiệu quả: *mẫu câu trả lời này không được thư viện hiện tại nắm bắt tốt*.</p>
+<h2>Tại sao cấu trúc này có vẻ chi tiết hơn một bài kiểm tra trò đùa thông thường?</h2>
+<p>Bởi vì nó thực hiện được ba điều mà nhiều câu đố giải trí nhẹ nhàng không làm được:</p>
+<ul><li><strong>Đầu tiên nó chia hành vi thành các kích thước</strong></li></ul>
+<p>Nó không chỉ đơn giản là hỏi “bạn là người hướng ngoại hay hướng nội?” Nó biến rất nhiều cảnh hàng ngày thành những tín hiệu nhỏ hơn.</p>
+<ul><li><strong>Nó vector hóa những tín hiệu đó</strong></li></ul>
+<p>Mỗi chiều được nén thành một cấp độ và các cấp độ đó trở thành một mô hình tổng thể.</p>
+<ul><li><strong>Nó phù hợp với toàn bộ nguyên mẫu</strong></li></ul>
+<p>Một câu hỏi không quyết định kết quả. Hệ thống so sánh đường nét tổng thể của câu trả lời của bạn.</p>
+<p>Điều đó vẫn không tự động làm cho nó trở nên khoa học. Nhưng nó mang lại cấu trúc chặt chẽ hơn nhiều so với bài kiểm tra &quot;10 câu hỏi và nhận một con vật ngẫu nhiên&quot;.</p>
+<h2>Giới hạn của hệ thống bắt đầu tại cùng một điểm</h2>
+<p>Ngay cả khi cơ chế này hoàn thiện hơn nhiều người vẫn nghĩ thì cũng không nên hiểu lầm bản chất của nó.</p>
+<p>Tất cả những điều sau đây vẫn đúng:</p>
+<ul><li>thư viện nguyên mẫu được viết bởi người sáng tạo, không được xây dựng từ mẫu đã được kiểm chứng lâm sàng</li><li>nhãn thứ nguyên là đánh giá biên tập của người sáng tạo, không phải thang đo tâm lý tiêu chuẩn</li><li>điểm tương đồng là điểm hiển thị, không phải điểm tự tin chẩn đoán</li><li>kết quả đặc biệt chứa đựng lập trường rõ ràng của tác giả và ý định châm biếm</li></ul>
+<p>Vậy <strong>SBTI là chương trình giải trí có cấu trúc chứ không phải đánh giá khoa học khoác lên mình sự vui vẻ.</strong></p>
+<p>Nếu bạn quan tâm hơn đến lý do tại sao nhiều người vẫn cho rằng nó chính xác, hãy tiếp tục <a href="/blog/why-sbti-feels-accurate">Tại sao SBTI cảm thấy chính xác</a>. Nếu bạn quan tâm đến việc nên và không nên sử dụng nó ở đâu, hãy đọc <a href="/blog/sbti-limits-and-boundaries">SBTI có thể cho bạn biết điều gì và điều gì không thể?</a>.</p>
+<h2>Phần kết luận</h2>
+<p>Cốt lõi của SBTI có thể được tóm tắt như sau:</p>
+<ul><li><code>15</code> kích thước</li><li><code>30</code> câu hỏi tính điểm chuẩn</li><li><code>25</code> nguyên mẫu tính cách tiêu chuẩn</li><li><code>1</code> quy tắc ghi đè đặc biệt cho <code>DRUNK</code></li><li><code>1</code> quy tắc dự phòng có độ khớp thấp cho <code>HHHH</code></li><li><code>1</code> quá trình so khớp nguyên mẫu dựa trên khoảng cách L1</li></ul>
+<p>Cơ chế này không phải là thần bí, nhưng nó đủ hoàn thiện và nó diễn đạt ngôn ngữ của Internet đủ tốt để tạo ra cảm giác chủ quan rằng kết quả là &quot;chính xác một cách đáng ngạc nhiên&quot; và hỗ trợ chia sẻ ảnh chụp màn hình sau đó.</p></div>
+    </article>
+  
+      </main>
+    </div>
+  </body>
+</html>

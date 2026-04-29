@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SBTI 如何運作？15 維模型、原型比對與隱藏規則</title>
+    <meta name="description" content="拆解 SBTI 的核心機制：30 題常規題、15 個維度、25 個常規原型、DRUNK 特殊覆蓋規則，以及 HHHH 兜底邏輯。" />
+    <link rel="stylesheet" href="../../../assets/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="shell-header">
+        <a class="brand" href="../../../">SBTI Test</a>
+        <nav class="locale-nav" aria-label="Languages"><a href="/zh/">简体中文</a><a href="/zh-hant/" aria-current="page">繁體中文</a><a href="/">English</a><a href="/ja/">日本語</a><a href="/ko/">한국어</a><a href="/es/">Español</a><a href="/fr/">Français</a><a href="/ru/">Русский</a><a href="/de/">Deutsch</a><a href="/th/">ภาษาไทย</a><a href="/vi/">Tiếng Việt</a><a href="/id/">Bahasa Indonesia</a><a href="/ms/">Bahasa Melayu</a><a href="/ar/">العربية</a></nav>
+      </header>
+      <main class="blog-page" data-locale="zh-hant">
+        
+    <article class="card blog-detail">
+      <a class="blog-back" href="/zh-hant/blog/">部落格</a>
+      <header>
+        <div class="blog-date">2026年4月13日</div>
+        <h1>SBTI 如何運作？15 維模型、原型比對與隱藏規則</h1>
+        <p class="sub">拆解 SBTI 的核心機制：30 題常規題、15 個維度、25 個常規原型、DRUNK 特殊覆蓋規則，以及 HHHH 兜底邏輯。</p>
+        <img class="blog-cover" src="https://file.sbti-test.org/imgs/blog-covers/how-sbti-works-cover.zh-hant.png" alt="" loading="lazy" />
+      </header>
+      <div class="blog-content"><p>許多人第一次參加 SBTI 時，他們認為這只是一個隨機測試，文案寫作更加嚴格。實際上，結果引擎其實是<strong>非常明確，而且不是特別複雜</strong>。</p>
+<p>這是簡短的版本：</p>
+<p><strong>SBTI 不是人工智慧算命，也不是深度心理測量。它的行為更像是圍繞 15 維離散向量和預定義原型庫構建的娛樂分類器。</strong></p>
+<p>這個系統做了三件事：</p>
+<ol><li>它將你的答案映射到 15 個維度</li><li>它將這 15 個維度壓縮為 <code>L/M/H</code> 模式</li><li>將該模式與預設的個性原型進行比較並返回最接近的匹配</li></ol>
+<p>如果你關心的是<strong>為什麼這個設定感覺異常準確</strong>，繼續<a href="/blog/why-sbti-feels-accurate">為什麼 SBTI 感覺準確</a>。本文主要關注 <strong>該機制如何運作</strong>。</p>
+<h2>從基本結構開始</h2>
+<p>從核心來看，關鍵結構分為三層：</p>
+<ul><li><strong>15個維度</strong></li><li><strong>30個標準題</strong></li><li><strong>25個標準人格原型</strong></li></ul>
+<p>除此之外，還有：</p>
+<ul><li><strong>1 總是出現的與飲酒相關的門問題</strong></li><li><strong>1 個僅在特定條件下出現的額外飲酒問題</strong></li><li><strong>2 特殊成果</strong>：<code>DRUNK</code> 和 <code>HHHH</code></li></ul>
+<p>這就是為什麼許多描述都說「31個問題」。但分裂確實是：</p>
+<ul><li><code>30</code> 標準評分問題</li><li><code>1</code>修正了特殊門問題</li><li><code>1</code> 僅針對部分使用者出現的後續問題</li></ul>
+<p>所以<strong>大多數用戶會看到 31 個問題，有些用戶會被引導至 32 個問題</strong>。</p>
+<h2>這 15 個維度不是隨機組合在一起的</h2>
+<p>這 15 個維度分為 5 個模型，每個模型又包含 3 個子維度：</p>
+
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>模型</th><th>維度</th></tr></thead>
+        <tbody>
+          <tr><td>自我模特兒</td><td><code>S1 self-esteem and confidence</code>、<code>S2 self-clarity</code>、<code>S3 core values</code></td></tr><tr><td>情緒模型</td><td><code>E1 attachment security</code>、<code>E2 emotional investment</code>、<code>E3 boundaries and dependence</code></td></tr><tr><td>態度模型</td><td><code>A1 worldview tendency</code>、<code>A2 rules vs flexibility</code>、<code>A3 sense of life meaning</code></td></tr><tr><td>行動驅動模型</td><td><code>Ac1 motivational orientation</code>、<code>Ac2 decision style</code>、<code>Ac3 execution pattern</code></td></tr><tr><td>社會模式</td><td><code>So1 social initiative</code>、<code>So2 interpersonal boundaries</code>、<code>So3 expression and authenticity</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  
+<p>這裡最重要的一點是：</p>
+<p><strong>SBTI 不重複使用 MBTI 的四個二進位軸。相反，它將網路生活的心理場景分解為更小、更日常的子維度。</strong></p>
+<p>這並沒有使它變得更加科學。但它確實讓輸出感覺更詳細。</p>
+<h2>每個維度如何評分？</h2>
+<p>每個維度都與兩個標準問題相關。每個答案都會被分配一個值 <code>1</code>、<code>2</code> 或 <code>3</code>。</p>
+<p>這意味著單一維度的總分範圍為：</p>
+<ul><li>最小值 <code>2</code></li><li>最大<code>6</code></li></ul>
+<p>然後系統將總數壓縮到三個儲存桶中：</p>
+<ul><li><code>&lt;= 3</code> 變成 <code>L</code></li><li><code>= 4</code> 變成 <code>M</code></li><li><code>&gt;= 5</code> 變成 <code>H</code></li></ul>
+<p>所以SBTI最後並沒有保留連續的分數。它將每個維度離散成三個層級。最終輸出是 15 個字元的 <code>L/M/H</code> 模式，例如 <code>HHH-HMH-MHH-HHH-MHM</code>。</p>
+<p>此模式是使用者的 <strong>個性向量</strong>。</p>
+<h2>它不會詢問“您選擇了哪種類型？”它問“您最接近哪種類型？”</h2>
+<p>這是 SBTI 最類似真實分類器的部分。</p>
+<p>SBTI包括<code>25</code>個標準人格原型，每個原型都有自己的15維度模式。範例包括：</p>
+<ul><li><code>CTRL</code></li><li><code>BOSS</code></li><li><code>SEXY</code></li><li><code>OJBK</code></li><li><code>MALO</code></li><li><code>THIN-K</code></li><li><code>SHIT</code></li><li><code>ZZZZ</code></li><li><code>DEAD</code></li><li><code>IMFW</code></li></ul>
+<p>這些原型並不是為每個使用者即時產生的。它們是<strong>作者定義的人格質心</strong>提前準備的。系統所做的是將您的向量與所有向量一一進行比較。</p>
+<h2>距離演算法很簡單</h2>
+<p>比較方法很容易解釋：</p>
+<ul><li>第一張地圖 <code>L/M/H</code> 到 <code>1/2/3</code></li><li>從每個原型向量維度中逐維減去使用者向量</li><li>取每個差值的絕對值並將它們相加</li></ul>
+<p>本質上就是<strong>L1距離</strong>，也稱為<strong>曼哈頓距離</strong>。</p>
+<p>通俗點說就是：</p>
+<p><strong>您距離 15 個維度的原型還有多少步？</strong></p>
+<p>差距越小，比賽越接近。差距越大，你就越不像。</p>
+<p>SBTI 也使用相似度顯示公式：**相似度 = max(0, round((1 - 距離 / 30) * 100))**。</p>
+<p>因此，當結果頁面顯示「92% 匹配」之類的內容時，該數字不是心理測量置信區間。它是<strong>從距離線性匯出的顯示值</strong>。</p>
+<h2>如果兩種類型看起來一樣接近會發生什麼？</h2>
+<p>程式碼中的排序邏輯大致為：</p>
+<p>1.先比較總距離，選擇較小的值</p>
+<ol><li>如果總距離相等，則比較 <code>exact</code>，即 15 個維度中有多少個維度完全匹配</li><li>之後才繼續使用顯示的相似度值</li></ol>
+<p>這告訴您 SBTI 並沒有使用粗略的「第一個通過的條件來獲勝」規則。它執行基本但相當清晰的排名過程。</p>
+<h2>為什麼 <code>DRUNK</code> 是隱藏人格？</h2>
+<p>這是SBTI中最清楚揭示創作者個人動機的部分。</p>
+<p>SBTI 包括一個特定於飲酒的邏輯鏈：</p>
+<p>1.系統插入固定問題詢問您平時的興趣愛好</p>
+<ol><li>如果您在該問題中選擇“飲酒”</li></ol>
+<p>3.系統插入第二個問題，關於您對飲酒的態度</p>
+<ol><li>如果您在第二個問題中選擇具體答案，系統 <strong>立即返回 [[[1000]]]</strong></li></ol>
+<p>重要的一點是：</p>
+<p><strong>[[[1000]]] 不是透過正常的 15 維距離過程計算的。它透過更高優先權的觸發規則來覆蓋標準結果。</strong></p>
+<p>這也符合成為計畫身分一部分的最初創作動機：作者最初希望透過測驗來推動朋友少喝酒。</p>
+<p>所以 <code>DRUNK</code> 不只是原型庫中的另一個普通條目。它更像是<strong>一個刻意優先的價值判斷分支</strong>。</p>
+<h2>那麼<code>HHHH</code>是什麼？</h2>
+<p><code>HHHH</code> 是另一個特殊結果，但其工作方式與 <code>DRUNK</code> 不同。</p>
+<p>它不是由行為觸發的。它是<strong>當原型匹配太弱時的後備方案</strong>。</p>
+<p>SBTI 使用明確的閾值：</p>
+<ul><li>如果最佳標準個性配對具有相似度分數 <strong>低於60%</strong></li><li>系統不會強迫你進入正常類型</li><li>它直接回傳 <code>HHHH</code></li></ul>
+<p>這意味著 <code>HHHH</code> 不是一個明確定義的人格原型。這意味著：</p>
+<p><strong>目前的原型庫不能很好地解釋你的答案模式。</strong></p>
+<p>從經驗上來看，這實際上可以讓系統感覺更有說服力。它不是強制弱擬合，而是有效地表示：*目前庫未能很好地捕捉此答案模式*。</p>
+<h2>為什麼這個結構感覺比典型的笑話測試更詳細？</h2>
+<p>因為它做了許多輕量級娛樂測驗所沒有的三件事：</p>
+<ul><li><strong>它首先將行為分解為多個維度</strong></li></ul>
+<p>它不只是簡單地問「你是外向還是內向？」它將許多日常場景變成更小的信號。</p>
+<ul><li><strong>它將這些訊號向量化</strong></li></ul>
+<p>每個維度都被壓縮成一個層次，這些層次又成為一個整體的模式。</p>
+<ul><li><strong>它與整個原型相匹配</strong></li></ul>
+<p>一個問題並不能決定結果。系統會比較您答案的整體輪廓。</p>
+<p>但這仍然不會自動使其變得科學。但它確實比「10 個問題並隨機接收一隻動物」測驗提供了更多的結構。</p>
+<h2>系統的限制從同一點開始</h2>
+<p>即使該機制比許多人想像的更完整，其本質也不應該被誤解。</p>
+<p>以下所有內容仍然正確：</p>
+<ul><li>原型庫是由創建者編寫的，而不是根據臨床驗證的採樣構建的</li><li>維度標籤是創作者的編輯判斷，而不是標準化的心理量表</li><li>相似度分數是顯示分數，而不是診斷置信度</li><li>特別結果包含明顯的作者立場和諷刺意圖</li></ul>
+<p>所以<strong>SBTI 是結構化的娛樂，而不是打扮得有趣的科學評估。</strong></p>
+<p>如果您更關心為什麼許多人仍然認為它是準確的，請繼續<a href="/blog/why-sbti-feels-accurate">為什麼 SBTI 感覺準確</a>。如果您關心它應該和不應該在哪裡使用，請閱讀 <a href="/blog/sbti-limits-and-boundaries">SBTI 可以告訴您什麼，不能告訴您什麼？</a>。</p>
+<h2>結論</h2>
+<p>SBTI的核心可以概括為：</p>
+<ul><li><code>15</code> 個維度</li><li><code>30</code> 標準評分問題</li><li><code>25</code>標準人格原型</li><li><code>1</code> <code>DRUNK</code> 的特殊覆蓋規則</li><li><code>1</code> <code>HHHH</code> 的低匹配後備規則</li><li><code>1</code>基於L1距離的原型匹配過程</li></ul>
+<p>這個機制並不神秘，但足夠完整，也足夠用網絡語言表達，給人一種結果「意外準確」的主觀感覺，並支持事後截圖分享。</p></div>
+    </article>
+  
+      </main>
+    </div>
+  </body>
+</html>

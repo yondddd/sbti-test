@@ -1,0 +1,18 @@
+{
+  "page": {
+    "title": "SBTI Blog",
+    "sections": {
+      "blog": {
+        "id": "blog",
+        "title": "Blog",
+        "description": "Read articles about the SBTI personality test to understand how SBTI relates to MBTI, how the test works, and how to read each result."
+      }
+    }
+  },
+  "messages": {
+    "all": "All",
+    "no_content": "No articles are available in this language yet.",
+    "crumb": "Blog",
+    "toc": "On this page"
+  }
+}

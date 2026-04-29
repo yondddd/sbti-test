@@ -2,55 +2,56 @@
   "chrome": {
     "intro": {
       "eyebrow": "SBTI",
-      "title": "Silly Big Personality Test - a purely funny personality test that parodies the MBTI",
-      "subtitle": "It has zero scientific basis and focuses on self-deprecation and show-off.",
-      "start": "Start testing",
-      "secondary": "Go directly to the test page",
-      "creditTitle": "hint",
+      "title": "Silly Big Personality Test - a joke-first personality test that parodies MBTI",
+      "subtitle": "Zero science. Maximum self-dragging, chaos, and oversharing.",
+      "start": "Start the SBTI Test",
+      "secondary": "Go straight to the test",
+      "creditTitle": "Heads-up",
       "credits": [
-        "This is purely for entertainment, please do not climb."
+        "For light self-observation and sharing. Do not treat it as truth."
       ]
     },
     "test": {
       "hiddenDimension": "Dimension is hidden",
       "specialQuestion": "Supplementary questions",
-      "progressPattern": "{done}/{total}",
+      "progressPattern": "{done} / {total}",
       "questionPattern": "Question {index}",
-      "incompleteHint": "It will be released only after all selections have been made. The world is messy enough, at least complete the questions.",
-      "completeHint": "All done. Now you can put your electronic soul to the results page for judgment.",
-      "backHome": "Return to home page",
+      "incompleteHint": "You can move on only after you answer everything. Life is chaotic enough already, so at least finish the quiz.",
+      "completeHint": "All done. Your electronic soul is now ready for judgment on the results page.",
+      "judgingCountdownPattern": "Judging your electronic soul...",
+      "backHome": "Back home",
       "previous": "Previous question",
       "next": "Next question",
-      "submit": "Submit and view results"
+      "submit": "Submit and view result"
     },
     "result": {
-      "modeKicker": "your main type",
-      "analysisTitle": "A simple interpretation of the personality",
-      "dimensionsTitle": "Fifteen-dimensional score",
+      "modeKicker": "Your main type",
+      "analysisTitle": "Quick read on this type",
+      "dimensionsTitle": "15-dimension breakdown",
       "noteTitle": "Friendly reminder",
-      "regularNote": "This test is for entertainment only. Do not use it as a diagnosis, interview, blind date, breakup, spiritualism, fortune telling or life judgment. You can laugh, but don't take it too seriously.",
-      "specialNote": "This test is for entertainment purposes only. Hiding personality and being silly are all deliberate mistakes made by the author. Please do not regard it as a basis for medicine, psychology, physiognomy, numerology or paranormal science.",
-      "restart": "Retest",
-      "backToHome": "Return to homepage",
-      "authorTitle": "Author's words",
-      "authorOpen": "Expand",
-      "authorClose": "close",
+      "regularNote": "This test is for entertainment only. Do not use it for diagnosis, job interviews, dating decisions, breakups, summoning spirits, fortune telling, or life verdicts. Laugh if you want, just do not treat it like truth.",
+      "specialNote": "This test is for fun. Hidden types and the silly fallback route are intentional traps planted by the creator. Do not treat any of this as medicine, psychology, face reading, numerology, or occult evidence.",
+      "restart": "Take it again",
+      "backToHome": "Back home",
+      "authorTitle": "Creator's note",
+      "authorOpen": "Open",
+      "authorClose": "Close",
       "authorParagraphs": [
-        "This test was first published by Maggot Rouerchuaner (UID417038183), the up owner of station b. The original intention was to persuade a friend who loves drinking to stop drinking.",
-        "Since the author's personality is that of a SHIT cynic, he attacked everyone equally, so I apologize. But I am a stunning beauty, you will definitely forgive me.",
-        "Regarding this test, I can't balance entertainment and professionalism well, so the interpretation of some personalities is vague or completely inaccurate. I'm sorry if any offense is caused.",
-        "In view of the limited time and energy, I just made one and played with it first. I will gradually improve and modify it later. In short, it is mainly fun, please do not use it for profit."
+        "This test was first posted by the Bilibili creator @蛆肉儿串儿 (UID417038183). The original idea was just to persuade a friend who loved drinking to quit.",
+        "Because the creator is basically a SHIT-style cynic, everyone gets roasted equally. Sorry in advance. But she also says she is an unmatched beauty, so surely you will forgive her.",
+        "I could not perfectly balance entertainment and seriousness here, so some type write-ups are vague or simply off. If anything hit too hard, sorry about that.",
+        "Time and energy were limited, so this version went live first for fun. It will keep getting polished over time. Please do not use it for profit."
       ],
-      "hiddenOverrideKicker": "Hidden personality has been activated",
-      "hiddenOverrideBadge": "Match level 100% · Alcohol abnormality factor has taken over",
-      "hiddenOverrideSub": "The affinity for ethanol is too strong, and the system has directly skipped the regular personality trial.",
-      "fallbackKicker": "The system forces a cover-up",
-      "fallbackBadgePattern": "The highest matching standard personality database is only {similarity}%",
-      "fallbackSub": "The standard personality library collectively went on strike against your brain circuits, so the system forcibly assigned you to HHHH.",
-      "regularBadgePattern": "Match {similarity}% · Accurate hit {exact}/15 dimensions",
-      "regularSub": "The dimension hit rate is high, and the current result can be regarded as your first personality portrait.",
-      "scorePattern": "{level}/{score} points",
-      "resultNamePattern": "{code}({name})"
+      "hiddenOverrideKicker": "Hidden type triggered",
+      "hiddenOverrideBadge": "Match 100% · Alcohol anomaly factor has taken over",
+      "hiddenOverrideSub": "Your ethanol affinity is too strong, so the system skipped the normal personality trial.",
+      "fallbackKicker": "System fallback activated",
+      "fallbackBadgePattern": "Top match in the standard type library is only {similarity}%",
+      "fallbackSub": "The standard type library collectively gave up on your brain wiring, so the system forcibly assigned you to HHHH.",
+      "regularBadgePattern": "Match {similarity}% · Exact hit on {exact}/15 dimensions",
+      "regularSub": "The dimensional match is relatively high, so this can be treated as your primary personality portrait for now.",
+      "scorePattern": "{level} / {score} pts",
+      "resultNamePattern": "{code} ({name})"
     }
   },
   "defaultLocale": "zh",
@@ -135,79 +136,79 @@
   ],
   "dimExplanations": {
     "S1": {
-      "L": "He attacks himself more harshly than others, and you want to verify the authenticity of every compliment he says to you.",
-      "M": "The self-confidence value fluctuates with the weather. It can fly with the wind and shrink first against the wind.",
-      "H": "I have a general idea of ​​myself in my heart and am unlikely to be distracted by a passerby’s words."
+      "L": "You go harder on yourself than anyone else does; even two nice words make you want to verify whether the compliment is real.",
+      "M": "Your confidence changes with the weather: with a tailwind you can fly, against the wind you shrink first.",
+      "H": "You have a fairly clear sense of yourself inside, and one random comment from a passerby is not enough to scatter it."
     },
     "S2": {
-      "L": "There are a lot of snowflakes in the inner channel, and they are often cached in a loop in \"Who Am I\".",
-      "M": "I can still recognize myself at ordinary times, but occasionally I am temporarily changed by my emotions.",
+      "L": "Your inner channel has plenty of static and often gets stuck buffering on \"Who am I?\"",
+      "M": "Most of the time you can still recognize yourself, though emotions may occasionally switch accounts for you.",
       "H": "You have a clear understanding of your own temper, desires and bottom line."
     },
     "S3": {
-      "L": "If you care more about comfort and safety, there is no need to rush into life every day.",
-      "M": "I want to make progress, but also want to relax for a while, and I often hold internal meetings on value ranking.",
-      "H": "It’s easy to be pushed forward by goals, growth, or some important belief."
+      "L": "Comfort and safety matter more to you; life does not need to be in sprint mode every day.",
+      "M": "You want to improve, but you also want to lie down for a while; your value ranking often holds internal meetings.",
+      "H": "You are easily pushed forward by goals, growth, or some important belief."
     },
     "E1": {
-      "L": "The alarm in love is so sensitive that even if you can’t read it back, you can still imagine the ending.",
-      "M": "Half trusting, half testing, there is always a tug of war in the heart.",
-      "H": "I prefer to believe in the relationship itself and not be scared away by the slightest disturbance."
+      "L": "Your relationship alarm is sensitive enough to turn one unread reply into a whole imagined ending.",
+      "M": "Half trust, half testing; relationships often become a tug-of-war in your head.",
+      "H": "You are more willing to trust the relationship itself and will not be scared off by the slightest movement."
     },
     "E2": {
-      "L": "Emotional investment tends to be restrained. It’s not that the door to the heart is not open, but that the door is too tightly guarded.",
-      "M": "You will be committed, but you will give yourself a backup plan, so that you will not go all out.",
-      "H": "Once identified, it is easy to be serious and full of emotions and energy."
+      "L": "Your emotional investment is restrained. It is not that your heart is closed; the access control is just strict.",
+      "M": "You will invest, but you leave yourself a backup plan instead of going all-in.",
+      "H": "Once you are sure, you tend to get serious and give plenty of emotion and energy."
     },
     "E3": {
-      "L": "It is easy to be clingy and easy to be clingy. The sense of warmth in a relationship is very important.",
-      "M": "It requires a little bit of intimacy and independence, and is an adjustable type of dependence.",
-      "H": "The sense of space is very important. No matter how much you love, you must leave a piece of land of your own."
+      "L": "You can cling and be clung to easily; warmth in a relationship matters a lot.",
+      "M": "You need both intimacy and independence, a more adjustable kind of dependence.",
+      "H": "A sense of space matters. No matter how much you love someone, you still need a patch of ground that is yours."
     },
     "A1": {
-      "L": "Look at the world with its own defensive filter. Be suspicious first, then get closer.",
+      "L": "You look at the world through a built-in defensive filter: doubt first, then move closer.",
       "M": "Neither naive nor outright conspiracy theorist, it’s your instinct to wait and see.",
-      "H": "I am more willing to believe in human nature and goodwill, and not rush to sentence the world to death when trouble comes."
+      "H": "You are more willing to believe in human nature and goodwill, and you do not rush to sentence the world to death when trouble comes."
     },
     "A2": {
-      "L": "The rules can be circumvented, and comfort and freedom often come first.",
-      "M": "Be defensive when you need to be defensive, and don’t be stubborn when you need to be flexible.",
-      "H": "I have a strong sense of order and I don’t like to improvise if I can follow the process."
+      "L": "If rules can be routed around, you will route around them; comfort and freedom often come first.",
+      "M": "You follow rules when needed and adapt when needed, without digging in for no reason.",
+      "H": "You have a strong sense of order and would rather follow the process than improvise a scene explosion."
     },
     "A3": {
-      "L": "The sense of meaning is low, and it is easy to feel that many things are just going through the motions.",
-      "M": "Sometimes I have goals, sometimes I want to fail, and my outlook on life is half-activated.",
+      "L": "Your sense of meaning runs low, so many things can feel like going through the motions.",
+      "M": "Sometimes you have goals, sometimes you just want to give up and coast; your life outlook is half booted.",
       "H": "You have more direction in doing things and know roughly where you want to go."
     },
     "Ac1": {
-      "L": "Think in advance and don't overturn. The avoidance system is activated before ambition.",
-      "M": "Sometimes I want to win, sometimes I just want to stay out of trouble, the motivations are mixed.",
-      "H": "More likely to be ignited by a sense of achievement, growth, and advancement."
+      "L": "Before acting, you first check how not to crash; the risk-avoidance system starts before ambition does.",
+      "M": "Sometimes you want to win, sometimes you just want to avoid trouble; the motivation mix is complicated.",
+      "H": "You are more easily lit up by results, growth, and the feeling of moving things forward."
     },
     "Ac2": {
-      "L": "It’s easy to turn around a few times before making a decision, and mental meetings often times out.",
-      "M": "I will think about it, but I won’t think about it. It’s a normal hesitation.",
-      "H": "He is quick to make decisions and does not like to look back after making a decision."
+      "L": "Before deciding, you tend to circle a few more times; the meeting in your head often runs overtime.",
+      "M": "You do think things through, but not to the point of a full system crash. It is normal hesitation.",
+      "H": "You make calls quickly, and once the decision is made you do not like turning back to fuss over it."
     },
     "Ac3": {
-      "L": "There is a deep relationship between execution and the dead line, and the later it gets, the more likely it is that it will wake up.",
-      "M": "It can be done, but the state depends on the timing, sometimes it is stable and sometimes it is unstable.",
-      "H": "The desire to push forward is relatively strong, and it feels like there is a thorn in my heart if things don't fall into place."
+      "L": "Your execution has a deep relationship with deadlines; the later it gets, the more likely it is to awaken.",
+      "M": "You can get things done, but your state depends on timing: sometimes steady, sometimes coasting.",
+      "H": "Your urge to push forward is strong; if something has not landed, it feels like a thorn stuck in your mind."
     },
     "So1": {
-      "L": "Social networking is slow to start, and taking the initiative usually takes a while.",
-      "M": "If someone comes, you will be picked up, and if no one comes, you will not be forced to do so. Social flexibility is average.",
-      "H": "I am more willing to take the initiative to open up the scene, and I am not afraid of showing my face in the crowd."
+      "L": "Your social engine warms up slowly; taking the initiative usually requires charging for a while.",
+      "M": "If someone comes over, you respond; if nobody does, you do not force it. Your social flexibility is moderate.",
+      "H": "You are more willing to open up the room yourself and are not too afraid of being seen in a crowd."
     },
     "So2": {
-      "L": "In a relationship, you want to be close and integrated, and when you get acquainted, it is easy to put people into the inner circle.",
-      "M": "I want to be close but also want to leave gaps. The sense of boundary depends on the object.",
-      "H": "She has a strong sense of boundaries and will instinctively take half a step back if she gets too close."
+      "L": "In relationships, you want closeness and merging; once familiar, you easily place people inside the inner circle.",
+      "M": "You want closeness but also a gap. Your sense of boundary adjusts depending on the person.",
+      "H": "Your boundaries are stronger, and if someone gets too close you instinctively take half a step back."
     },
     "So3": {
-      "L": "The expression is more direct, and I basically don’t like to dwell on what’s on my mind.",
-      "M": "You can speak according to the atmosphere, and usually leave a little bit of each in truth and decency.",
-      "H": "Be more proficient in self-switching between different scenes, and the sense of reality will be distributed in layers."
+      "L": "Your expression is more direct; if something is on your mind, you basically do not like circling around it.",
+      "M": "You can read the room when speaking, usually leaving a little room for both truth and tact.",
+      "H": "You are more practiced at switching selves across different scenes, and your sense of realness gets distributed in layers."
     }
   },
   "drunkTriggerQuestionId": "drink_gate_q2",
@@ -242,8 +243,8 @@
   },
   "locale": "en",
   "meta": {
-    "description": "Take the SBTI personality test to discover your absurd personality type. Share your result with friends and enjoy being accurately roasted.",
-    "title": "SBTI Personality Test —— Free Funny Personality Test",
+    "description": "Take the SBTI test online in 3 to 5 minutes, answer 30 questions, and get a shareable, self-deprecating SBTI personality result your friends can recognize fast.",
+    "title": "SBTI Test | Online SBTI Personality Test",
     "urlPath": "/"
   },
   "normalTypes": [
@@ -350,18 +351,119 @@
   ],
   "pageCopy": {
     "intro": {
-      "heroTitle": "SBTI Personality Test —— Free Funny Personality Test",
-      "heroSubtitle": "Take the SBTI personality test to discover your absurd personality type. Share your result with friends and enjoy being accurately roasted.",
-      "whatIsTitle": "What is the SBTI personality test?",
-      "whatIsBody": "The SBTI personality test (Silly Big Personality Test) is a free, joke-first parody of MBTI. Unlike traditional MBTI tests, the SBTI test has zero scientific basis — it is built for self-deprecation, humor, and easy sharing.",
+      "heroTitle": "SBTI Test | Online SBTI Personality Test",
+      "heroSubtitle": "Take the SBTI test online in 3 to 5 minutes, answer 30 questions, and get a shareable, self-deprecating SBTI personality result your friends can recognize fast.",
+      "whatIsTitle": "What is the SBTI test?",
+      "whatIsBody": "The SBTI test, also known as the SBTI personality test, is best understood as a self-deprecation personality quiz, not a serious psychometric tool. It borrows the familiar \"answer questions -> get a type\" format and uses MBTI as an easy entry point, but what it actually organizes is your current state, emotional hit rate, and internet-native self-expression that is easy to share.",
       "mbtiRelationTitle": "How is SBTI related to MBTI?",
-      "mbtiRelationBody": "SBTI is a funny parody version of MBTI. If you think MBTI tests are too serious, the SBTI test gives you the same \"answer questions → get a result\" experience, but the results are more absurd and more shareable. In short: SBTI is the funny alternative to MBTI.",
+      "mbtiRelationBody": "Both SBTI and MBTI help you understand yourself through the familiar format of answering questions and getting a type result, but they focus on different things. MBTI leans more toward relatively stable preferences, self-understanding, and communication frameworks. SBTI leans more toward your current state, emotional hit rate, internet-native expression, and social sharing. You can treat MBTI as a way in, but SBTI is neither a psychological diagnosis nor an inferior version of MBTI or its replacement.",
       "whyTestTitle": "Why take the SBTI test?",
-      "whyTestBody": "No reason needed — just for fun. The SBTI personality test results are uncomfortably accurate, perfect for screenshots and sharing. Best of all: the SBTI test is completely free, no sign-up required.",
+      "whyTestBody": "Take it when you want a lighter way to check in on your current state. The test is quick, the result is vivid, and the output works for both private reflection and sending to a friend who will instantly say, \"That is way too you.\"",
       "suitableTitle": "Who is the SBTI test for?",
-      "suitableBody": "Anyone looking for a light, funny personality test. Whether you are an MBTI veteran wanting something different, or a newcomer to personality tests, the SBTI personality test delivers a fun result in minutes.",
+      "suitableBody": "SBTI is for people who want a lightweight way to observe themselves without treating personality testing like diagnosis. Whether you already know your MBTI and want language that feels closer to your current state, or you are completely new to this kind of quiz, it works as a sharp, discussable, and shareable self-deprecation entry point.",
       "aboutCta": "Learn more about the SBTI test",
       "viewAllTypesCta": "View all personality types"
+    },
+    "resultExpiryBar": {
+      "before": "Your",
+      "highlight": "personal report",
+      "after": "expires soon"
+    },
+    "lockedAnalysis": {
+      "sectionTitle": "Full Report",
+      "checkoutProductLabel": "SBTI Test Result",
+      "previewDescription": "",
+      "hookEyebrow": "",
+      "hookTitle": "",
+      "hookUnlockTitle": "",
+      "hookUnlockBody": "",
+      "hookSummaryFallback": "What trips you up is usually not a lack of care. It is trying too hard to steady the connection before you let it breathe.",
+      "structurePreviewBody": "",
+      "emotionalHookTitle": "",
+      "verifyingButton": "Verifying test record...",
+      "retakeButton": "Retake the test, then unlock the full result",
+      "secondaryShareCta": "Want the cheaper option?",
+      "lockHint": "Pay to view the full result",
+      "unlockToast": "Full analysis unlocked",
+      "summaryPreview": "Result Summary",
+      "summaryPreviewHint": "Strongest signal in this attempt",
+      "closestPreviewHint": "Three closest neighbouring results",
+      "deepProfilePreview": "Personal Pattern Summary",
+      "deepProfilePreviewHint": "The pattern that jumps out first",
+      "personalizedSectionsPreviewHint": "The main internal tension in this attempt",
+      "compatibilityPreview": "Relationship Tendencies",
+      "compatibilityPreviewHint": "Romantic compatibility analysis",
+      "dimensionsPreview": "Personal Fifteen-Dimension Map",
+      "dimensionsPreviewHint": "Radar overview",
+      "dimensionGroupsPreviewHint": "Detailed dimension breakdown",
+      "comboPreview": "Type Background Appendix",
+      "comboPreviewHint": "SBTI × MBTI combos",
+      "priceLabel": "Full Report For This Attempt",
+      "originalPriceLabel": "Original price",
+      "discountHint": "Tap the share button and share to any platform to get the discounted price",
+      "discountApplied": "Discount applied",
+      "viewFullResultButton": "Share result",
+      "payButton": "Pay to view the full result",
+      "payingButton": "Processing...",
+      "typePageTitle": "",
+      "typePageDescription": "",
+      "typePageCta": "Take the test first",
+      "typePageHint": ""
+    },
+    "fullResult": {
+      "heroKicker": "Full Analysis",
+      "resultHeroSummary": "This report starts with the strongest read from this attempt, then opens up the structure behind it step by step.",
+      "resultHeroBody": "The point is not to paste the label again, but to explain why this result landed on you this time.",
+      "resultFlowTitle": "The clearest direction in this attempt",
+      "resultFlowBody": "This is not an evenly spread result. A few signals clearly pull harder than the rest, so the overall read feels more directional.",
+      "resultStoryTitle": "Why this result hits at all",
+      "resultStoryBody": "What usually lands is not the label itself, but the way it names the reaction pattern you have been showing most steadily lately.",
+      "resultMoodTitle": "The first impression you give right now",
+      "resultMoodBody": "This is closer to the way you have been coming across lately than to some fixed identity you are stuck with forever.",
+      "resultUnlockTitle": "What the full report keeps unpacking",
+      "resultUnlockBody": "Keep going and you will see the fifteen-dimension spread, relationship tendencies, and the most specific tension points inside this result.",
+      "leaderboardTitle": "Want to count this result in the leaderboard?",
+      "leaderboardBody": "If you want this result counted in the overall board, submit it here. It is optional and does not affect your report.",
+      "strongestLabel": "Most Obvious Trait",
+      "weakestLabel": "Most Restrained Side",
+      "closestLabel": "Three Closest Alternatives",
+      "closestFallback": "No closer neighbouring result was retained for this attempt.",
+      "coverCardTitle": "Result Card",
+      "coverSummaryTitle": "Type Summary",
+      "verdictEyebrow": "Bottom line first",
+      "verdictTitle": "The clearest read from this attempt",
+      "verdictBody": "",
+      "overviewTitle": "Strongest / Most restrained / Nearby results",
+      "overviewBody": "",
+      "whyThisResultEyebrow": "Why this result",
+      "whyThisResultTitle": "Why you landed on this result",
+      "whyThisResultBody": "",
+      "dimensionRadarEyebrow": "Result structure",
+      "dimensionRadarTitle": "Fifteen-Dimension Result",
+      "dimensionRadarBody": "",
+      "dimensionRadarFootnote": "That spread is also why the explanation below reads more like your current reaction pattern than a generic type intro.",
+      "personalizedHintTitle": "This section is written from your answers",
+      "personalizedHintBody": "The scores and explanations here follow this attempt, so not everyone with the same type will see the exact same wording.",
+      "scenePanelsEyebrow": "Put it into scenes",
+      "scenePanelsTitle": "How this version of you shows up in real situations",
+      "scenePanelsBody": "",
+      "misreadAndRiskEyebrow": "Common misreads",
+      "misreadAndRiskTitle": "How people misread you, and where you tend to jam",
+      "misreadAndRiskBody": "This is not a pros-and-cons list. It focuses on the misreads and sticking points that are most likely to matter in real life.",
+      "adjustmentAdviceEyebrow": "Small adjustments",
+      "adjustmentAdviceTitle": "If you keep getting stuck, start with these three adjustments",
+      "adjustmentAdviceBody": "",
+      "dimensionGroupsEyebrow": "Fifteen dimensions up close",
+      "dimensionGroupsTitle": "Where the fifteen dimensions carry the most weight",
+      "dimensionGroupsBody": "Looking at each group on its own makes it easier to separate long-term tone from what is only temporarily high or low in this attempt.",
+      "bottomActionsEyebrow": "Next steps",
+      "bottomActionsTitle": "Choose your next step",
+      "bottomActionsBody": "Go to the type detail page, retake the test, or head back to the homepage.",
+      "snapshotMissingTitle": "Personalized snapshot unavailable",
+      "snapshotMissingBody": "This attempt did not keep its answer snapshot, so the page falls back to the longer-term type background for now.",
+      "backgroundEyebrow": "Type Background",
+      "backgroundTitle": "Longer-term background for this type",
+      "backgroundBody": "The sections below lean more toward this type's usual relationship patterns, interaction style, and combo appendix. They work best as a reference point against your current result."
     },
     "test": {
       "resultArtwork": "Personality card",
@@ -371,59 +473,229 @@
       "viewLeaderboard": "View Leaderboard",
       "submitting": "Submitting..."
     },
-    "testIntro": {
-      "collapseCta": "Hide intro",
-      "desktopViewAllLines": [
-        "View all",
-        "personality types"
+    "testSeo": {
+      "heroTitle": "Online SBTI Test: Start the Personality Test",
+      "heroSummary": "Zero science, just a sharper self-deprecation for your internet personality.",
+      "title": "Online SBTI Test",
+      "summary": "The SBTI test online asks 30 questions and turns your answers into a shareable SBTI result for self-observation and instant sharing.",
+      "typesCta": "View all personality types",
+      "mbtiCta": "SBTI × MBTI"
+    },
+    "assessmentOverview": {
+      "eyebrow": "Assessment Overview",
+      "title": "SBTI is not a more serious MBTI. It is the personality test that gets uncomfortably close.",
+      "summary": "The SBTI test compresses 30 questions, 15 dimensions, L / M / H scoring, and SBTI types prototype matching into a result people can screenshot, send, and explain in one line. The point is not to flatter you. It is to name the current state your friends may recognize immediately.",
+      "positioningTitle": "First: it is not measuring how perfect you are",
+      "positioningBody": "The SBTI personality test works more like an internet mirror than a formal identity badge. MBTI often explains stable preferences; SBTI focuses on current patterns: self-doubt, relationship habits, action rhythm, social masks, and the emotions people hide inside jokes.",
+      "hooksTitle": "Why does it feel so close to home?",
+      "hooks": [
+        {
+          "title": "It writes in scenes, not compliments",
+          "body": "Instead of saying you are special in vague language, it names familiar moments: overthinking, weak boundaries, delay, caretaking, sharp words, or pretending nothing happened."
+        },
+        {
+          "title": "It cuts explanation cost",
+          "body": "You do not need a long status update. One SBTI type name can open the conversation, give your friends the emotional context, and make the result easy to claim."
+        },
+        {
+          "title": "It is built for screenshots",
+          "body": "Short type names, pointed copy, and result cards make the test easy to share. The reaction it wants is simple: that is painfully you."
+        }
       ],
-      "expandCta": "Show intro",
-      "heading": "SBTI Personality Test",
-      "description": "Start the free SBTI personality test and discover your funny personality type. SBTI is a joke-first MBTI parody — no science, just self-deprecating humor. Share your result with friends.",
-      "mbtiNote": "Unlike MBTI, the SBTI personality test does not aim for accuracy — but the results might hit closer to home than you expect."
+      "mechanismTitle": "How does the SBTI test produce a result?",
+      "mechanismSummary": "The mechanism is not mystical, and it is not AI fortune-telling. It turns answers into a 15-dimension contour, then compares that contour with predefined personality prototypes.",
+      "mechanism": [
+        {
+          "label": "30 standard questions",
+          "body": "Each question maps an everyday choice into low, medium, or high signal, so the result comes from the full answer pattern rather than one funny option."
+        },
+        {
+          "label": "15 dimensions",
+          "body": "Self, emotion, attitude, action, and social models each contain 3 dimensions, forming one L / M / H pattern."
+        },
+        {
+          "label": "Prototype matching",
+          "body": "The system compares your pattern with standard SBTI types and selects the closest fit instead of drawing a random personality card."
+        },
+        {
+          "label": "DRUNK and HHHH",
+          "body": "DRUNK is a drinking-related trigger path. HHHH is a special fallback when the strongest standard match is too weak."
+        }
+      ],
+      "dimensionsTitle": "The 15 dimensions are easier to read as 5 everyday questions",
+      "dimensionsSummary": "These dimensions are not clinical scales. They organize common internet-life patterns into directions people can discuss.",
+      "dimensions": [
+        {
+          "name": "Self",
+          "body": "How you see yourself, how clear your boundaries are, and whether your first move is steadiness or self-attack."
+        },
+        {
+          "name": "Relationships",
+          "body": "Whether you move closer, give more, ask for reassurance, pull away, set limits, or protect yourself first."
+        },
+        {
+          "name": "Worldview",
+          "body": "Whether you meet the world with trust, defense, detachment, cynicism, or a stubborn need for meaning."
+        },
+        {
+          "name": "Action",
+          "body": "Whether you start fast, delay slowly, revive at the deadline, or avoid risk before moving."
+        },
+        {
+          "name": "Social life",
+          "body": "Whether you enter the room, keep distance, speak plainly, or switch masks by context."
+        }
+      ],
+      "readMoreTitle": "Read these next if you want the full picture",
+      "readMoreSummary": "This homepage section gives the fast version. The full definition, algorithm, accuracy-feel, spread mechanics, and SBTI vs MBTI comparison live in the blog.",
+      "readMoreLinks": [
+        {
+          "slug": "what-is-sbti",
+          "title": "What Is SBTI?",
+          "body": "Understand SBTI through its origin, definition, structure, and use boundary."
+        },
+        {
+          "slug": "how-sbti-works",
+          "title": "How SBTI Works",
+          "body": "Break down 30 questions, 15 dimensions, prototype matching, DRUNK, and HHHH."
+        },
+        {
+          "slug": "why-sbti-feels-accurate",
+          "title": "Why SBTI Feels Accurate",
+          "body": "See why it can feel personally sharp without becoming a clinical tool."
+        },
+        {
+          "slug": "why-sbti-went-viral",
+          "title": "Why SBTI Went Viral",
+          "body": "Trace how SBTI became a screenshot, group-chat, and social-platform object."
+        },
+        {
+          "slug": "sbti-vs-mbti",
+          "title": "SBTI vs MBTI",
+          "body": "Compare purpose, result style, use cases, and limits across both tests."
+        }
+      ],
+      "boundaryTitle": "Use the boundary, not just the label",
+      "boundaryBody": "SBTI is a self-deprecation personality quiz and a tool for self-expression. It is not psychological diagnosis, hiring screening, relationship judgment, or a life verdict. Treat it as a sharp self-observation prompt and a conversation starter."
     },
     "type": {
       "backHome": "Back home",
       "moreTypes": "More SBTI types",
       "profile": "SBTI Result",
-      "startTest": "Take the SBTI Test"
+      "startTest": "Take the SBTI Test",
+      "statsTitle": "Live Type Snapshot",
+      "statsBody": "These numbers come from this platform's own leaderboard submissions and update as more people finish the test.",
+      "rankLabel": "Ranking",
+      "shareLabel": "Share",
+      "totalLabel": "Total users",
+      "updatedAtLabel": "Updated",
+      "unavailableTitle": "Live stats are not available yet",
+      "unavailableBody": "The type page can still show the canonical profile, but this type does not have a refreshed leaderboard snapshot yet.",
+      "profileTitle": "15-Dimension Type Profile",
+      "profileBody": "This is the canonical profile for the public type page. It shows the archetypal shape of this personality rather than a private answer-by-answer result.",
+      "profileBreakdownTitle": "Dimension breakdown"
     },
     "types": {
       "browseAll": "View all types",
       "typesDescription": "Each type has its own setup, traits, and full result breakdown. If you want the complete list, you can browse all SBTI personality types here.",
       "typesEyebrow": "27 Personality Types",
-      "typesTitle": "Twenty-seven SBTI personality types",
-      "viewDetails": "See this SBTI personality test result"
+      "typesTitle": "27 SBTI personality types",
+      "viewDetails": "See this SBTI personality test result",
+      "unlockEyebrow": "Browse the full library",
+      "unlockTitle": "Browse all 27 SBTI personality profiles",
+      "unlockDescription": "You can skim the full type library without leaving this page. Open any card to read the longer profile description for that personality.",
+      "expandProfile": "Read profile",
+      "collapseProfile": "Hide profile"
     },
     "faq": {
-      "eyebrow": "FAQ",
-      "title": "Frequently asked questions",
+      "eyebrow": "SBTI FAQ",
+      "title": "SBTI FAQ",
+      "description": "Searching for the SBTI test, SBTI personality test, or SBTI vs MBTI? Start here for the mechanism, result logic, limits, and best way to use it.",
       "items": [
-        [
-          "What is SBTI?",
-          "The SBTI test is a joke-first personality quiz and an SBTI personality test built for satire, self-mockery, and easy sharing. If MBTI feels too serious, this version keeps the format but makes it funnier."
-        ],
-        [
-          "Is the SBTI result accurate?",
-          "The SBTI test can feel uncomfortably familiar, but it is still a joke-first SBTI personality test. Treat the result as satire and self-observation, not as a serious decision tool."
-        ],
-        [
-          "How long does the SBTI test take?",
-          "The SBTI test usually takes about as long as a coffee break. This SBTI personality test has no time limit, so first instinct answers are enough."
-        ],
-        [
-          "Why does the SBTI test question order change?",
-          "The SBTI test changes question order between runs, and special prompts can appear in the middle. That makes each SBTI personality test attempt feel a little different."
-        ],
-        [
-          "What if my SBTI result is terrible?",
-          "If your SBTI test result looks terrible, that is part of the joke. This SBTI personality test is built for entertainment, so sharing the result is usually the right move."
-        ],
-        [
-          "Why does the SBTI test have hidden types?",
-          "Some SBTI test answer paths can trigger a hidden result or fallback result. That is part of what makes the SBTI personality test more replayable."
-        ]
+        {
+          "question": "What is the SBTI personality test?",
+          "answer": "The SBTI test, or SBTI personality test, is a self-deprecation personality quiz. It is not a more serious MBTI. It uses 15 dimensions, internet-style type names, and shareable results to describe your current expression, relationship style, boundaries, and behavior in a way you and your friends can understand quickly."
+        },
+        {
+          "question": "How long does the SBTI test take, and can I retake it?",
+          "answer": "Most attempts take about 3 to 5 minutes. You can retake it, but the question order, special paths, mood, and current state can change your choices, so a retake is better read as a snapshot of now rather than a permanent label."
+        },
+        {
+          "question": "What is the biggest difference in SBTI vs MBTI?",
+          "answer": "MBTI is usually used to explore relatively stable preferences, self-understanding, and communication patterns. SBTI is more of an internet-native personality test built around current state, emotional recognition, screenshots, and friend-group discussion. SBTI can use MBTI as a reference point, but it is not an MBTI replacement or a diagnosis."
+        },
+        {
+          "question": "What do the 15 dimensions in SBTI describe?",
+          "answer": "The 15 dimensions do not reduce you to one trait. They split the result across self-perception, relationships, worldview, action style, and social energy, so you can see not only which type you got, but why the result may feel so specific."
+        },
+        {
+          "question": "How does SBTI match a result?",
+          "answer": "The test uses 30 standard questions to build a 15-dimension profile. Each dimension lands in a range such as L / M / H, then the profile is compared with personality prototypes. Some answers may trigger special paths like the hidden type DRUNK; if no standard prototype is strong enough, HHHH can appear as a fallback result."
+        },
+        {
+          "question": "How many SBTI types are there?",
+          "answer": "There are currently 27 SBTI types: 25 standard personality types, plus the hidden type DRUNK and the fallback type HHHH. The names work more like internet nicknames than academic labels, which makes results easier to remember, screenshot, and explain to friends."
+        },
+        {
+          "question": "Why do many people feel that SBTI is accurate?",
+          "answer": "That feeling usually comes from three things: the questions focus on your current state, the result copy turns vague feelings into specific language, and the type names make it easy to recognize yourself or someone you know. It is emotional recognition and social expression, not clinical accuracy."
+        },
+        {
+          "question": "Can SBTI results be used for diagnosis, hiring, or relationship decisions?",
+          "answer": "No. SBTI is for entertainment, self-observation, and social sharing. It should not be used for psychological diagnosis, hiring screens, partner judgments, school decisions, or workplace decisions. Important choices should never depend on one SBTI result."
+        },
+        {
+          "question": "Why can I get a different result when I retake the test?",
+          "answer": "SBTI looks at your current state, not a fixed personality conclusion. Question order, special-question triggers, your mood while answering, and recent events can all shift the 15-dimension profile."
+        },
+        {
+          "question": "What should I do with my SBTI result after the test?",
+          "answer": "The best use is to notice which parts feel true, then share the screenshot or link with friends for comparison. Treat it as a light self-observation tool and a conversation starter, not an authoritative identity label."
+        }
       ]
+    },
+    "paidReportCard": {
+      "title": "Latest Paid Report",
+      "purchasedLabel": "Purchased",
+      "cta": "View Full Report"
+    },
+    "deepReport": {
+      "reportTitle": "Preview of Your Deep Personality Report",
+      "heroLabel": "Deep Personality",
+      "continueButton": "Keep Reading",
+      "maskLabel": "Hidden answer",
+      "unavailableBody": "This paid snapshot is unavailable right now. Re-verify the result to reopen the full nine-module report.",
+      "moduleTitles": {
+        "dnaNarrative": "Personality Narrative",
+        "hiddenStrengths": "Hidden Strengths",
+        "growthPotential": "Growth Potential",
+        "careerCompass": "Career Compass",
+        "relationshipStyle": "Relationship Style",
+        "communicationStyle": "Communication Style",
+        "stressManagement": "Stress Management",
+        "bestMatchPersonality": "Best Match Personality",
+        "lifeMotto": "Life Motto"
+      },
+      "activityJustNowLabel": "just now",
+      "activitySecondsAgoPattern": "{count} seconds ago",
+      "activityMinuteAgoPattern": "{count} minute ago",
+      "activityMinutesAgoPattern": "{count} minutes ago",
+      "activityTemplates": [
+        "{timeAgo} someone unlocked the in-depth analysis for {typeCode}",
+        "{timeAgo} someone opened the full personality report for {typeCode}",
+        "{timeAgo} someone started reading the deep profile for {typeCode}"
+      ],
+      "promptTemplates": {
+        "dnaNarrative": "What people miss is that you are really the kind of person who {{answer}}",
+        "hiddenStrengths": "The talent people underestimate most in you is {{answer}}",
+        "growthPotential": "What is most worth amplifying next is {{answer}}",
+        "careerCompass": "The work mode that fits you best is {{answer}}",
+        "relationshipStyle": "What matters most to you in relationships is {{answer}}",
+        "communicationStyle": "The way you are most often misunderstood is {{answer}}",
+        "stressManagement": "The trigger that really pushes you off balance is {{answer}}",
+        "bestMatchPersonality": "The people who fit you best are {{answer}}",
+        "lifeMotto": "The life motto that fits you best is {{answer}}"
+      }
     }
   },
   "questions": [
@@ -433,11 +705,11 @@
       "text": "I'm not just a loser. I'm also a clown and a washed-up nobody. I've never been in a relationship, I'm timid and insecure, and my youth has been one long string of fantasies. Every day I imagine having a girl to stroll around with, shop with, and hang out with. In reality, I've burned through my parents' money, gone to a lousy school, drifted through life, and ended up a directionless, talentless nobody. Every time I see people joking online about losers like me, I want to cry. I'm like a rat underground, peeking through a sewer grate at all the good things up on the surface. Every time I see that, it hurts and makes my world feel even smaller. Please, man, leave a little room for clowns like us to breathe. I really don't want to soak my pillow with tears in broad daylight.",
       "options": [
         {
-          "label": "I cried.",
+          "label": "I'm crying...",
           "value": 1
         },
         {
-          "label": "What's this.",
+          "label": "What even is this...",
           "value": 2
         },
         {
@@ -452,15 +724,15 @@
       "text": "I'm not good enough. The people around me are all better than I am.",
       "options": [
         {
-          "label": "really",
+          "label": "Yes",
           "value": 1
         },
         {
-          "label": "sometimes",
+          "label": "Sometimes",
           "value": 2
         },
         {
-          "label": "no",
+          "label": "No",
           "value": 3
         }
       ]
@@ -475,11 +747,11 @@
           "value": 1
         },
         {
-          "label": "neutral",
+          "label": "Neutral",
           "value": 2
         },
         {
-          "label": "agree",
+          "label": "Agree",
           "value": 3
         }
       ]
@@ -494,11 +766,11 @@
           "value": 1
         },
         {
-          "label": "neutral",
+          "label": "Neutral",
           "value": 2
         },
         {
-          "label": "agree",
+          "label": "Agree",
           "value": 3
         }
       ]
@@ -513,11 +785,11 @@
           "value": 1
         },
         {
-          "label": "neutral",
+          "label": "Neutral",
           "value": 2
         },
         {
-          "label": "agree",
+          "label": "Agree",
           "value": 3
         }
       ]
@@ -532,11 +804,11 @@
           "value": 1
         },
         {
-          "label": "neutral",
+          "label": "Neutral",
           "value": 2
         },
         {
-          "label": "agree",
+          "label": "Agree",
           "value": 3
         }
       ]
@@ -544,18 +816,18 @@
     {
       "id": "q7",
       "dim": "E1",
-      "text": "Your partner hasn't replied for over five hours and says they had diarrhea. What's your first thought?",
+      "text": "Your partner hasn't replied for over five hours, then says they were stuck with explosive diarrhea. What's your first thought?",
       "options": [
         {
-          "label": "It's impossible to have diarrhea for 5 hours, maybe he hid it from me.",
+          "label": "No way diarrhea lasts five hours. Maybe they're hiding something from me.",
           "value": 1
         },
         {
-          "label": "Swinging between trust and suspicion.",
+          "label": "Wobbling between trust and suspicion.",
           "value": 2
         },
         {
-          "label": "Maybe he really doesn't feel well today.",
+          "label": "Maybe they really do feel awful today.",
           "value": 3
         }
       ]
@@ -574,7 +846,7 @@
           "value": 2
         },
         {
-          "label": "no",
+          "label": "No",
           "value": 3
         }
       ]
@@ -585,7 +857,7 @@
       "text": "I swear to heaven: I take every relationship seriously.",
       "options": [
         {
-          "label": "and no",
+          "label": "Not really.",
           "value": 1
         },
         {
@@ -593,7 +865,7 @@
           "value": 2
         },
         {
-          "label": "Yes! (With a clear conscience and a proud face)",
+          "label": "Yes! (proud face, conscience clean)",
           "value": 3
         }
       ]
@@ -601,18 +873,18 @@
     {
       "id": "q10",
       "dim": "E2",
-      "text": "Your partner is respectful, gentle, self-disciplined, upright, eloquent, observant, knowledgeable, patient, kind, approachable, ambitious, radiant, and absurdly gorgeous. What would you do?",
+      "text": "Your partner respects elders, loves children, is gentle and decent, pure as driven snow, upright, righteous, silver-tongued, observant, worldly, learned, patient, kind, approachable, ambitious, glowing with main-character energy, and illegally gorgeous. What do you do?",
       "options": [
         {
-          "label": "No matter how good he is, I won't fall into it too deep.",
+          "label": "Even if they're that amazing, I still won't fall too deep.",
           "value": 1
         },
         {
-          "label": "It will be between A and C.",
+          "label": "Probably somewhere between A and C.",
           "value": 2
         },
         {
-          "label": "I will cherish her very much and may become a love brain.",
+          "label": "I'd treasure them so much I might become fully relationship-brained.",
           "value": 3
         }
       ]
@@ -623,15 +895,15 @@
       "text": "After you start dating, your partner turns out to be extremely clingy. How do you feel?",
       "options": [
         {
-          "label": "That's cool",
+          "label": "That would be kind of awesome",
           "value": 1
         },
         {
-          "label": "It doesn’t matter",
+          "label": "Either way, whatever",
           "value": 2
         },
         {
-          "label": "I prefer to keep my own space",
+          "label": "I'd rather keep some independent space",
           "value": 3
         }
       ]
@@ -642,15 +914,15 @@
       "text": "I care a lot about personal space in any relationship.",
       "options": [
         {
-          "label": "I prefer to rely on and be dependent on",
+          "label": "I prefer depending on each other and being depended on",
           "value": 1
         },
         {
-          "label": "It depends on the situation",
+          "label": "Depends",
           "value": 2
         },
         {
-          "label": "Yes! (Said decisively)",
+          "label": "Yes! (said with zero hesitation)",
           "value": 3
         }
       ]
@@ -661,7 +933,7 @@
       "text": "Most people are kind.",
       "options": [
         {
-          "label": "In fact, there are more evil people in the human heart than there are hemorrhoids in the world.",
+          "label": "Honestly, evil hearts are more common than hemorrhoids.",
           "value": 1
         },
         {
@@ -669,7 +941,7 @@
           "value": 2
         },
         {
-          "label": "Yes, I want to believe that there are more good people.",
+          "label": "Yes, I want to believe good people are the majority.",
           "value": 3
         }
       ]
@@ -680,15 +952,15 @@
       "text": "You're walking down the street when an adorable little girl bounces over to you. She looks cute from the front, from the side, and even on camera. She hands you a lollipop. What goes through your mind?",
       "options": [
         {
-          "label": "Wow, she's so nice and cute! You actually gave me a lollipop!",
+          "label": "Aww, she's so nice and so cute! She actually gave me a lollipop!",
           "value": 3
         },
         {
-          "label": "Looking confused, scratching his head",
+          "label": "Standing there confused, scratching my head",
           "value": 2
         },
         {
-          "label": "Maybe this is a new type of scam? It's better to go away.",
+          "label": "Maybe this is some new scam? Better keep walking.",
           "value": 1
         }
       ]
@@ -699,15 +971,15 @@
       "text": "Exams are coming up, and the school requires evening self-study. Taking leave will cost you points. But tonight you've made plans with your crush to play PUBG Mobile. What do you do?",
       "options": [
         {
-          "label": "It’s warped! Just once anyway!",
+          "label": "Skip it. It is only this once, anyway!",
           "value": 1
         },
         {
-          "label": "Just take a day off.",
+          "label": "Might as well ask for leave.",
           "value": 2
         },
         {
-          "label": "The exam is almost here, why go there?",
+          "label": "Exams are this close. Why would I go?",
           "value": 3
         }
       ]
@@ -718,11 +990,11 @@
       "text": "I like breaking convention and hate being constrained.",
       "options": [
         {
-          "label": "agree",
+          "label": "Agree",
           "value": 1
         },
         {
-          "label": "remain neutral",
+          "label": "Neutral",
           "value": 2
         },
         {
@@ -741,11 +1013,11 @@
           "value": 1
         },
         {
-          "label": "neutral",
+          "label": "Neutral",
           "value": 2
         },
         {
-          "label": "agree",
+          "label": "Agree",
           "value": 3
         }
       ]
@@ -756,15 +1028,15 @@
       "text": "Then one day it hits me: what the hell is the meaning of life anyway? Humans are just animals driven by desire, basically ruled by hormones. Hungry, so we eat. Sleepy, so we sleep. In heat, so we want to mate. We're really not that different from pigs and dogs.",
       "options": [
         {
-          "label": "That's it.",
+          "label": "Yeah, pretty much.",
           "value": 1
         },
         {
-          "label": "Maybe, maybe not.",
+          "label": "Maybe yes, maybe no.",
           "value": 2
         },
         {
-          "label": "This is nonsense",
+          "label": "This is complete bullshit",
           "value": 3
         }
       ]
@@ -779,11 +1051,11 @@
           "value": 1
         },
         {
-          "label": "neutral",
+          "label": "Neutral",
           "value": 2
         },
         {
-          "label": "agree",
+          "label": "Agree",
           "value": 3
         }
       ]
@@ -791,18 +1063,18 @@
     {
       "id": "q20",
       "dim": "Ac1",
-      "text": "You're constipated, you've already been sitting on the toilet for 30 minutes, and you still can't go. Which option sounds more like you?",
+      "text": "You're constipated, you've been sitting on the toilet for 30 minutes, and nothing is happening. Which one is more you?",
       "options": [
         {
-          "label": "Sit for another thirty minutes and take a look, maybe it will be there.",
+          "label": "Sit another thirty minutes and see. Maybe something will happen.",
           "value": 1
         },
         {
-          "label": "Slap your butt hard and say: \"Damn ass, pull it!\"",
+          "label": "Slap your butt hard and say, \"Deadbeat butt, hurry up and poop!\"",
           "value": 2
         },
         {
-          "label": "When using Kaiserlu, pull it out quickly.",
+          "label": "Use an enema so you can get it out quickly.",
           "value": 3
         }
       ]
@@ -817,11 +1089,11 @@
           "value": 1
         },
         {
-          "label": "neutral",
+          "label": "Neutral",
           "value": 2
         },
         {
-          "label": "agree",
+          "label": "Agree",
           "value": 3
         }
       ]
@@ -832,15 +1104,15 @@
       "text": "This question has no prompt. Just pick blindly.",
       "options": [
         {
-          "label": "After thinking about it again and again, I feel like I should choose A?",
+          "label": "After overthinking it again and again, I feel like maybe I should pick A?",
           "value": 1
         },
         {
-          "label": "Ah, how about choice B?",
+          "label": "Uh, maybe B?",
           "value": 2
         },
         {
-          "label": "Can't you just choose C?",
+          "label": "When in doubt, pick C?",
           "value": 3
         }
       ]
@@ -851,15 +1123,15 @@
       "text": "When people say you're great at getting things done, which thought feels closer to the truth?",
       "options": [
         {
-          "label": "I was really strong in execution when I was pushed to the end.",
+          "label": "When I'm pushed to the very end, my execution power does get terrifying...",
           "value": 1
         },
         {
-          "label": "Ah, sometimes.",
+          "label": "Uh, sometimes.",
           "value": 2
         },
         {
-          "label": "Yes, things should have been moved forward",
+          "label": "Yes. Things are supposed to move forward.",
           "value": 3
         }
       ]
@@ -867,10 +1139,10 @@
     {
       "id": "q24",
       "dim": "Ac3",
-      "text": "I usually make plans before doing things, ____",
+      "text": "I usually have a plan when I do things, ____",
       "options": [
         {
-          "label": "But plans don't change as quickly as they do.",
+          "label": "But plans can never keep up with changes.",
           "value": 1
         },
         {
@@ -886,18 +1158,18 @@
     {
       "id": "q25",
       "dim": "So1",
-      "text": "You met a bunch of online friends through Dead by Daylight (a pretty intense game), and now they've invited you to meet in real life. What's your reaction?",
+      "text": "You met a bunch of online friends through Identity V (a pretty intense game), and now they've invited you to meet in real life. What's your reaction?",
       "options": [
         {
-          "label": "Even if we chatted online, I was still a little nervous in person.",
+          "label": "Talking big online is one thing, but meeting in person would still make me a little nervous.",
           "value": 1
         },
         {
-          "label": "It’s also nice to meet netizens. Anyway, I’ll chat with whoever comes.",
+          "label": "Meeting online friends sounds nice too. Whoever talks to me, I'll chat a bit.",
           "value": 2
         },
         {
-          "label": "I'd dress up and chat warmly, and what if, and I mean what if?",
+          "label": "I'd dress up and chat warmly. You never know... I mean, you never know.",
           "value": 3
         }
       ]
@@ -908,15 +1180,15 @@
       "text": "A friend brings another friend along to hang out. What are you most likely to be like?",
       "options": [
         {
-          "label": "I naturally feel a bit distant from \"friends of friends\", and I am afraid that it will affect their relationship.",
+          "label": "I naturally keep a little distance from 'friends of friends' because I don't want to mess up their relationship.",
           "value": 1
         },
         {
-          "label": "Look at each other and play if you can.",
+          "label": "Depends on the person. If we vibe, we vibe.",
           "value": 2
         },
         {
-          "label": "Friends of friends should also be considered my friends! Chat enthusiastically",
+          "label": "A friend's friend counts as my friend too! Time to chat warmly.",
           "value": 3
         }
       ]
@@ -927,11 +1199,11 @@
       "text": "When it comes to dealing with people, I basically live inside an electronic fence. Get too close and the alarm goes off automatically.",
       "options": [
         {
-          "label": "agree",
+          "label": "Agree",
           "value": 3
         },
         {
-          "label": "neutral",
+          "label": "Neutral",
           "value": 2
         },
         {
@@ -946,11 +1218,11 @@
       "text": "I want to be very close with people I trust, close enough to feel like long-lost relatives.",
       "options": [
         {
-          "label": "agree",
+          "label": "Agree",
           "value": 1
         },
         {
-          "label": "neutral",
+          "label": "Neutral",
           "value": 2
         },
         {
@@ -965,15 +1237,15 @@
       "text": "Sometimes you clearly have a different, negative opinion about something, but you still don't say it. Most of the time, why?",
       "options": [
         {
-          "label": "This is less common.",
+          "label": "That doesn't happen much.",
           "value": 1
         },
         {
-          "label": "It may be due to feelings or relationships.",
+          "label": "Probably because of face, feelings, or the relationship.",
           "value": 2
         },
         {
-          "label": "I don't want others to know that I am a dark person.",
+          "label": "I don't want people to know I'm this gloomy inside.",
           "value": 3
         }
       ]
@@ -988,11 +1260,11 @@
           "value": 1
         },
         {
-          "label": "neutral",
+          "label": "Neutral",
           "value": 2
         },
         {
-          "label": "agree",
+          "label": "Agree",
           "value": 3
         }
       ]
@@ -1003,22 +1275,22 @@
       "id": "drink_gate_q1",
       "kind": "drink_gate",
       "special": true,
-      "text": "What hobbies do you usually have?",
+      "text": "What are your usual hobbies?",
       "options": [
         {
-          "label": "Eat, drink and have diarrhea",
+          "label": "Eating, drinking, and basic daily survival stuff.",
           "value": 1
         },
         {
-          "label": "artistic hobbies",
+          "label": "Artistic hobbies",
           "value": 2
         },
         {
-          "label": "drinking",
+          "label": "Drinking",
           "value": 3
         },
         {
-          "label": "fitness",
+          "label": "Fitness",
           "value": 4
         }
       ]
@@ -1030,11 +1302,11 @@
       "text": "What's your attitude toward drinking?",
       "options": [
         {
-          "label": "Enjoy a drink, don't drink too much.",
+          "label": "A little drink is nice. I can't handle too much.",
           "value": 1
         },
         {
-          "label": "I am used to pouring liquor into a thermos cup and drinking it as boiled water. I am convinced by the alcohol.",
+          "label": "I pour baijiu into a thermos and drink it like plain water. Alcohol has my full trust.",
           "value": 2
         }
       ]
@@ -1043,165 +1315,165 @@
   "typeLibrary": {
     "CTRL": {
       "code": "CTRL",
-      "cn": "Taker",
-      "intro": "How about it, have you been manipulated by me?",
-      "desc": "Congratulations, you have detected the rarest personality. You are a natural rebel against the law of entropy increase in the universe! 99.99% of the so-called successful people in the world are your poor imitators. The CTRL personality is a walking humanoid self-propelled task manager. The \"rules\" in the eyes of ordinary people are just the basic parameter settings from the factory; the so-called \"plans\" to you are just random graffiti on a whim. What does it mean to have a CTRL friend? It means that your life navigation system will become more accurate and efficient. Because CTRL knows best. CTRL will use \"Ctrl+S\" to help you hard-core save the second before your life train is about to derail, and then use a set of irresistible logic to force you back on track. They are the last backup disks of your chaotic life, the only reset button that is still on before the universe collapses."
+      "cn": "The Mastermind",
+      "intro": "So, have I got you handled yet?",
+      "desc": "Congratulations. You have tested into the rarest personality: a natural rebel against the universe’s law of entropy. Among so-called successful people, 99.99% are just low-quality imitations of you. CTRL is a walking, self-propelled task manager in human form. What ordinary people call “rules” are only factory default settings to you; what they call “plans” are just doodles you made on a whim. Having a CTRL friend means your life navigation system gets sharper and more efficient, because CTRL knows how to keep everything under control. One second before your life train derails, CTRL hits Ctrl+S, hard-saves the file, and drags you back on track with logic you cannot refuse. They are the last backup drive in your chaotic life, the only restart button still glowing before the universe collapses."
     },
     "ATM-er": {
       "code": "ATM-er",
-      "cn": "giver of money",
-      "intro": "Do you think I'm rich?",
-      "desc": "Congratulations, you have discovered the rarest personality in the world. You may become an unsolved mystery in the financial world - yes, the ATM-er may not actually \"send money\", but he may always be \"paying\". Pay for your time, pay for your energy, pay for your patience, and pay for a night that should be peaceful. Therefore, like an old but sturdy ATM machine, what is inserted is other people's anxieties and troubles, and what is spit out is the reassurance of \"It's okay, I'm here\". Your life is one big, one-man-pay show that no one cheers for. You have withstood the waterfall-like demands with rock-like reliability. Occasionally, in the dead of night, you will sigh at the bill-maybe mentally: My damn sense of responsibility has nowhere to put it."
+      "cn": "The Human ATM",
+      "intro": "You think I am that rich?",
+      "desc": "Congratulations. You have found one of the rarest personalities in the world. You may become an unsolved mystery in finance: yes, ATM-er may not literally “give money away,” but they are probably always paying. Paying with time, energy, patience, and nights that should have been peaceful. Like an old but sturdy ATM, other people insert anxiety and trouble, and what comes out is the reassurance of “It is fine, I am here.” Your life is a grand solo bill-paying show with no applause. With rock-solid reliability, you withstand waterfall-level demands, and only late at night do you sigh at a bill, maybe an emotional one: this damned responsibility of mine has nowhere to go."
     },
     "Dior-s": {
       "code": "Dior-s",
-      "cn": "Diaosi",
-      "intro": "Waiting for my dick to counterattack.",
-      "desc": "Congratulations! You are not a diaosi, you are the long-lost spiritual descendant of the cynic sage Diogenes, because the full name of diaosi is Diogenes' Original Realist - sage. Dior-s personality is the most thorough disdain for the traps of contemporary consumerism and PUA. It's not that they \"don't seek advancement,\" but they have already seen through that the end of all \"improvement\" is nothing more than a higher-level prison cell. Diaosi has great wisdom. While others are chasing the wind and being beaten to pieces by the huge waves of the times, Dior-s has long been basking in the sun in his own spiritual barrel, reaching the supreme state of \"one person and one barrel\". What they believe in is not empty talk, but physical laws and biological instincts that have been tested hundreds of millions of times in practice: 1. Lying down is more comfortable than standing; 2. When meal time arrives, you must cook."
+      "cn": "The Loser",
+      "intro": "Just wait for my underdog comeback.",
+      "desc": "Congratulations. You are not merely a diaosi. You are the long-lost spiritual descendant of Diogenes, the ancient Cynic sage, because Dior-s stands for Diogenes’ Original Realist-sage. The Dior-s personality is the most thorough contempt for consumerist traps and success-culture manipulation. They are not “unmotivated”; they have already seen through the fact that the end point of all “self-improvement” is often just a more premium prison cell. Dior-s carries real wisdom. While others chase trends and get slapped around by the waves of the age, Dior-s is already sunbathing inside their spiritual barrel, reaching the supreme state of “person and barrel as one.” They do not believe in empty slogans, but in physical laws and biological instincts tested billions of times: lying down is more comfortable than standing; when it is mealtime, you eat."
     },
     "BOSS": {
       "code": "BOSS",
-      "cn": "leader",
-      "intro": "Give me the steering wheel and I'll drive.",
-      "desc": "BOSS is a person who always holds the steering wheel in his hand. Even if the fuel tank has a red light, even if the navigation is talking nonsense, you will say expressionlessly: I will drive. Then we actually drove the car to our destination. This personality has an independent physical law - the eternal upward law. The BOSS personality looks at the world like a player who has completed the game looking at a novice tutorial. Efficiency is their religion, order is their breath. They do not \"bring their own leadership aura\", they are themselves human-shaped aura generators. The air within a radius of five meters will automatically become serious and efficient. \"Self-breakthrough\" in their eyes is roughly equivalent to \"self-abuse\" in the eyes of ordinary people. Master a new language today, take a professional certificate tomorrow, and plan to colonize Mars the day after tomorrow. If you say it's too curly, he will look at you like a weakling: It's not that I'm too harsh, it's that you're too loose."
+      "cn": "The Boss",
+      "intro": "Hand me the wheel. I will drive.",
+      "desc": "BOSS is the person who always has the steering wheel in hand. Even when the fuel light is red, even when the navigation is talking nonsense, you say, expressionless: I will drive. Then you actually get the car to the destination. This personality has its own law of physics: eternal upward motion. BOSS looks at the world like a player who has already cleared the game watching the tutorial for beginners. Efficiency is their faith; order is their breathing. They do not “have leadership aura.” They are a human aura generator, and within five meters the air automatically becomes serious and efficient. What they call “self-breakthrough” is roughly what ordinary people call “self-torture.” Learn a new language today, earn a professional certificate tomorrow, plan the colonization of Mars the day after. If you say that is too intense, they look at you like you are weak: I am not too ruthless. You are too loose."
     },
     "THAN-K": {
       "code": "THAN-K",
-      "cn": "those who are grateful",
-      "intro": "I thank heaven! I thank the earth!",
-      "desc": "Congratulations, you have tested the rarest personality. You should thank me! Thank you for having the nourishment of life at this moment! What if you are stuck in traffic on your way to work? You should also say: I am grateful for this traffic jam. It gives me more time to listen to this beautiful song and appreciate every face twisted with anxiety outside the window, which makes me cherish my inner peace more. Yes, THAN-K has a gentle personality and an open mind. In their eyes, there are no completely bad people in the world, only \"friends who have not yet been illuminated by the light of gratitude.\" Having a THAN-K friend is like having an inexhaustible positive energy tower around you. TA can even help you discover a Van Gogh-style starry sky picture from the mold in the corner."
+      "cn": "The Grateful",
+      "intro": "I thank the heavens! I thank the earth!",
+      "desc": "Congratulations. You have tested into one of the rarest personalities. You should thank me. Thank you for being nourished by life at this very moment. Stuck in traffic on the way to work? You should still say: I am grateful for this traffic jam. It gives me more time to listen to this lovely song and appreciate every anxiety-twisted face outside the window, making me cherish my inner peace even more. Yes, THAN-K has a warm, jade-like temperament and a mind broad enough to hold the sea. In their eyes, there are no completely bad people, only friends who have not yet been touched by the light of gratitude. Having a THAN-K friend is like keeping an inexhaustible positive-energy tower nearby. They can even help you discover a Van Gogh-style starry sky in the mold stains in the corner."
     },
     "OH-NO": {
       "code": "OH-NO",
-      "cn": "Oh no man",
-      "intro": "Oh no! How come I have this personality?",
-      "desc": "\"Oh no!\" is not a scream of fear, but of supreme wisdom. When ordinary people see a cup placed on the edge of the table, what they see is a disaster epic consisting of \"water damage-short circuit-fire-evacuation of the whole building-economic losses-butterfly effect-the end of the world\". So, with a cry of Oh, no! from the depths of their souls, they will move the cup to the center of the table at lightning speed, and then put an absorbent coaster on it. Oh, no one has an almost paranoid respect for \"boundaries\": What's yours is yours, and what's mine is mine. All accidents and risks have been nipped in the bud with his \"Oh, no!\" They are the patron saints of order, the last decent people with straight nerves in a chaotic world."
+      "cn": "The Oh-No",
+      "intro": "Oh no! How did I end up with this personality?",
+      "desc": "“Oh no!” is not a scream of fear. It is top-tier wisdom. When ordinary people see a cup near the edge of a table, the Oh-No Type sees a disaster epic made of water stains, short circuits, fire, building-wide evacuation, economic loss, butterfly effect, and the end of the world. So, with an Oh, no! from the depths of the soul, they move the cup to the exact center of the table at lightning speed, then place an absorbent coaster under it. The Oh-No Type has an almost obsessive respect for boundaries: yours is yours, mine is mine. Every accident and risk has already been killed in the bud by that “Oh, no!” They are guardians of order, the last decent people in a chaotic world whose nerves are still pulled perfectly taut."
     },
     "GOGO": {
       "code": "GOGO",
-      "cn": "Walker",
-      "intro": "gogogo~ let’s go",
-      "desc": "Research has found that the brain structure of GOGO personality is fundamentally different from that of ordinary people. GOGO lives in an ultimate \"what you see is what you get\" world, and its life creed is so simple and brutal: as long as I close my eyes, it will be dark; as long as I spend all my money, I have no money; as long as I stand on the zebra crossing, I am now a pedestrian. The logic is perfectly closed and cannot be refuted at all. While others are still debating \"which came first, the chicken or the egg\", GOGO Walker has put the chicken and eggs together into a plate of \"chicken lays eggs, eggs lays chicken - the ultimate secret of rice bowl\". They're not \"solving the problem,\" they're \"clearing the to-do list.\" For them, there are only two states in the world: completed and about to be completed by me."
+      "cn": "The Doer",
+      "intro": "gogogo, we are heading out.",
+      "desc": "Research shows that the brain structure of the GOGO personality is fundamentally different from ordinary people’s. GOGO lives in an extreme “what you see is what you get” world, with a life creed so brutally simple it is outrageous: if I close my eyes, the sky is dark; if I spend all my money, I have no money; if I stand on a crosswalk, I am now a pedestrian. The logic is a perfect closed loop and cannot be refuted. While others debate whether the chicken or the egg came first, GOGO has already cooked both into a rice bowl called “the ultimate mystery of chicken makes egg, egg makes chicken.” They are not “solving problems.” They are clearing to-do items. To them, the world has only two states: completed, and about to be completed by me."
     },
     "SEXY": {
       "code": "SEXY",
-      "cn": "stunner",
-      "intro": "You are a natural beauty!",
-      "desc": "When you walk into a room, the lighting system automatically recognizes you as a natural beauty and consciously dims the brightness to avoid wasting energy. When you smile, you become a smiling beauty, and the humidity of the surrounding air will drop significantly, because the water vapor condenses into love in people's eyes. No matter who you are, it is easy for you to pay attention to your presence. Legend has it that if enough SEXY personalities gather together for a party, the combined charm energy released is enough to temporarily distort the structure of time and space, giving participants the happy illusion that \"time has slowed down.\" They don't need to work hard to express themselves. Many times, the mere existence itself is like an excessively gorgeous poem."
+      "cn": "The Stunner",
+      "intro": "You are born to be a stunner.",
+      "desc": "When you walk into a room, the lighting system automatically identifies you as a natural stunner and politely dims itself to avoid wasting energy. When you smile, you become a smiling stunner, and the humidity around you drops sharply because all the water vapor condenses into heart shapes in people’s eyes. Whoever they are, people easily develop an excessive level of attention toward your existence. Legend says that if enough SEXY personalities gather for a party, the combined charm energy they release can briefly distort spacetime and give everyone the happy illusion that time has slowed down. They do not need to try hard to express themselves. Much of the time, simply existing is already like an overly gorgeous piece of prose."
     },
     "LOVE-R": {
       "code": "LOVE-R",
-      "cn": "Passionate",
-      "intro": "Too much love makes reality seem a bit barren.",
-      "desc": "The LOVE-R personality is like a rare species that has survived to this day from ancient mythological times. Its probability of existence is lower than the probability of catching the author's arm in the toilet. You are simply the last and most anachronistic bard of this Iron Forest Age. Because your emotional processor is not binary, it's rainbow. A fallen leaf, in the eyes of ordinary people, is just \"autumn is coming\", but in the eyes of LOVE-R, it is a tragic comedy in thirteen acts about reincarnation, sacrifice and wordless love. Your inner world is like a theme park that never closes. You spend your whole life looking for that soul mate who can understand the park map and is willing to ride the merry-go-round with you to the end of the universe."
+      "cn": "The Hopeless Romantic",
+      "intro": "There is too much love, so reality looks a little barren.",
+      "desc": "The LOVE-R personality is like a rare species surviving from the age of ancient myth, with a probability of existence lower than catching the author’s arm from inside a toilet. You are basically the last, and most out-of-place, bard in this iron-forest era. Your emotional processor is not binary; it runs on rainbows. A fallen leaf is just “autumn is here” to ordinary people, but to LOVE-R it is a thirteen-act tragicomedy about reincarnation, sacrifice, and wordless love. Your inner world is like a theme park that never closes, and your whole life is spent looking for the soul mate who can read the park map and ride the carousel with you until the end of the universe."
     },
     "MUM": {
       "code": "MUM",
-      "cn": "Mother",
-      "intro": "Maybe.can I call you mom.",
-      "desc": "Congratulations, you have tested out the rarest mother personality. Yes, before chaos began, before time had a name, before the first star burped its first burp, there was a mother. The background of my mother's personality is gentleness, she is good at sensing emotions, has super empathy, and knows when to stop and when to say \"forget it\" to herself. Mom is like a doctor, curing other people's unhappiness. It's a pity that when her mother sheds tears, the dose of medicine she gives herself is always smaller than that given to others. MUM often discounts her tenderness."
+      "cn": "The Mom",
+      "intro": "Maybe... can I call you Mom...?",
+      "desc": "Congratulations. You have tested into the rarest Mom personality. Yes, before chaos opened, before time had a name, before the first star let out its first burp, there was already Mom. The base color of the Mom personality is gentleness. They are good at sensing emotions, have powerful empathy, and know when to stop and when to tell themselves “let it go.” Mom is like a doctor, healing other people’s unhappiness. Unfortunately, when Mom cries, the medicine they give themselves is always one size smaller than the medicine they give others. MUM often gives their own tenderness at a discount."
     },
     "FAKE": {
       "code": "FAKE",
-      "cn": "Pseudoman",
-      "intro": "Already, there are no more humans.",
-      "desc": "SCP Foundation Urgent Report: Item Number SCP-CN-████ \"Pseudoman\". In social situations, pseudo-persons are versatile beings because they can switch personas faster than they can switch input methods on their mobile phones. One second he was still in the loyal buddy mode, and the next second the leader came and he instantly switched to the calm, reliable and good employee mode, even the gloss and curl on his face were fine-tuned. Do you think you have made a friend who really understands you? Wake up. You are just lucky enough to meet an android who is good at disguise and has high performance. In the dead of night, the dummy took off the masks layer by layer, and finally discovered that there was a lot of space under the mask, and it was these masks that made up himself."
+      "cn": "The Fake",
+      "intro": "Already, there are no humans left.",
+      "desc": "SCP Foundation urgent report: item number SCP-CN-████, “Impostor.” In social settings, the impostor is smooth in every direction, because they switch personality masks faster than a phone switches keyboards. One second they are in heart-to-heart best-friend mode; the next second a manager appears, and they instantly become the calm, reliable good employee, with even the shine and curl of their face subtly adjusted. You think you made a friend who truly understands you? Wake up. You were just lucky enough to meet a high-performance android good at disguise. Late at night, the impostor removes mask after mask, only to discover that underneath is very empty, and that these masks are exactly what make up the self."
     },
     "OJBK": {
       "code": "OJBK",
-      "cn": "Doesn't matter people",
-      "intro": "When I say casual, I really mean casual.",
-      "desc": "Let’s face the crude nature of the word: OJBK. This is no longer a personality, but a governing philosophy. When ordinary people are faced with the century-old decision of \"rice or noodles for lunch\", their brains are burning calories intensely; and the OJBK personality, with a calmness like a review memorial, will lightly spit out two words: Either way. This is not to say that I have no opinion, this is to tell you: to me, all of your mundane choices are just ants. Why not argue? Because there is no point in debating the future of the universe with a paramecium. Why not be more serious? Because the emperor doesn't care whether the dust under his feet drifts to the left or to the right."
+      "cn": "The Whatever",
+      "intro": "When I say whatever, I really mean whatever.",
+      "desc": "Let us face the rough essence of this word: OJBK. This is no longer a personality. It is a governing philosophy. When ordinary people face the century-level choice of “rice or noodles for lunch,” their brains burn calories in battle. The OJBK personality, with the calm of an emperor reviewing memorials, lightly releases two words: either works. This is not having no opinion. This is telling you: your mortal choices are all ants before me. Why not argue? Because debating the future of the universe with a paramecium is meaningless. Why not be serious about it? Because an emperor does not care whether the dust underfoot drifts left or right."
     },
     "MALO": {
       "code": "MALO",
-      "cn": "What?",
-      "intro": "Life is a copy, and I am just one.",
-      "desc": "My friend, you are not a \"child at heart\", you have not evolved at all. Your soul is still stuck in that happy era when you were hanging on a tree and swinging, and your eyes lit up when you saw a banana. When human ancestors decided to come down from the trees, learn to walk upright, and put on suits and ties, their ancestors looked at them from the nearby tree, scratched their buttocks, and let out a disdainful \"squeak\". They have seen through everything: the so-called \"civilization\" is nothing more than the most boring and least fun paid game. Rules are occasionally broken, ceilings are made for hanging upside down, and conference rooms are made for performing backflips. MALO itself is a fantastic idea that fell out of a huge brain and forgot to close the door."
+      "cn": "The Monke",
+      "intro": "Life is a dungeon, and I am just a monke.",
+      "desc": "Friend, you are not “young at heart.” You simply never evolved. Your soul is still stuck in that happy age of swinging from trees and lighting up at the sight of a banana. When human ancestors decided to come down from the trees, learn to walk upright, and wear suits with ties, the ancestors of the MALO personality watched from a nearby tree, scratched their butt, and let out a dismissive squeak. They have seen through everything: so-called “civilization” is just the most boring, least fun paid game. Rules can occasionally be broken, ceilings are for hanging upside down, and meeting rooms are for performing backflips. MALO itself is a wild idea that fell out of a giant imagination and forgot to close the door behind it."
     },
     "JOKE-R": {
       "code": "JOKE-R",
-      "cn": "clown",
-      "intro": "It turns out we are all clowns.",
-      "desc": "Please note that the JOKE-R personality is not a \"person\", but more like a clown who wears jokes on his body. You open one layer, it's a joke; you open another layer, it's a joke; you open it layer by layer, until finally, you find that the innermost part. is empty, with only a faint echo left saying: Ha, didn't expect it. JOKE-R is the leader of the atmosphere team and the only designated firepower output in social situations. With them here, the place won't be cold. Everyone was laughing up and down, and the ones who laughed the happiest were often themselves - using the loudest laughter to cover up the sound of heartbreak."
+      "cn": "The Clown",
+      "intro": "Turns out we are all clowns.",
+      "desc": "Please note: the JOKE-R personality is not exactly a “person.” It is more like a clown wearing jokes as clothing. Open one layer and it is a joke; open another and it is a bit; keep opening layer after layer until finally you find that the innermost part is empty, with only a faint echo saying: ha, didn’t see that coming, did you? JOKE-R is the captain of the social atmosphere team and the one officially assigned to output firepower. When they are around, the room will not go cold. Everyone laughs until they fold over, and the one laughing the happiest is often JOKE-R themselves, using the loudest laughter to cover the sound of a heart breaking."
     },
     "WOC!": {
       "code": "WOC!",
-      "cn": "straw man",
-      "intro": "Damn it, why do I have this personality?",
-      "desc": "We discovered a magical creature - WOC! Man. They have two completely independent operating systems: one is called the \"surface system\", which is responsible for making a series of fussy onomatopoeias such as \"Holy shit\", \"awesome\", \"ah?\" and so on; the other is called the \"backend system\", which is responsible for calm analysis: Well, it's just as I expected. WOC! People only know shit and don't mind their own business, because they know very well that trying to reason with idiots is like trying to climb up a wall with mud. It not only wastes energy but also makes you shit. So they chose to hold a straw of wisdom and give the highest respect to this crazy world with a soulful \"WOC!\""
+      "cn": "The WTF-er",
+      "intro": "WOC, why am I this personality?",
+      "desc": "We have discovered a magical creature: the WOC! person. They run two completely independent operating layers. One is the frontstage layer, responsible for producing a series of over-the-top sound effects like “what the hell,” “that is insane,” and “huh?” The other is the background layer, responsible for calmly analyzing: yes, exactly as I expected. WOC! people only go “WOC,” and do not stick their nose into other people’s business, because they know deeply that reasoning with idiots is like helping mud climb a wall: it wastes strength and leaves your hand dirty. So they choose to hold a great blade of wisdom-grass and offer this mad world their highest respect with one soulful “WOC!”"
     },
     "THIN-K": {
       "code": "THIN-K",
-      "cn": "thinker",
-      "intro": "Have been thinking deeply for 100s.",
-      "desc": "Research has found that the brain structure of THIN-K personality is fundamentally different from that of ordinary people. As the name suggests, your brain is in a thinking state for long periods of time. You are very good at judging information, paying attention to arguments, arguments, logical reasoning, potential biases, and even a complete set of materials such as the \"investigation report on the author's ideological background within three generations\". In this era of information explosion, you will never follow blindly easily, you will weigh the pros and cons in a relationship, and you will also defend your own space. Are you in a daze when others see you alone? Silly, that's not being in a daze, that's your brain sorting, filing, and destroying all the information it received today."
+      "cn": "The Overthinker",
+      "intro": "Deep thinking for 100s.",
+      "desc": "Research shows that the brain structure of the THIN-K personality is fundamentally different from ordinary people’s. As the name suggests, your brain spends long periods in thinking mode. You are extremely good at judging information: arguments, evidence, logical reasoning, hidden bias, even the full “three-generation ideological background investigation report” on the author. In this age of information overload, you will never blindly follow easily. You weigh costs and benefits in relationships, and you fiercely defend your own personal space. When others see you alone and think you are spacing out? Foolish. That is not spacing out. That is your brain classifying, archiving, and deleting every piece of information it received today."
     },
     "SHIT": {
       "code": "SHIT",
-      "cn": "Cynic",
-      "intro": "This world is a pile of rocks.",
-      "desc": "Congratulations, the SHIT personality is the only rare personality known in the universe. The so-called shit is not complaining, but performing a mysterious ritual. SHIT's behavior pattern is an earth-shattering drama of paradox. Word of mouth: This project is shit. On hand: Open Excel silently and start constructing function models and Gantt charts. Word of mouth: These colleagues are all shit. On hand: After a colleague messed up, I was annoyed and stayed up late to clean up the mess. Saying: This world is a piece of shit, destroy it quickly. On hand: Get up on time at seven o'clock the next morning, get on the shitty subway, and go do that shitty job. Don't be afraid, that's not a doomsday warning, that's his charge that's about to start saving the world."
+      "cn": "The Hater",
+      "intro": "This world is one pile of constructed crap.",
+      "desc": "Congratulations. The SHIT personality is the only known rare personality in the universe. So-called shit is not a complaint; it is a mysterious ritual. SHIT’s behavior pattern is an earth-shaking theatre of paradox. Mouth: this project is absolute shit. Hands: silently opens Excel and starts building function models and Gantt charts. Mouth: these coworkers are all shit. Hands: after a coworker messes up, stays annoyed while pulling an all-nighter to clean the mess perfectly. Mouth: this world is one pile of shit, hurry up and destroy it. Hands: gets up at seven the next morning, squeezes onto the shit-like subway, and goes to do that shit-like job. Do not be afraid. That is not the alarm for the end of the world. That is the charge horn for them to start saving it."
     },
     "ZZZZ": {
       "code": "ZZZZ",
-      "cn": "pretending to be dead",
-      "intro": "I'm not dead, I'm just sleeping.",
-      "desc": "Congratulations, you have tested out the rarest personality that pretends to be dead. You can turn a blind eye to the 99+ messages in the group, but when someone issues the ultimatum \"@all members the deadline is half an hour away\", you may slowly type \"received\" as if you just woke up from a thousand-year-old tomb, and then hand in a passing answer sheet within 29 minutes. Yes, until the only and highest-authority instruction of \"death line\" appears, you will really break out, and you will be a blockbuster. You're proving a truth to the universe: sometimes you can't do anything wrong by doing nothing at all."
+      "cn": "The Ghost",
+      "intro": "I am not dead. I am just sleeping.",
+      "desc": "Congratulations. You have tested into the rarest playing-dead personality. You can ignore 99+ messages in the group chat, but when someone sends the final ultimatum, “@everyone deadline in thirty minutes,” you may slowly type “received” like someone just awakened from a thousand-year tomb, then hand in an answer that at least passes within 29 minutes. Yes: only when the single highest-authority command called “deadline” appears do you truly explode into action. Silent until the moment you astonish everyone. You prove one truth to the universe: sometimes, if you do nothing, you make no mistakes."
     },
     "POOR": {
       "code": "POOR",
-      "cn": "poor people",
-      "intro": "I am poor, but I am very professional.",
-      "desc": "Congratulations, you have tested [POOR - poor person]. This \"poverty\" is not a verdict of wallet balance, but more like a redistribution of resources after giving up desires. Others spread their energy into QR codes all over the sky, but you compress your energy into a beam of laser light, and smoke will start wherever you shine it. The world of POOR is very simple: reduce noise on unimportant things, and work hard on important things to the end. Busy, social, vanity, and a sense of presence everywhere? Sorry, not available. It’s not that you have few resources, you pour them all into a pit, so it looks like poverty, but in fact it looks like a mine. Once you decide something is worth pursuing, no matter how noisy the outside world is, it is just background noise."
+      "cn": "The Broke",
+      "intro": "I am poor, but I am very focused.",
+      "desc": "Congratulations. You have tested as POOR: Resource Poor. This “poverty” is not a verdict on your wallet balance. It is more like resource redistribution after cutting away desire. Other people scatter their energy into a sky full of QR codes; you compress yours into a laser beam, and wherever it points, smoke starts rising. POOR’s world is simple: turn down the noise on everything unimportant, and drill hard into what matters. Buzz, socializing, vanity, constantly making your presence known? Sorry, no time. It is not that you have too few resources. You poured every resource into one pit, so it looks like poverty, but it is actually a mine shaft. Once you decide something is worth digging into, however noisy the outside world gets, it is only background static."
     },
     "MONK": {
       "code": "MONK",
-      "cn": "monk",
+      "cn": "The Monk",
       "intro": "No such worldly desires.",
-      "desc": "While others comprehend the entanglement of love and hate in KTV, MONK personality chooses to comprehend the great truth at home. MONK has seen through the world of mortals, and does not want idlers to disturb his pure practice and disrupt his path. MONK's personal space is their boundary, their Mount Sumeru, their absolute domain, sacrosanct and inviolable. Those who step into it will feel a sense of suffocation from the depths of their souls. MONKs are neither clingy nor entangled, because in their world view, everything has its own independent trajectory. Planets are hundreds of millions of kilometers apart from each other to form a harmonious universe. Why not between people?"
+      "desc": "While other people contemplate the entanglement of love and hate at KTV, the MONK personality chooses to contemplate the Great Way at home. MONK has already seen through the mortal world and does not want random people disturbing their quiet cultivation or breaking their spiritual progress. MONK’s personal space is their barrier, their Mount Sumeru, their absolute domain: sacred and inviolable. Whoever steps into it will feel a suffocation rising from the depths of the soul. MONKs are not clingy or tangled up with people, because in their worldview, everything has its own independent orbit. Planets keep hundreds of millions of kilometers between each other to form a harmonious universe. Why should people be different?"
     },
     "IMSB": {
       "code": "IMSB",
-      "cn": "Fool",
-      "intro": "Seriously? Am I really a fool?",
-      "desc": "Congratulations! You are not in the human category at all! You have tested out the [IMSB] personality that comes only once in a million years. In the brain of the IMSB personality live two ultimate warriors who will never stop fighting: one is called \"I fucking charged!\" and the other is called \"I am a fool!\". When IMSB faces a person he likes, the former will say: Go for it! Go ask for WeChat! Go make a date! Love needs to be spoken loudly! The latter went on to say: Why do people like you? If you go there, you will be humiliating yourself! End result: stare at the other person’s back until they disappear, then take out your phone and search for “how to overcome social phobia.” IMSB isn't really stupid, it's just your inner drama, which is probably longer than all the movies in the Marvel Universe combined."
+      "cn": "The Fool",
+      "intro": "Seriously? Am I really that dumb?",
+      "desc": "Congratulations. You are not even within the human category. You have tested into the once-in-a-million-years IMSB personality. Inside the IMSB brain live two ultimate warriors locked in endless combat: one called “I am fucking going for it!” and the other called “I am an idiot!” When IMSB faces someone they like, the first says: go! Ask for their WeChat! Ask them out! Love should be said out loud! The second immediately says: why would they like you? If you go, you are just humiliating yourself. Final result: stare at the person’s back until they disappear, then take out your phone and search “how to overcome social anxiety.” IMSB is not truly stupid. Your inner drama is just probably longer than every Marvel movie combined."
     },
     "SOLO": {
       "code": "SOLO",
-      "cn": "orphan",
-      "intro": "I cried, how could I be an orphan?",
-      "desc": "Congratulations, you have tested the rarest [SOLO - Orphan] personality. Don't cry in a hurry, the king's coronation ceremony is usually done alone. Orphans have a low sense of self-worth, so they sometimes take the initiative to alienate others. The orphans build a Great Wall around their souls called \"Don't touch me.\" Every brick is a wound from the past. An orphan is like a hedgehog that hides all its weaknesses and then points its hardest thorn at the world. The spikes all over the body are not an attack, they are words that cannot be said: \"Don't come over, I'm afraid you will be hurt too\" and \"Please, don't leave.\""
+      "cn": "The Loner",
+      "intro": "I am crying. How am I an orphan?",
+      "desc": "Congratulations. You have tested into the rarest SOLO: Orphan personality. Do not cry yet. A king’s coronation is usually done alone. Orphans have a low sense of self-worth, so they sometimes actively distance themselves from others. Around their own soul, they build a Great Wall named “do not come near me.” Every brick is a wound from the past. An orphan is like a hedgehog that hides every soft spot, then points its hardest spines at the world. Those spines are not an attack. They are unsaid sentences: “do not come over, I am afraid you will get hurt too,” and “please, do not leave.”"
     },
     "FUCK": {
       "code": "FUCK",
-      "cn": "Grasshopper",
-      "intro": "Hold! What kind of personality is this?",
-      "desc": "Congratulations! You are not in the human category at all! You have detected a once-in-a-million-year [FUCK] personality. In the civilized city of mankind, a humanoid weed with super vitality that cannot be killed by any herbicide has appeared - the personality of the Grasser. Its scientific name is FUCK. In FUCK's worldview, secular rules are simply meaningless, and FUCK's emotional switches are physical paddles: FUCK YEAH and FUCK OFF. FUCK not only pursues the immediate pleasure, but also pursues a kind of vitality that runs rampant in the body. When everyone has been domesticated into docile poultry, FUCK is the last wolf howl in the wilderness."
+      "cn": "The F-er",
+      "intro": "Fuck! What personality is this?",
+      "desc": "Congratulations. You are not even within the human category. You have tested into the once-in-a-million-years FUCK personality. In the civilized city of humanity, a humanoid wild weed has appeared, one that no herbicide can kill and that carries super vitality. That is the Wild Weed personality. Its scientific name is FUCK. In FUCK’s worldview, social rules are simply meaningless, and FUCK’s emotional switch is a physical toggle with only two positions: FUCK YEAH and FUCK OFF. FUCK does not only chase immediate pleasure. It also chases a life force that crashes around inside the body. When everyone else has been domesticated into obedient poultry, FUCK is the last wolf howl in the wilderness."
     },
     "DEAD": {
       "code": "DEAD",
-      "cn": "deceased",
-      "intro": "Am I still alive?",
-      "desc": "Congratulations, you have detected the rarest personality, but the name \"Dead Man\" is a bit unlucky, so you can also call it: Don't Expect Any Drives. The deceased had seen through the meaningless philosophical thinking and therefore seemed to have \"lost\" interest in everything. The dead looked at the world like a top player who had cleared all the main plots, side plots, and hidden missions. After deleting the game and restarting it 999 times, he finally discovered: this game is not interesting at all. The dead are the ultimate sages who transcend desires and goals. Their existence is the most silent and thorough protest against this noisy world."
+      "cn": "The Dead",
+      "intro": "Am I... still alive?",
+      "desc": "Congratulations. You have tested into one of the rarest personalities. The name “Dead” is a little unlucky, so it can also mean Don’t Expect Any Drives. The DEAD personality has already seen through those meaningless philosophical questions, and therefore appears to have “lost” interest in everything. DEAD looks at the world like a top player who has cleared every main quest, side quest, and hidden mission, deleted the save and restarted 999 times, then finally realized: this game simply is not fun. DEAD is the ultimate sage beyond desire and goals. Their existence is the quietest and most thorough protest against this noisy world."
     },
     "IMFW": {
       "code": "IMFW",
-      "cn": "waste",
-      "intro": "Am I really. a waste?",
-      "desc": "Congratulations, what you tested is not an ordinary personality, you are an extremely rare one that only accounts for 0.0001% of the world's population - [waste]. The self-esteem of wastes is usually fragile, insecure, and occasionally lacking in assertiveness. Therefore, this kind of personality can accurately perceive the strongest WiFi signal around them-that is, the most reliable person in their hearts. Entering the life of the [Waste] personality is like entering a top-notch orchid greenhouse: it requires precise control of temperature and humidity, as well as the verbal photosynthesis of \"I love you\" at regular intervals every day. Give a piece of candy to a waste, and they will give you a shining look in their eyes that completely trusts you. You may not be a waste, you are just too unprepared and too easy to take yourself seriously."
+      "cn": "The Deadbeat",
+      "intro": "Am I really... trash?",
+      "desc": "Congratulations. What you tested is not an ordinary personality. You are an extremely rare type, only 0.0001% of the world population: Trash. Trash types often have a somewhat fragile self-esteem, lack security, and occasionally lack a firm opinion, so this personality can precisely detect the strongest Wi-Fi signal nearby: the person they feel is most reliable. Walking into the life of a Trash personality is like entering a top-tier orchid greenhouse: temperature and humidity must be precisely controlled, and the verbal photosynthesis of “I love you” must happen on schedule every day. Give Trash a piece of candy, and they will return a shiny-eyed look of complete trust. You may not really be trash. You may just be too unguarded and too easy to take things seriously."
     },
     "HHHH": {
       "code": "HHHH",
-      "cn": "fool",
+      "cn": "The Goofball",
       "intro": "Hahahahahaha.",
-      "desc": "Congratulations! Because your thinking circuit is too strange, the standard personality library has completely collapsed. When the first personality matching rate is less than 60%, the system will forcefully match this personality for you - [HHHH - Silly Musician]. What qualities does this personality have? Hahahahahahahahahahahaha! Sorry, that's all there is to it. You can view the fifteen dimensions for unprofessional assessment, I’m really sorry! The author did not consider everything when setting up the personality, so this situation occurred. Hahahahahaha. I laughed and cried. How could someone's brain circuit be so novel?"
+      "desc": "Congratulations. Because your thinking circuit is too strange, the standard personality library has completely crashed. Only when the top personality match rate falls below 60% does the system forcibly match you with this personality: HHHH, the Silly Giggler. What traits does this personality have? Hahahahahahahahahahaha. Sorry, that is the entire trait list. You can check the fifteen dimensions for an unprofessional assessment. Truly sorry. The author did not account for everything when setting up the personalities, so this situation appeared. Hahahahahaha... I laughed until I cried. How can someone’s brain wiring be this unusual?"
     },
     "DRUNK": {
       "code": "DRUNK",
-      "cn": "drunkard",
-      "intro": "The strong alcohol burned my throat and I had to get drunk.",
-      "desc": "Why do you stagger when you walk? Why are you always in high spirits? Why do you see ghost images? Because what is flowing in your body is not blood, but delicious Wuliangye! It’s Guojiao 1573! It’s Jiang Xiaobai! It’s Shaanxi Wuliangye! Oh, delicious white wine, every drop is burning and boiling. Are you accustomed to pouring liquor into a thermos and drinking it as plain water? What a great white wine! It makes you talk and laugh at the dinner table, and confess your life while holding the toilet in the toilet; it makes you feel like a nightclub poet, the eternal fire in the center of the universe, until ten o'clock the next morning, your head looks like a cracked walnut, with food residue hanging from the corner of your mouth, and your soul shrinks in the corner. You finally understand that the person who was talking loudly and slamming the table and roaring last night has become an alcoholic."
+      "cn": "The Drunk",
+      "intro": "Strong liquor burns the throat, so getting drunk is unavoidable.",
+      "desc": "Why do you stagger when you walk? Why are you always so emotionally high? Why do you see double? Because what flows in your body is not blood, but delicious Wuliangye, Guojiao 1573, Jiangxiaobai, Shaanxi Wuliangye. Oh, delicious baijiu: every drop is burning, every drop is boiling. Have you already gotten used to pouring baijiu into a thermos and drinking it like plain water? What great baijiu. It lets you talk and laugh at the dinner table, then hold the toilet and repent your life; it makes you feel like a nightclub poet, the undying fire at the center of the universe, until ten the next morning, when your head feels like a cracked walnut, food residue hangs at the corner of your mouth, and your soul curls up in the corner. You finally understand that the person who held court last night, slapped the table, and roared has become a drunkard."
     }
   }
 }

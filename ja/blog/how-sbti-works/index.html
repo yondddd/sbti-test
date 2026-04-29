@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SBTIの仕組みとは？15次元モデル・プロトタイプ照合・隠しルールを解説</title>
+    <meta name="description" content="SBTIのロジックを整理します。30問の通常設問、15次元、25の原型、DRUNKの特殊分岐、HHHHのフォールバックまでまとめて解説します。" />
+    <link rel="stylesheet" href="../../../assets/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="shell-header">
+        <a class="brand" href="../../../">SBTI Test</a>
+        <nav class="locale-nav" aria-label="Languages"><a href="/zh/">简体中文</a><a href="/zh-hant/">繁體中文</a><a href="/">English</a><a href="/ja/" aria-current="page">日本語</a><a href="/ko/">한국어</a><a href="/es/">Español</a><a href="/fr/">Français</a><a href="/ru/">Русский</a><a href="/de/">Deutsch</a><a href="/th/">ภาษาไทย</a><a href="/vi/">Tiếng Việt</a><a href="/id/">Bahasa Indonesia</a><a href="/ms/">Bahasa Melayu</a><a href="/ar/">العربية</a></nav>
+      </header>
+      <main class="blog-page" data-locale="ja">
+        
+    <article class="card blog-detail">
+      <a class="blog-back" href="/ja/blog/">ブログ</a>
+      <header>
+        <div class="blog-date">2026年4月13日</div>
+        <h1>SBTIの仕組みとは？15次元モデル・プロトタイプ照合・隠しルールを解説</h1>
+        <p class="sub">SBTIのロジックを整理します。30問の通常設問、15次元、25の原型、DRUNKの特殊分岐、HHHHのフォールバックまでまとめて解説します。</p>
+        <img class="blog-cover" src="https://file.sbti-test.org/imgs/blog-covers/how-sbti-works-cover.ja.png" alt="" loading="lazy" />
+      </header>
+      <div class="blog-content"><p>多くの人が初めて SBTI を受けるとき、それはより厳しいコピーライティングが行われる単なるランダムなテストだと思います。実際には、結果エンジンは実際には <strong>非常に明確であり、特に複雑ではありません</strong> です。</p>
+<p>短いバージョンは次のとおりです。</p>
+<p><strong>SBTIはAI占いでも深層心理学でもありません。これは、15 次元の離散ベクトルと事前定義されたプロトタイプのライブラリを中心に構築されたエンターテイメント分類器のように動作します。</strong></p>
+<p>システムは次の 3 つのことを行います。</p>
+<ol><li>答えを 15 の次元にマッピングします</li><li>これらの 15 次元を <code>L/M/H</code> パターンに圧縮します</li><li>そのパターンを事前に設定された性格プロトタイプと比較し、最も近い一致を返します。</li></ol>
+<p>関心があるのが <strong>この設定が異常に正確に感じられる理由</strong> である場合は、<a href="/blog/why-sbti-feels-accurate">SBTI が正確だと感じる理由</a> に進んでください。この記事は引き続き <strong>メカニズムがどのように機能するか</strong> に焦点を当てます。</p>
+<h2>基本構造から始めます</h2>
+<p>中心となるキー構造には次の 3 つの層があります。</p>
+<ul><li><strong>15次元</strong></li><li><strong>標準的な質問 30 問</strong></li><li><strong>25 の標準的な性格プロトタイプ</strong></li></ul>
+<p>それに加えて、次のようなものもあります。</p>
+<ul><li><strong>常に表示される飲酒関連のゲート質問 1 つ</strong></li><li><strong>条件下でのみ表示される追加の飲酒に関する質問 1 つ</strong></li><li><strong>2つの特別な結果</strong>: <code>DRUNK</code> および <code>HHHH</code></li></ul>
+<p>多くの説明に「31の質問」と書かれているのはこのためです。しかし、実際の分割は次のとおりです。</p>
+<ul><li><code>30</code> の標準スコアの質問</li><li><code>1</code> 特別なゲートの質問を修正</li><li><code>1</code> 一部のユーザーにのみ表示されるフォローアップの質問</li></ul>
+<p>つまり<strong>ほとんどのユーザーには 31 個の質問が表示されますが、一部のユーザーは 32 個の質問にルーティングされます</strong>。</p>
+<h2>15 の次元はランダムにまとめられたわけではありません</h2>
+<p>15 の次元は 5 つのモデルにグループ化され、それぞれに 3 つのサブ次元があります。</p>
+
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>モデル</th><th>寸法</th></tr></thead>
+        <tbody>
+          <tr><td>セルフモデル</td><td><code>S1 self-esteem and confidence</code>、<code>S2 self-clarity</code>、<code>S3 core values</code></td></tr><tr><td>感情モデル</td><td><code>E1 attachment security</code>、<code>E2 emotional investment</code>、<code>E3 boundaries and dependence</code></td></tr><tr><td>態度モデル</td><td><code>A1 worldview tendency</code>、<code>A2 rules vs flexibility</code>、<code>A3 sense of life meaning</code></td></tr><tr><td>アクションドライブモデル</td><td><code>Ac1 motivational orientation</code>、<code>Ac2 decision style</code>、<code>Ac3 execution pattern</code></td></tr><tr><td>社会モデル</td><td><code>So1 social initiative</code>、<code>So2 interpersonal boundaries</code>、<code>So3 expression and authenticity</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  
+<p>ここで最も重要な点は次のとおりです。</p>
+<p><strong>SBTI は、MBTI の 4 つのバイナリ軸を再利用しません。代わりに、インターネット生活の心理的シーンをより小さな、より日常的なサブ次元に分割します。</strong></p>
+<p>それはそれをより科学的にするものではありません。ただし、出力がより詳細に感じられるようになります。</p>
+<h2>各ディメンションはどのようにスコア付けされるのでしょうか?</h2>
+<p>各ディメンションは 2 つの標準的な質問に関連付けられています。各回答には、<code>1</code>、<code>2</code>、または <code>3</code> の値が割り当てられます。</p>
+<p>つまり、単一のディメンションの合計スコア範囲は次のようになります。</p>
+<ul><li>最小 <code>2</code></li><li>最大<code>6</code></li></ul>
+<p>次に、システムはその合計を 3 つのバケットに圧縮します。</p>
+<ul><li><code>&lt;= 3</code>は<code>L</code>になります</li><li><code>= 4</code> は <code>M</code> になります</li><li><code>&gt;= 5</code>は<code>H</code>になります</li></ul>
+<p>そのため、SBTIは最後まで連続得点を記録できません。あらゆる次元を 3 つのレベルに離散化します。最終出力は、<code>HHH-HMH-MHH-HHH-MHM</code> などの 15 文字の <code>L/M/H</code> パターンです。</p>
+<p>そのパターンはユーザーの <strong>性格ベクトル</strong> です。</p>
+<h2>「どのタイプを選択しましたか?」とは尋ねません。 「あなたはどのタイプに近いですか?」と尋ねます。</h2>
+<p>これは、SBTI が実際の分類子に最も似ている部分です。</p>
+<p>SBTI には <code>25</code> 個の標準的な性格プロトタイプが含まれており、それぞれが独自の 15 次元のパターンを持っています。例としては次のものが挙げられます。</p>
+<ul><li><code>CTRL</code></li><li><code>BOSS</code></li><li><code>SEXY</code></li><li><code>OJBK</code></li><li><code>MALO</code></li><li><code>THIN-K</code></li><li><code>SHIT</code></li><li><code>ZZZZ</code></li><li><code>DEAD</code></li><li><code>IMFW</code></li></ul>
+<p>これらのプロトタイプは、ユーザーごとにその場で生成されるわけではありません。事前に<strong>著者が定義した性格重心</strong>個用意されています。システムは、ベクトルをすべてのベクトルと 1 つずつ比較します。</p>
+<h2>距離アルゴリズムは単純です</h2>
+<p>比較方法を簡単に説明すると、次のようになります。</p>
+<ul><li>最初に <code>L/M/H</code> を <code>1/2/3</code> にマップします</li><li>各プロトタイプ ベクトル次元からユーザーのベクトルを次元ごとに減算します。</li><li>各差の絶対値を取得し、合計します。</li></ul>
+<p>本質的には、<strong>L1距離</strong> であり、<strong>マンハッタンの距離</strong> とも呼ばれます。</p>
+<p>もっとカジュアルに言うと、次のような意味になります。</p>
+<p><strong>15 次元すべてにおいて、そのプロトタイプから何ステップ離れていますか?</strong></p>
+<p>ギャップが小さいほど、一致は近くなります。ギャップが大きければ大きいほど、似ていなくなります。</p>
+<p>SBTI では、類似度の表示式として **類似度 = max(0,round((1 - 距離 / 30) * 100))** も使用します。</p>
+<p>したがって、結果ページに「92% 一致」などと表示される場合、その数値は心理測定の信頼区間ではありません。 <strong>距離から直線的に導出される表示値</strong>です。</p>
+<h2>2 つのタイプが同じように似ている場合はどうなるでしょうか?</h2>
+<p>コード内の並べ替えロジックは大まかに次のとおりです。</p>
+<ol><li>最初に合計距離を比較し、小さい値を優先します。</li><li>合計距離が同点の場合は、<code>exact</code> を比較します。これは、15 の次元のうちのいくつが正確に一致するかを意味します。</li><li>その後のみ、表示された類似度値が使用され続けます。</li></ol>
+<p>これは、SBTI が「最初にパスした方が勝ち」という粗雑なルールを使用していないことを示しています。基本的ですがかなり明確なランキング プロセスを実行します。</p>
+<h2><code>DRUNK</code> が非表示タイプなのはなぜですか?</h2>
+<p>これは、SBTI の中で、作成者の個人的な動機が最も明確に表れる部分です。</p>
+<p>SBTI には、飲酒に特化したロジック チェーンが含まれています。</p>
+<ol><li>システムはあなたの普段の趣味について尋ねる定型質問を挿入します</li><li>その質問で「飲酒」を選択した場合</li><li>システムは、飲酒に対するあなたの態度に関する 2 番目の質問を挿入します。</li><li>2 番目の質問で特定の答えを選択すると、システム <strong>[[[1000]]] をすぐに返します</strong></li></ol>
+<p>重要な点は次のとおりです。</p>
+<p><strong>[[[1000]]] は、通常の 15 次元の距離プロセスでは計算されません。これは、優先度の高いトリガー ルールによって標準の結果をオーバーライドします。</strong></p>
+<p>これは、プロジェクトのアイデンティティの一部となった元の創造的動機とも一致します。作者は当初、クイズで友人の飲酒量を減らすよう促すことを望んでいました。</p>
+<p>したがって、<code>DRUNK</code> はプロトタイプ ライブラリの単なる通常のエントリではありません。むしろ<strong>意図的に優先された価値判断部門</strong>のようなものです。</p>
+<h2>それでは、<code>HHHH</code> とは何でしょうか?</h2>
+<p><code>HHHH</code> も特別な結果ですが、<code>DRUNK</code> とは動作が異なります。</p>
+<p>それは行動によって引き起こされるものではありません。 <strong>プロトタイプのマッチングが弱すぎる場合のフォールバック</strong>です。</p>
+<p>SBTI は明確なしきい値を使用します。</p>
+<ul><li>最もよく一致する標準的な性格の類似性スコアが <strong>60%未満</strong> である場合</li><li>システムはあなたをノーマルタイプに強制しません</li><li>代わりに <code>HHHH</code> を直接返します</li></ul>
+<p>つまり、<code>HHHH</code> は明確に定義された性格のプロトタイプではありません。それは次のことを意味します:</p>
+<p><strong>現在のプロトタイプ ライブラリは、あなたの答えのパターンをうまく説明していません。</strong></p>
+<p>経験的には、これによりシステムがより説得力のあるものに感じられるようになります。弱い近似を強制するのではなく、事実上、「*この回答パターンは現在のライブラリではうまく捕捉されていない*」と言えます。</p>
+<h2>この構造が通常のジョーク テストより詳細に感じられるのはなぜですか?</h2>
+<p>それは、多くの軽量エンターテイメント クイズにはない 3 つのことを実現しているからです。</p>
+<ul><li><strong>まず行動を次元に分割します</strong></li></ul>
+<p>それは単に「あなたは外向的ですか、それとも内向的ですか?」と尋ねるのではありません。日常のさまざまなシーンを小さな信号に変えます。</p>
+<ul><li><strong>それらの信号をベクトル化します</strong></li></ul>
+<p>各次元は 1 つのレベルに圧縮され、それらのレベルが全体的なパターンになります。</p>
+<ul><li><strong>プロトタイプ全体と照合します</strong></li></ul>
+<p>たった 1 つの質問で結果が決まるわけではありません。システムは、回答の全体的な輪郭を比較します。</p>
+<p>それでも自動的に科学的になるわけではありません。しかし、「10 問質問してランダムな動物を受け取る」クイズよりもはるかに構造的なものになります。</p>
+<h2>システムの制限は同じ時点から始まります</h2>
+<p>たとえこのメカニズムが多くの人が想定しているよりも完全であるとしても、その性質を誤解してはなりません。</p>
+<p>以下のすべてが当てはまります。</p>
+<ul><li>プロトタイプ ライブラリは作成者によって書かれたものであり、臨床的に検証されたサンプリングから構築されたものではありません</li><li>寸法ラベルは作成者による編集上の判断であり、標準化された心理スケールではありません</li><li>類似性スコアは表示スコアであり、診断の信頼度ではありません。</li><li>特別な結果には、明らかな作者の立場と風刺的な意図が含まれています</li></ul>
+<p>それで<strong>SBTIは構造化されたエンターテイメントであり、楽しみを装った科学的評価ではありません。</strong></p>
+<p>多くの人が依然としてそれが正確であると感じている理由についてもっと知りたい場合は、<a href="/blog/why-sbti-feels-accurate">SBTI が正確だと感じる理由</a> に進んでください。使用すべき場所と使用すべきでない場所が気になる場合は、<a href="/blog/sbti-limits-and-boundaries">SBTI は何を伝えることができ、何が言えないのでしょうか?</a> をお読みください。</p>
+<h2>結論</h2>
+<p>SBTI の中核は次のように要約できます。</p>
+<ul><li><code>15</code> 寸法</li><li><code>30</code> の標準得点問題</li><li><code>25</code>の標準的な性格のプロトタイプ</li><li><code>DRUNK</code> の <code>1</code> 特別なオーバーライド ルール</li><li><code>HHHH</code> の <code>1</code> 低一致フォールバック ルール</li><li>L1 距離に基づく <code>1</code> プロトタイプ マッチング プロセス</li></ul>
+<p>このメカニズムは神秘的なものではありませんが、十分に完成しており、結果が「驚くほど正確である」という主観的な感覚を生み出し、その後のスクリーンショットの共有をサポートするために、インターネットの言語を十分に話します。</p></div>
+    </article>
+  
+      </main>
+    </div>
+  </body>
+</html>

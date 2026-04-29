@@ -4,7 +4,7 @@
       "eyebrow": "SBTI",
       "title": "Silly Big Personality Test —— 一个纯玩梗、恶搞 MBTI 的搞笑人格测试",
       "subtitle": "零科学依据，主打自嘲和摆烂。",
-      "start": "开始测试",
+      "start": "开始SBTI测试",
       "secondary": "直接去测试页",
       "creditTitle": "提示",
       "credits": [
@@ -18,6 +18,7 @@
       "questionPattern": "第 {index} 题",
       "incompleteHint": "全选完才会放行。世界已经够乱了，起码把题做完整。",
       "completeHint": "都做完了。现在可以把你的电子魂魄交给结果页审判。",
+      "judgingCountdownPattern": "正在审判您的电子灵魂...",
       "backHome": "返回首页",
       "previous": "上一题",
       "next": "下一题",
@@ -242,8 +243,8 @@
   },
   "locale": "zh",
   "meta": {
-    "description": "做一次 SBTI 人格测试，找到你的荒诞人设，把测试结果分享给朋友，一起感受被精准冒犯的快乐。",
-    "title": "SBTI 人格测试 —— 免费搞笑人格测试",
+    "description": "在线参加SBTI测试，3到5分钟回答30道题，获得朋友一眼就能看懂的自嘲式SBTI人格结果。",
+    "title": "SBTI测试 | 在线SBTI人格测试",
     "urlPath": "/zh/"
   },
   "normalTypes": [
@@ -350,18 +351,119 @@
   ],
   "pageCopy": {
     "intro": {
-      "heroTitle": "SBTI 人格测试 —— 免费搞笑人格测试",
-      "heroSubtitle": "做一次 SBTI 人格测试，找到你的荒诞人设，把测试结果分享给朋友，一起感受被精准冒犯的快乐。",
-      "whatIsTitle": "SBTI 人格测试是什么？",
-      "whatIsBody": "SBTI 人格测试（Silly Big Personality Test）是一个恶搞 MBTI 的免费搞笑人格测试。和传统 MBTI 测试不同，SBTI 测试零科学依据、主打自嘲和娱乐，用随机题目帮你得到一个容易理解、方便分享的搞笑结果。",
+      "heroTitle": "SBTI测试 | 在线SBTI人格测试",
+      "heroSubtitle": "在线参加SBTI测试，3到5分钟回答30道题，获得朋友一眼就能看懂的自嘲式SBTI人格结果。",
+      "whatIsTitle": "SBTI测试是什么？",
+      "whatIsBody": "SBTI测试，也可以叫SBTI人格测试，更接近一套自嘲式人格测试，而不是严肃心理测量工具。它借用“做题 → 看结果”的熟悉体验，也把 MBTI 当成大家容易进入的理解入口，但真正整理的是你当下的状态、情绪命中感和适合截图分享的互联网表达。",
       "mbtiRelationTitle": "SBTI 和 MBTI 有什么关系？",
-      "mbtiRelationBody": "SBTI 人格测试是 MBTI 的趣味恶搞版。如果你觉得 MBTI 测试太严肃太正经，SBTI 测试用同样的\"做题 → 看结果\"体验，但结果更荒诞、更适合分享。简单说：SBTI 是 MBTI 的搞笑替代品。",
-      "whyTestTitle": "为什么要做 SBTI 测试？",
-      "whyTestBody": "做 SBTI 人格测试不需要理由——纯图一乐。测试结果精准得离谱，测完直接截图发朋友圈，朋友看了直呼\"太真实了\"。最重要的是：SBTI 测试完全免费，不用注册，随时随地开测。",
-      "suitableTitle": "SBTI 人格测试适合谁？",
-      "suitableBody": "只要你想要一个轻松搞笑的人格测试体验，SBTI 就适合你。无论你是 MBTI 老玩家想换个口味，还是从没做过人格测试的新手，SBTI 人格测试都能让你快速获得一个有趣的结果。",
-      "aboutCta": "了解更多关于 SBTI 测试",
+      "mbtiRelationBody": "两者都用“做题后得到类型结果”的形式帮助你理解自己，但重点并不一样。MBTI 更偏相对稳定的偏好、自我认知和沟通框架；SBTI 更偏当下状态、情绪命中感、互联网表达和社交传播。你可以把 MBTI 当成理解入口，但 SBTI 不是心理诊断，也不是 MBTI 的低配或替代。",
+      "whyTestTitle": "为什么要做SBTI测试？",
+      "whyTestBody": "如果你想用更轻松的方式观察自己当下的状态，SBTI 会比很多传统人格测试更容易进入。它保留了人格测试容易理解的结构，又把结果写得更直接、更有情绪命中感，也更适合拿去和朋友对照讨论。",
+      "suitableTitle": "SBTI人格测试适合谁？",
+      "suitableBody": "SBTI 适合想做轻量自我观察、又不想把人格测试当成严肃诊断的人。无论你是做过 MBTI、想换一个更贴近当下状态的表达方式，还是第一次接触这类测试的新手，都可以先把它当作一个有梗、有结构、可讨论、可分享的自嘲式人格测试。",
+      "aboutCta": "了解更多关于SBTI测试",
       "viewAllTypesCta": "查看全部人格"
+    },
+    "resultExpiryBar": {
+      "before": "您的",
+      "highlight": "个性报告",
+      "after": "即将到期"
+    },
+    "lockedAnalysis": {
+      "sectionTitle": "完整分析",
+      "checkoutProductLabel": "SBTI人格测试结果",
+      "previewDescription": "",
+      "hookEyebrow": "",
+      "hookTitle": "",
+      "hookUnlockTitle": "",
+      "hookUnlockBody": "",
+      "hookSummaryFallback": "你其实是想靠近的。只是节奏一快，你就先往回收。",
+      "structurePreviewBody": "",
+      "emotionalHookTitle": "",
+      "verifyingButton": "正在验证测试记录...",
+      "retakeButton": "重新测一次，再解锁完整结果",
+      "secondaryShareCta": "想便宜点，也行",
+      "lockHint": "付费查看全部结果",
+      "unlockToast": "完整分析已解锁",
+      "summaryPreview": "结果摘要与接近人格",
+      "summaryPreviewHint": "最明显的特征",
+      "closestPreviewHint": "最接近的另外三种结果",
+      "deepProfilePreview": "个人机制总结",
+      "deepProfilePreviewHint": "最先跳出来的特征",
+      "personalizedSectionsPreviewHint": "最常见的内在拉扯",
+      "compatibilityPreview": "恋爱关系倾向与匹配",
+      "compatibilityPreviewHint": "恋爱兼容性分析",
+      "dimensionsPreview": "个人十五维图谱",
+      "dimensionsPreviewHint": "十五维分布图",
+      "dimensionGroupsPreviewHint": "十五维详细解读",
+      "comboPreview": "类型背景与组合附录",
+      "comboPreviewHint": "SBTI × MBTI 组合",
+      "priceLabel": "本次完整分析",
+      "originalPriceLabel": "原价",
+      "discountHint": "先分享一次，回来就是优惠价",
+      "discountApplied": "分享折扣已生效",
+      "viewFullResultButton": "分享结果",
+      "payButton": "付费看完整结果",
+      "payingButton": "处理中...",
+      "typePageTitle": "",
+      "typePageDescription": "",
+      "typePageCta": "开始SBTI测试",
+      "typePageHint": ""
+    },
+    "fullResult": {
+      "heroKicker": "完整分析",
+      "resultHeroSummary": "这份结果先点出你这次最鲜明的气质，再把背后的结构慢慢摊开。",
+      "resultHeroBody": "重点不是再贴一次标签，而是解释你为什么会呈现出现在这副样子。",
+      "resultFlowTitle": "这次最明显的走向",
+      "resultFlowBody": "这次不是平均展开，而是几处特征格外突出，所以整份结果会显得很有指向性。",
+      "resultStoryTitle": "这次为什么会像这个结果",
+      "resultStoryBody": "真正打中人的通常不是名字本身，而是它把你最近最稳定的反应方式说中了。",
+      "resultMoodTitle": "你现在给人的第一印象",
+      "resultMoodBody": "这更像你最近最常露出来的反应方式，而不是一个永远不变的人设。",
+      "resultUnlockTitle": "完整分析还会解释什么",
+      "resultUnlockBody": "继续往下，你会看到十五维的高低、关系倾向，以及这次结果里最具体的拉扯点。",
+      "leaderboardTitle": "想把这次结果记进排行榜",
+      "leaderboardBody": "如果你愿意把这次结果算进总榜，可以在这里提交；这只是附加动作，不影响你继续看报告。",
+      "strongestLabel": "最突出的特征",
+      "weakestLabel": "最收着的一面",
+      "closestLabel": "最接近的三种结果",
+      "closestFallback": "这次没有拉出更接近的备选结果。",
+      "coverCardTitle": "本次结果卡",
+      "coverSummaryTitle": "类型摘要",
+      "verdictEyebrow": "先说结论",
+      "verdictTitle": "这次结果最先打出来的判断",
+      "verdictBody": "",
+      "overviewTitle": "最强 / 最弱 / 近邻结果",
+      "overviewBody": "",
+      "whyThisResultEyebrow": "为什么会是它",
+      "whyThisResultTitle": "这次为什么会落到这个结果",
+      "whyThisResultBody": "",
+      "dimensionRadarEyebrow": "结果结构",
+      "dimensionRadarTitle": "十五维的整体分布",
+      "dimensionRadarBody": "",
+      "dimensionRadarFootnote": "也因为这种高低差，下面的解释会更像你当下的反应方式，而不是泛泛的人格介绍。",
+      "personalizedHintTitle": "这部分是按你这次的答案写的",
+      "personalizedHintBody": "这里的分数和解释对应的是你这次的回答，不是所有同类型的人都会看到同一段话。",
+      "scenePanelsEyebrow": "放进场景里",
+      "scenePanelsTitle": "这次的你，落到具体情境会怎么表现",
+      "scenePanelsBody": "",
+      "misreadAndRiskEyebrow": "容易被误读",
+      "misreadAndRiskTitle": "别人怎么读错你，你又会卡在哪里",
+      "misreadAndRiskBody": "这部分讲的不是优缺点清单，而是最容易在现实里出问题的误读和卡点。",
+      "adjustmentAdviceEyebrow": "微调提醒",
+      "adjustmentAdviceTitle": "如果最近总卡住，先调这三处",
+      "adjustmentAdviceBody": "",
+      "dimensionGroupsEyebrow": "十五维细看",
+      "dimensionGroupsTitle": "十五维里，哪些地方最有分量",
+      "dimensionGroupsBody": "把每一组单独看，你会更容易分清哪些是长期底色，哪些只是这次暂时偏高或偏低。",
+      "bottomActionsEyebrow": "下一步",
+      "bottomActionsTitle": "接下来你可以做什么",
+      "bottomActionsBody": "查看人格详情、重新测试，或回到首页，都可以从这里进入。",
+      "snapshotMissingTitle": "这次的个性化结果没有保留下来",
+      "snapshotMissingBody": "这次没有留下答题快照，所以这里先按该人格的长期画像继续解释。",
+      "backgroundEyebrow": "类型延伸",
+      "backgroundTitle": "这个人格的长期画像",
+      "backgroundBody": "下面这些内容更接近这个人格在关系、相处和组合上的常见样子，适合拿来和你这次的状态对照着看。"
     },
     "test": {
       "resultArtwork": "人格图卡",
@@ -371,55 +473,229 @@
       "viewLeaderboard": "查看排行榜",
       "submitting": "提交中..."
     },
-    "testIntro": {
-      "collapseCta": "收起说明",
-      "expandCta": "展开说明",
-      "heading": "SBTI 人格测试",
-      "description": "开始免费的 SBTI 人格测试，找出你的搞笑人格类型。SBTI 是恶搞 MBTI 的趣味人格测试，零科学依据，纯图一乐。测完把结果分享给朋友，一起被精准冒犯。",
-      "mbtiNote": "和 MBTI 不同，SBTI 人格测试不追求准确——但结果可能比你想的更真实。"
+    "testSeo": {
+      "heroTitle": "在线SBTI测试：开始人格测试",
+      "heroSummary": "零科学依据，只是一次更贴脸的互联网人格自嘲。",
+      "title": "在线SBTI测试",
+      "summary": "在线SBTI测试包含30道题，会把你的回答变成适合自我观察和快速分享的SBTI结果。",
+      "typesCta": "查看全部人格",
+      "mbtiCta": "SBTI × MBTI"
+    },
+    "assessmentOverview": {
+      "eyebrow": "Assessment Overview",
+      "title": "SBTI 不是更正经的 MBTI，而是更贴脸的人格测试",
+      "summary": "SBTI测试把 30 道题、15 个维度、L / M / H 三级评分和 SBTI人格类型的原型匹配，压缩成一个能截图、能转发、能让朋友秒懂的结果。它的重点不是给你贴金，而是把你最近那种说不清的状态说出来。",
+      "positioningTitle": "先说清楚：它测的不是“你有多完美”",
+      "positioningBody": "SBTI人格测试更像一面互联网照镜子工具。MBTI 常用稳定偏好解释你是谁，SBTI 更关注当下状态：你怎么内耗、怎么亲近别人、怎么行动、怎么社交、怎么把情绪藏进玩笑里。",
+      "hooksTitle": "为什么很多人会觉得它贴脸？",
+      "hooks": [
+        {
+          "title": "它写的是具体场景",
+          "body": "不是泛泛夸你特别，而是把自我怀疑、边界感、拖延、操心、嘴硬、装没事这些日常状态拆出来。读到结果时，你更容易想到某件真实发生过的事。"
+        },
+        {
+          "title": "它降低了解释成本",
+          "body": "你不用写一大段近况，只要甩出一个 SBTI 类型名，朋友就能接住那个情绪入口。结果像一句社交暗号，适合聊天、调侃和自我表达。"
+        },
+        {
+          "title": "它天生适合截图传播",
+          "body": "类型名够短，文案够冲，结果卡够好转发。它不是让你把报告背下来，而是让你发出去之后有人回一句：这不就是你吗。"
+        }
+      ],
+      "mechanismTitle": "SBTI测试到底怎么出结果？",
+      "mechanismSummary": "机制不神秘，也不是 AI 算命。它先把答案变成 15 个维度的轮廓，再和预设人格原型做距离匹配。",
+      "mechanism": [
+        {
+          "label": "30 道标准题",
+          "body": "每道题把一个日常选择映射到低、中、高三档，让结果来自整组回答，而不是某一个爆梗选项。"
+        },
+        {
+          "label": "15个维度",
+          "body": "自我、情感、态度、行动和社交五组模型，每组 3 个维度，最后形成一条 L / M / H 模式。"
+        },
+        {
+          "label": "原型匹配",
+          "body": "系统把你的模式和标准 SBTI人格类型 逐一比较，选择距离最近的类型，而不是随便抽一张人格卡。"
+        },
+        {
+          "label": "DRUNK 与 HHHH",
+          "body": "DRUNK 是饮酒相关触发路径，HHHH 是匹配度太低时的特殊回退结果，两者都不是普通原型匹配。"
+        }
+      ],
+      "dimensionsTitle": "15 个维度，用人话看就是这 5 件事",
+      "dimensionsSummary": "这些维度不是临床量表。它们更像把互联网生活里常见的心理状态拆成几个可讨论的方向。",
+      "dimensions": [
+        {
+          "name": "自我",
+          "body": "你怎么看自己，底线清不清楚，内核是稳住还是先自我攻击。"
+        },
+        {
+          "name": "关系",
+          "body": "你在亲密关系里是靠近、付出、确认，还是抽离、设边界、先保护自己。"
+        },
+        {
+          "name": "世界观",
+          "body": "你对世界是信任、防御、随缘、厌世，还是仍然想给生活一点意义。"
+        },
+        {
+          "name": "行动",
+          "body": "你是马上做、慢慢拖、靠截止日期复活，还是只想先躲过风险。"
+        },
+        {
+          "name": "社交",
+          "body": "你是主动上桌、保持距离、真实表达，还是按场景切换不同面具。"
+        }
+      ],
+      "readMoreTitle": "想继续深挖，可以从这几篇读起",
+      "readMoreSummary": "首页只负责让你快速看懂 SBTI。更完整的定义、算法、准确感、传播路径和 SBTI vs MBTI 对比，放在站内文章里。",
+      "readMoreLinks": [
+        {
+          "slug": "what-is-sbti",
+          "title": "What Is SBTI?",
+          "body": "从起源、定义、结构和使用边界快速理解 SBTI。"
+        },
+        {
+          "slug": "how-sbti-works",
+          "title": "How SBTI Works",
+          "body": "拆解 30 道题、15 个维度、原型匹配、DRUNK 和 HHHH。"
+        },
+        {
+          "slug": "why-sbti-feels-accurate",
+          "title": "Why SBTI Feels Accurate",
+          "body": "解释为什么它会让人觉得被看见，但不等于临床准确。"
+        },
+        {
+          "slug": "why-sbti-went-viral",
+          "title": "Why SBTI Went Viral",
+          "body": "看它为什么会成为截图、群聊和社交平台上的传播对象。"
+        },
+        {
+          "slug": "sbti-vs-mbti",
+          "title": "SBTI vs MBTI",
+          "body": "对比两种测试的目的、结果风格、使用场景和边界。"
+        }
+      ],
+      "boundaryTitle": "边界也要说在前面",
+      "boundaryBody": "SBTI 是自嘲式人格测试和自我表达工具，不是心理诊断、招聘筛选、亲密关系判决或人生结论。把它当作一次好玩的自我观察和聊天入口，会比把它当成权威标签更合适。"
     },
     "type": {
       "backHome": "返回首页",
       "moreTypes": "更多 SBTI 人格",
       "profile": "SBTI 结果",
-      "startTest": "开始 SBTI 测试"
+      "startTest": "开始SBTI测试",
+      "statsTitle": "实时人格数据",
+      "statsBody": "这些数字来自本站自己的排行榜提交数据，会随着更多用户完成测试而持续更新。",
+      "rankLabel": "排名",
+      "shareLabel": "占比",
+      "totalLabel": "总用户数",
+      "updatedAtLabel": "更新时间",
+      "unavailableTitle": "实时数据暂未就绪",
+      "unavailableBody": "当前类型页仍会显示标准人格画像，但这个人格暂时还没有可用的最新排行榜快照。",
+      "profileTitle": "15维人格画像",
+      "profileBody": "这里展示的是公开类型页使用的标准画像，代表该人格原型的典型形状，而不是某位用户的私有答题结果。",
+      "profileBreakdownTitle": "维度拆解"
     },
     "types": {
       "browseAll": "查看全部人格",
       "typesDescription": "每一种人格都有自己的设定、特点和结果解读。想看完整类型列表，可以直接查看全部人格。",
       "typesEyebrow": "27 种人格类型",
       "typesTitle": "27 种 SBTI 人格类型",
-      "viewDetails": "查看此 SBTI 人格测试结果"
+      "viewDetails": "查看此SBTI人格测试结果",
+      "unlockEyebrow": "先看看完整人格库",
+      "unlockTitle": "在这里浏览 27 种 SBTI 人格",
+      "unlockDescription": "不用离开当前页面，也可以把整套人格库先看一遍。点开任意卡片，就能看到该人格更完整的描述。",
+      "expandProfile": "查看简介",
+      "collapseProfile": "收起简介"
     },
     "faq": {
-      "eyebrow": "常见问题",
-      "title": "常见问题",
+      "eyebrow": "SBTI FAQ",
+      "title": "SBTI 常见问题",
+      "description": "如果你在搜索 SBTI测试、SBTI人格测试，或 SBTI vs MBTI，这里先把机制、结果、边界和适合怎么用说清楚。",
       "items": [
-        [
-          "SBTI 是什么？",
-          "SBTI 是一个走搞笑路线的人格测试，也是一个恶搞 MBTI 的 SBTI 人格测试。它用更轻松的方式给你一个适合分享的结果。"
-        ],
-        [
-          "SBTI 结果准吗？",
-          "SBTI 的结果更适合娱乐和自我观察，不适合拿来做严肃判断。把它当作一个好玩的 SBTI 人格测试会更合理。"
-        ],
-        [
-          "SBTI 测试需要多久？",
-          "SBTI 大概只需要一杯咖啡的时间。这个 SBTI 人格测试没有时间限制，按第一直觉作答就行。"
-        ],
-        [
-          "为什么 SBTI 题目顺序会变？",
-          "SBTI 的题目顺序会随机变化，中间也可能出现特殊题，所以每次做 SBTI 人格测试的体验都不完全一样。"
-        ],
-        [
-          "如果 SBTI 结果很糟糕怎么办？",
-          "如果 SBTI 的结果看起来很离谱，也不用当真。这个 SBTI 人格测试本来就偏娱乐，分享给朋友图个乐子就够了。"
-        ],
-        [
-          "为什么 SBTI 有隐藏人格？",
-          "有些 SBTI 回答路径会触发隐藏结果或兜底结果，这本来就是 SBTI 人格测试乐趣的一部分。"
-        ]
+        {
+          "question": "SBTI人格测试到底是什么？",
+          "answer": "SBTI测试，也就是SBTI人格测试，是一套自嘲式人格测试。它不是把 MBTI 包装得更严肃，而是用 15 个维度、互联网式命名和可分享的结果，把你当下的表达方式、关系感、边界感和行动习惯整理成一种更容易被自己和朋友理解的 SBTI人格类型。"
+        },
+        {
+          "question": "SBTI测试要多久？可以重复测试吗？",
+          "answer": "通常 3 到 5 分钟可以完成。你可以重测，但题目顺序和特殊路径可能变化，心情和状态也会影响选择，所以重测结果更适合作为“此刻状态”的对照，而不是永久标签。"
+        },
+        {
+          "question": "SBTI vs MBTI 最大区别是什么？",
+          "answer": "MBTI 更常被用来理解相对稳定的偏好、自我认知和沟通框架；SBTI 更像互联网人格测试，强调当下状态、情绪命中感、截图分享和朋友讨论。SBTI 可以借 MBTI 降低理解门槛，但它不是 MBTI 的替代品，也不是心理诊断。"
+        },
+        {
+          "question": "SBTI 的 15 个维度在看什么？",
+          "answer": "15 个维度不是给你贴一个单一标签，而是把人格结果拆成自我、关系、世界观、行动方式和社交状态等层面。这样你看到的不只是“你是哪一类”，还包括为什么这个结果会让人觉得贴脸。"
+        },
+        {
+          "question": "SBTI结果是怎么匹配出来的？",
+          "answer": "测试使用 30 道标准题来形成 15 维画像，每个维度会落在 L / M / H 这样的区间，再与人格原型做匹配。某些回答还可能触发特殊路径，例如隐藏人格 DRUNK；如果常规原型匹配度不够，系统可能给出 HHHH 作为兜底结果。"
+        },
+        {
+          "question": "SBTI 一共有多少种人格类型？",
+          "answer": "当前 SBTI人格类型一共有 27 种结果：25 种常规人格，加上隐藏人格 DRUNK 和兜底人格 HHHH。它们的命名更像网络绰号，目的不是装专业，而是让结果更好记、更好截图、更容易被朋友秒懂。"
+        },
+        {
+          "question": "为什么很多人会觉得 SBTI 很准？",
+          "answer": "这种“准”更多来自三个因素：题目在抓当下状态，结果文案把模糊感受说得很具体，类型名字又容易让人联想到自己或身边的人。它是一种情绪识别和社交表达体验，不代表临床准确性。"
+        },
+        {
+          "question": "SBTI结果能用于诊断、招聘或关系判断吗？",
+          "answer": "不能。SBTI 适合娱乐、自我观察和聊天分享，不适合用于心理诊断、招聘筛选、伴侣评判、校园或职场决策。任何重要决定都不应该只根据一个 SBTI 结果来做。"
+        },
+        {
+          "question": "为什么我重复测试会得到不同结果？",
+          "answer": "因为 SBTI 关注的是你当下的状态，而不是一成不变的人格结论。题目顺序、特殊题触发、回答时的情绪和最近发生的事，都可能让 15 维画像略有变化。"
+        },
+        {
+          "question": "测完 SBTI 之后应该怎么用结果？",
+          "answer": "最推荐的用法是先自己看哪些部分被说中了，再把结果截图或链接发给朋友对照讨论。把它当作一个轻松的自我观察入口和社交话题，会比把它当成权威标签更合适。"
+        }
       ]
+    },
+    "paidReportCard": {
+      "title": "已购报告",
+      "purchasedLabel": "购买时间",
+      "cta": "查看完整报告"
+    },
+    "deepReport": {
+      "reportTitle": "你的深度人格报告预览",
+      "heroLabel": "深度人格",
+      "continueButton": "继续看",
+      "maskLabel": "隐藏答案",
+      "unavailableBody": "当前记录暂时不可用。重新验证后，就能回到完整的九模块深度报告。",
+      "moduleTitles": {
+        "dnaNarrative": "人格叙事",
+        "hiddenStrengths": "隐藏优势",
+        "growthPotential": "成长潜力",
+        "careerCompass": "职业罗盘",
+        "relationshipStyle": "关系风格",
+        "communicationStyle": "沟通风格",
+        "stressManagement": "压力管理",
+        "bestMatchPersonality": "最佳匹配人格",
+        "lifeMotto": "人生格言"
+      },
+      "activityJustNowLabel": "刚刚",
+      "activitySecondsAgoPattern": "{count}秒前",
+      "activityMinuteAgoPattern": "{count}分钟前",
+      "activityMinutesAgoPattern": "{count}分钟前",
+      "activityTemplates": [
+        "{timeAgo}有人解锁了 {typeCode} 的深度解析",
+        "{timeAgo}有人打开了 {typeCode} 的完整人格报告",
+        "{timeAgo}有人正在看 {typeCode} 的深度人格档案"
+      ],
+      "promptTemplates": {
+        "dnaNarrative": "别人没说出来的是，你其实是 {{answer}} 那种人",
+        "hiddenStrengths": "你最容易被低估的天赋是 {{answer}}",
+        "growthPotential": "你下一步最该放大的，是 {{answer}}",
+        "careerCompass": "最适合你的工作状态是 {{answer}}",
+        "relationshipStyle": "你在关系里最在意的，其实是 {{answer}}",
+        "communicationStyle": "你最容易被误解的表达方式是 {{answer}}",
+        "stressManagement": "真正让你失控的触发点是 {{answer}}",
+        "bestMatchPersonality": "最能接住你的人是 {{answer}}",
+        "lifeMotto": "最适合你的那句人生格言是 {{answer}}"
+      }
     }
   },
   "questions": [

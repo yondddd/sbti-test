@@ -30,13 +30,14 @@ test('README is English-first and includes multilingual jump links plus official
     'README.ja.md',
     'README.ko.md',
     'README.es.md',
+    'README.fr.md',
     'README.ru.md',
-    'README.hi.md',
     'README.de.md',
     'README.th.md',
     'README.vi.md',
     'README.id.md',
     'README.ms.md',
+    'README.ar.md',
   ];
   const h1Matches = [...readme.matchAll(/^# /gm)];
 
@@ -69,6 +70,8 @@ test('README is English-first and includes multilingual jump links plus official
   assert.match(readme, /https:\/\/www\.sbti-test\.org\/test/);
   assert.match(readme, /https:\/\/www\.sbti-test\.org\/en\/test/);
   assert.match(readme, /https:\/\/www\.sbti-test\.org\/zh-hant\/test/);
+  assert.match(readme, /https:\/\/www\.sbti-test\.org\/fr\/test/);
+  assert.match(readme, /https:\/\/www\.sbti-test\.org\/ar\/test/);
   assert.match(readme, /https:\/\/www\.sbti-test\.org\/ms\/test/);
   assert.match(readme, /npm run dev/);
   assert.match(readme, /vite preview/);
@@ -90,13 +93,14 @@ test('localized README files exist and keep official locale links', () => {
     ['README.ja.md', 'https://www.sbti-test.org/ja/test'],
     ['README.ko.md', 'https://www.sbti-test.org/ko/test'],
     ['README.es.md', 'https://www.sbti-test.org/es/test'],
+    ['README.fr.md', 'https://www.sbti-test.org/fr/test'],
     ['README.ru.md', 'https://www.sbti-test.org/ru/test'],
-    ['README.hi.md', 'https://www.sbti-test.org/hi/test'],
     ['README.de.md', 'https://www.sbti-test.org/de/test'],
     ['README.th.md', 'https://www.sbti-test.org/th/test'],
     ['README.vi.md', 'https://www.sbti-test.org/vi/test'],
     ['README.id.md', 'https://www.sbti-test.org/id/test'],
     ['README.ms.md', 'https://www.sbti-test.org/ms/test'],
+    ['README.ar.md', 'https://www.sbti-test.org/ar/test'],
   ];
 
   for (const [file, officialTestUrl] of docs) {

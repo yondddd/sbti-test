@@ -1,4 +1,4 @@
-import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
@@ -6,14 +6,36 @@ import { spawnSync } from 'node:child_process';
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(SCRIPT_DIR, '..');
 const SOURCE_APP_DIR = process.env.SBTI_SOURCE_APP_DIR;
-const SOURCE_TYPES_DIR = path.join(SOURCE_APP_DIR, 'public', 'sbti', 'types');
 const TARGET_TYPES_DIR = path.join(REPO_ROOT, 'public', 'sbti', 'types');
 const TARGET_DATA_DIR = path.join(REPO_ROOT, 'src', 'data');
+const TARGET_BLOG_DIR = path.join(TARGET_DATA_DIR, 'blog');
 const TARGET_CONTENT_DIR = path.join(TARGET_DATA_DIR, 'content');
+const TARGET_POSTS_DIR = path.join(TARGET_DATA_DIR, 'posts');
 const EXPORT_PROGRAM = `
 import { appLocales, localeNames } from '@repo/i18n-core/locale-policy';
 import { sbtiGenerated, getSbtiCopy } from '#features/sbti/lib/data.ts';
 import { getSbtiPageCopy } from '#features/sbti/lib/page-copy.ts';
+
+const contentEntries = await Promise.all(
+  appLocales.map(async (locale) => {
+    const [copy, pageCopy] = await Promise.all([
+      getSbtiCopy(locale),
+      getSbtiPageCopy(locale),
+    ]);
+    return [
+      locale,
+      {
+        chrome: copy.chrome,
+        dimensionMeta: copy.dimensionMeta,
+        dimExplanations: copy.dimExplanations,
+        pageCopy,
+        questions: copy.questions,
+        specialQuestions: copy.specialQuestions,
+        typeLibrary: copy.typeLibrary,
+      },
+    ];
+  })
+);
 
 const payload = {
   defaultLocale: sbtiGenerated.defaultLocale,
@@ -23,23 +45,7 @@ const payload = {
   locales: [...appLocales],
   normalTypes: [...sbtiGenerated.normalTypes],
   publicTypeImages: { ...sbtiGenerated.publicTypeImages },
-  content: Object.fromEntries(
-    appLocales.map((locale) => {
-      const copy = getSbtiCopy(locale);
-      return [
-        locale,
-        {
-          chrome: copy.chrome,
-          dimensionMeta: copy.dimensionMeta,
-          dimExplanations: copy.dimExplanations,
-          pageCopy: getSbtiPageCopy(locale),
-          questions: copy.questions,
-          specialQuestions: copy.specialQuestions,
-          typeLibrary: copy.typeLibrary,
-        },
-      ];
-    })
-  ),
+  content: Object.fromEntries(contentEntries),
 };
 
 process.stdout.write(JSON.stringify(payload));
@@ -53,13 +59,14 @@ const HTML_LANG_BY_LOCALE = {
   ja: 'ja',
   ko: 'ko',
   es: 'es',
+  fr: 'fr',
   ru: 'ru',
-  hi: 'hi',
   de: 'de',
   th: 'th',
   vi: 'vi',
   id: 'id',
   ms: 'ms',
+  ar: 'ar',
 };
 
 function ensureDir(dirPath) {
@@ -111,7 +118,8 @@ function getRepoPath(locale) {
 }
 
 function createImageMap(locale, publicTypeImages) {
-  const localeDir = path.join(SOURCE_TYPES_DIR, locale);
+  const sourceTypesDir = getSourceTypesDir();
+  const localeDir = path.join(sourceTypesDir, locale);
   const actualFiles = new Set(readdirSync(localeDir));
 
   return Object.fromEntries(
@@ -125,14 +133,39 @@ function createImageMap(locale, publicTypeImages) {
 }
 
 function syncImages(locales) {
+  const sourceTypesDir = getSourceTypesDir();
   rmSync(TARGET_TYPES_DIR, { force: true, recursive: true });
   ensureDir(TARGET_TYPES_DIR);
 
   for (const locale of locales) {
-    cpSync(path.join(SOURCE_TYPES_DIR, locale), path.join(TARGET_TYPES_DIR, locale), {
+    cpSync(path.join(sourceTypesDir, locale), path.join(TARGET_TYPES_DIR, locale), {
       recursive: true,
     });
   }
+}
+
+function getSourceTypesDir() {
+  return path.join(SOURCE_APP_DIR, 'public', 'sbti', 'types');
+}
+
+function syncBlogMessages(locales) {
+  rmSync(TARGET_BLOG_DIR, { force: true, recursive: true });
+  ensureDir(TARGET_BLOG_DIR);
+
+  for (const locale of locales) {
+    cpSync(
+      path.join(SOURCE_APP_DIR, 'src', 'i18n', 'messages', locale, 'pages', 'blog.json'),
+      path.join(TARGET_BLOG_DIR, `${locale}.json`)
+    );
+  }
+}
+
+function syncBlogPosts() {
+  rmSync(TARGET_POSTS_DIR, { force: true, recursive: true });
+  ensureDir(TARGET_POSTS_DIR);
+  cpSync(path.join(SOURCE_APP_DIR, 'content', 'posts'), TARGET_POSTS_DIR, {
+    recursive: true,
+  });
 }
 
 function buildMeta(locale, pageCopy) {
@@ -171,6 +204,9 @@ const localeManifest = payload.locales.map((locale) => ({
   repoPath: getRepoPath(locale),
 }));
 
+rmSync(TARGET_CONTENT_DIR, { force: true, recursive: true });
+ensureDir(TARGET_CONTENT_DIR);
+
 writeJson(path.join(TARGET_DATA_DIR, 'locales.json'), localeManifest);
 
 for (const locale of payload.locales) {
@@ -193,6 +229,9 @@ for (const locale of payload.locales) {
   };
   writeJson(path.join(TARGET_CONTENT_DIR, `${locale}.json`), content);
 }
+
+syncBlogMessages(payload.locales);
+syncBlogPosts();
 
 const sourceContract = {
   assetRoot: 'public/sbti/types',

@@ -1,0 +1,217 @@
+---
+title: 'How Does SBTI Work? The 15-Dimension Model, Prototype Matching, and Hidden Type Rules'
+description: 'This article breaks down how SBTI actually works: 30 standard questions, 15 dimensions, 25 standard prototypes, the `DRUNK` override, and the `HHHH` fallback.'
+keywords: 'how SBTI works, SBTI algorithm, SBTI 15 dimensions, SBTI personality types, SBTI Manhattan distance, SBTI hidden type'
+created_at: '2026-04-13'
+author_name: 'SBTI'
+author_image: /logo.png
+image: 'https://file.sbti-test.org/imgs/blog-covers/how-sbti-works-cover.en.png'
+categories:
+  - SBTI
+tags:
+  - SBTI
+  - algorithm
+  - personality test
+---
+
+The first time many people take SBTI, they assume it is just a random test with harsher copywriting. In practice, the result engine is actually **quite explicit, and not especially complicated**.
+
+Here is the short version:
+
+**SBTI is not AI fortune-telling, and it is not deep psychometrics. It behaves more like an entertainment classifier built around a 15-dimension discrete vector and a library of predefined prototypes.**
+
+The system does three things:
+
+1. It maps your answers onto 15 dimensions
+2. It compresses those 15 dimensions into an `L/M/H` pattern
+3. It compares that pattern against preset personality prototypes and returns the closest match
+
+If what you care about is **why this setup can feel unusually accurate**, continue to [Why SBTI Feels Accurate](/blog/why-sbti-feels-accurate). This article stays focused on **how the mechanism works**.
+
+## Start with the basic structure
+
+At the core, the key structure has three layers:
+
+- **15 dimensions**
+- **30 standard questions**
+- **25 standard personality prototypes**
+
+On top of that, there are also:
+
+- **1 drinking-related gate question that always appears**
+- **1 extra drinking question that appears only under a condition**
+- **2 special outcomes**: `DRUNK` and `HHHH`
+
+That is why many descriptions say "31 questions." But the split is really:
+
+- `30` standard scored questions
+- `1` fixed special gate question
+- `1` follow-up question that appears only for some users
+
+So **most users see 31 questions, and some users are routed to 32**.
+
+## The 15 dimensions were not thrown together at random
+
+The 15 dimensions are grouped into 5 models, with 3 sub-dimensions in each:
+
+| Model | Dimensions |
+| --- | --- |
+| Self model | `S1 self-esteem and confidence`, `S2 self-clarity`, `S3 core values` |
+| Emotion model | `E1 attachment security`, `E2 emotional investment`, `E3 boundaries and dependence` |
+| Attitude model | `A1 worldview tendency`, `A2 rules vs flexibility`, `A3 sense of life meaning` |
+| Action-drive model | `Ac1 motivational orientation`, `Ac2 decision style`, `Ac3 execution pattern` |
+| Social model | `So1 social initiative`, `So2 interpersonal boundaries`, `So3 expression and authenticity` |
+
+The most important point here is this:
+
+**SBTI does not reuse MBTI's four binary axes. Instead, it breaks internet-life psychological scenes into smaller, more everyday sub-dimensions.**
+
+That does not make it more scientific. But it does make the output feel more detailed.
+
+## How does each dimension get scored?
+
+Each dimension is tied to two standard questions. Each answer is assigned a value of `1`, `2`, or `3`.
+
+That means the total score range for a single dimension is:
+
+- minimum `2`
+- maximum `6`
+
+The system then compresses that total into three buckets:
+
+- `<= 3` becomes `L`
+- `= 4` becomes `M`
+- `>= 5` becomes `H`
+
+So SBTI does not keep a continuous score at the end. It discretizes every dimension into three levels. The final output is a 15-character `L/M/H` pattern such as `HHH-HMH-MHH-HHH-MHM`.
+
+That pattern is the user's **personality vector**.
+
+## It does not ask "which type did you pick?" It asks "which type are you closest to?"
+
+This is the part where SBTI most resembles a real classifier.
+
+SBTI includes `25` standard personality prototypes, and each one has its own 15-dimension pattern. Examples include:
+
+- `CTRL`
+- `BOSS`
+- `SEXY`
+- `OJBK`
+- `MALO`
+- `THIN-K`
+- `SHIT`
+- `ZZZZ`
+- `DEAD`
+- `IMFW`
+
+These prototypes are not generated on the fly for each user. They are **author-defined personality centroids** prepared in advance. What the system does is compare your vector against all of them one by one.
+
+## The distance algorithm is simple
+
+The comparison method is easy to explain:
+
+- First map `L/M/H` to `1/2/3`
+- Subtract the user's vector from each prototype vector dimension by dimension
+- Take the absolute value of each difference and sum them
+
+In essence, that is **L1 distance**, also known as **Manhattan distance**.
+
+Put more casually, it means:
+
+**How many steps away are you from that prototype across all 15 dimensions?**
+
+The smaller the gap, the closer the match. The larger the gap, the less you resemble it.
+
+SBTI also uses a display formula for similarity: **similarity = max(0, round((1 - distance / 30) * 100))**.
+
+So when a result page shows something like "92% match," that number is not a psychometric confidence interval. It is **a display value derived linearly from distance**.
+
+## What happens if two types look equally close?
+
+The sorting logic in the code is roughly:
+
+1. Compare total distance first, and prefer the smaller value
+2. If total distance ties, compare `exact`, meaning how many of the 15 dimensions match exactly
+3. Only after that does it keep using the displayed similarity value
+
+That tells you SBTI is not using a crude "first condition that passes wins" rule. It does a basic but fairly clear ranking process.
+
+## Why is `DRUNK` a hidden type?
+
+This is the part of SBTI that most clearly reveals the creator's personal motive.
+
+SBTI includes a drinking-specific logic chain:
+
+1. The system inserts a fixed question asking about your usual hobbies
+2. If you choose "drinking" in that question
+3. The system inserts a second question about your attitude toward drinking
+4. If you choose a specific answer in that second question, the system **returns `DRUNK` immediately**
+
+The important point is this:
+
+**`DRUNK` is not computed through the normal 15-dimension distance process. It overrides the standard result through a higher-priority trigger rule.**
+
+That also matches the original creative motive that became part of the project identity: the author initially wanted the quiz to nudge a friend toward drinking less.
+
+So `DRUNK` is not just another ordinary entry in the prototype library. It is more like **a deliberately prioritized value-judgment branch**.
+
+## Then what is `HHHH`?
+
+`HHHH` is another special outcome, but it works differently from `DRUNK`.
+
+It is not behavior-triggered. It is **a fallback when prototype matching is too weak**.
+
+SBTI uses a clear threshold:
+
+- if the best standard personality match has a similarity score **below 60%**
+- the system does not force you into a normal type
+- it returns `HHHH` directly instead
+
+That means `HHHH` is not a sharply defined personality prototype. It means:
+
+**the current prototype library does not explain your answer pattern very well.**
+
+Experientially, this can actually make the system feel more convincing. Instead of forcing a weak fit, it effectively says: *this answer pattern is not well captured by the current library*.
+
+## Why does this structure feel more detailed than a typical joke test?
+
+Because it does three things that many lightweight entertainment quizzes do not:
+
+- **It breaks behavior into dimensions first**
+  It does not simply ask "are you extroverted or introverted?" It turns a lot of everyday scenes into smaller signals.
+
+- **It vectorizes those signals**
+  Each dimension is compressed into a level, and those levels become an overall pattern.
+
+- **It matches against whole prototypes**
+  A single question does not decide the result. The system compares the overall contour of your answers.
+
+That still does not automatically make it scientific. But it does give it much more structure than a "10 questions and receive a random animal" quiz.
+
+## The system's limits begin at the same point
+
+Even if the mechanism is more complete than many people assume, its nature should not be misunderstood.
+
+All of the following remain true:
+
+- the prototype library was written by the creator, not built from clinically validated sampling
+- the dimension labels are editorial judgments by the creator, not standardized psychological scales
+- the similarity score is a display score, not diagnostic confidence
+- the special results contain obvious author stance and satirical intent
+
+So **SBTI is structured entertainment, not scientific assessment dressed up as fun.**
+
+If you care more about why many people still experience it as accurate, continue to [Why SBTI Feels Accurate](/blog/why-sbti-feels-accurate). If you care about where it should and should not be used, read [What Can SBTI Tell You, and What Can't It?](/blog/sbti-limits-and-boundaries).
+
+## Conclusion
+
+The core of SBTI can be summarized as:
+
+- `15` dimensions
+- `30` standard scored questions
+- `25` standard personality prototypes
+- `1` special override rule for `DRUNK`
+- `1` low-match fallback rule for `HHHH`
+- `1` prototype-matching process based on L1 distance
+
+The mechanism is not mystical, but it is complete enough, and it speaks the language of the internet well enough, to create the subjective feeling that the result is "surprisingly accurate" and to support screenshot sharing afterward.

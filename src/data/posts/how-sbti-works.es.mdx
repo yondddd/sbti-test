@@ -1,0 +1,216 @@
+---
+title: '¿Cómo funciona SBTI? Modelo de 15 dimensiones, prototipos y reglas ocultas'
+description: 'Así funciona SBTI: 30 preguntas base, 15 dimensiones, 25 prototipos, la regla especial DRUNK y el resultado de respaldo HHHH.'
+keywords: 'cómo funciona SBTI, algoritmo de SBTI, SBTI 15 dimensiones, tipos de personalidad SBTI, distancia Manhattan SBTI, tipo oculto SBTI'
+created_at: '2026-04-13'
+author_name: 'SBTI'
+author_image: /logo.png
+image: 'https://file.sbti-test.org/imgs/blog-covers/how-sbti-works-cover.es.png'
+categories:
+  - SBTI
+tags:
+  - SBTI
+  - algoritmo
+  - prueba de personalidad
+---
+La primera vez que muchas personas toman SBTI, asumen que es sólo una prueba aleatoria con una redacción más estricta. En la práctica, el motor de resultados es en realidad **bastante explícito y no especialmente complicado**.
+
+Aquí está la versión corta:
+
+**SBTI no es una adivinación por IA ni una psicometría profunda. Se comporta más como un clasificador de entretenimiento construido alrededor de un vector discreto de 15 dimensiones y una biblioteca de prototipos predefinidos.**
+
+El sistema hace tres cosas:
+
+1. Asigna tus respuestas a 15 dimensiones
+2. Comprime esas 15 dimensiones en un patrón `L/M/H`
+3. Compara ese patrón con prototipos de personalidad preestablecidos y arroja la coincidencia más cercana.
+
+Si lo que te importa es **por qué esta configuración puede parecer inusualmente precisa**, continúa con [Por qué SBTI se siente preciso](/blog/why-sbti-feels-accurate). Este artículo se centra en **cómo funciona el mecanismo**.
+
+## Comience con la estructura básica
+
+En esencia, la estructura clave tiene tres capas:
+
+- **15 dimensiones**
+- **30 preguntas estándar**
+- **25 prototipos de personalidad estándar**
+
+Además de eso, también hay:
+
+- **1 pregunta inicial relacionada con la bebida que siempre aparece**
+- **1 pregunta adicional sobre bebida que aparece solo bajo una condición**
+- **2 resultados especiales**: `DRUNK` y `HHHH`
+
+Por eso muchas descripciones dicen "31 preguntas". Pero la división es realmente:
+
+- `30` preguntas puntuadas estándar
+- `1` pregunta de puerta especial fija
+- `1` pregunta de seguimiento que aparece solo para algunos usuarios
+
+Entonces **la mayoría de los usuarios ven 31 preguntas y algunos usuarios son redirigidos a 32**.
+
+## Las 15 dimensiones no se juntaron al azar
+
+Las 15 dimensiones se agrupan en 5 modelos, con 3 subdimensiones en cada uno:
+
+| Modelo | Dimensiones |
+| --- | --- |
+| Auto modelo | `S1 self-esteem and confidence`, `S2 self-clarity`, `S3 core values` |
+| Modelo de emoción | `E1 attachment security`, `E2 emotional investment`, `E3 boundaries and dependence` |
+| Modelo de actitud | `A1 worldview tendency`, `A2 rules vs flexibility`, `A3 sense of life meaning` |
+| Modelo de acción-impulso | `Ac1 motivational orientation`, `Ac2 decision style`, `Ac3 execution pattern` |
+| Modelo social | `So1 social initiative`, `So2 interpersonal boundaries`, `So3 expression and authenticity` |
+
+El punto más importante aquí es este:
+
+**SBTI no reutiliza los cuatro ejes binarios de MBTI. En cambio, divide las escenas psicológicas de la vida en Internet en subdimensiones más pequeñas y cotidianas.**
+
+Eso no lo hace más científico. Pero hace que el resultado parezca más detallado.
+
+## ¿Cómo se puntúa cada dimensión?
+
+Cada dimensión está vinculada a dos preguntas estándar. A cada respuesta se le asigna un valor de `1`, `2` o `3`.
+
+Eso significa que el rango de puntuación total para una sola dimensión es:
+
+- mínimo `2`
+- máximo `6`
+
+Luego, el sistema comprime ese total en tres grupos:
+
+- `<= 3` se convierte en `L`
+- `= 4` se convierte en `M`
+- `>= 5` se convierte en `H`
+
+Por lo tanto, SBTI no mantiene una puntuación continua al final. Discretiza cada dimensión en tres niveles. El resultado final es un patrón `L/M/H` de 15 caracteres como `HHH-HMH-MHH-HHH-MHM`.
+
+Ese patrón es el **vector de personalidad** del usuario.
+
+## No pregunta "¿qué tipo elegiste?" Pregunta "¿a qué tipo eres más cercano?"
+
+Esta es la parte donde SBTI se parece más a un clasificador real.
+
+SBTI incluye `25` prototipos de personalidad estándar, y cada uno tiene su propio patrón de 15 dimensiones. Los ejemplos incluyen:
+
+- `CTRL`
+- `BOSS`
+- `SEXY`
+- `OJBK`
+- `MALO`
+- `THIN-K`
+- `SHIT`
+- `ZZZZ`
+- `DEAD`
+- `IMFW`
+
+Estos prototipos no se generan sobre la marcha para cada usuario. Están **centroides de personalidad definidos por el autor** preparados de antemano. Lo que hace el sistema es comparar su vector con todos ellos uno por uno.
+
+## El algoritmo de distancia es simple
+
+El método de comparación es fácil de explicar:
+
+- Primer mapa `L/M/H` a `1/2/3`
+- Resta el vector del usuario de cada vector prototipo dimensión por dimensión
+- Toma el valor absoluto de cada diferencia y súmalos.
+
+En esencia, eso es **distancia L1**, también conocido como **distancia de manhattan**.
+
+Dicho de manera más informal, significa:
+
+**¿A cuántos pasos estás de ese prototipo en las 15 dimensiones?**
+
+Cuanto menor sea la brecha, más cerca estará el partido. Cuanto mayor es la brecha, menos te pareces a ella.
+
+SBTI también utiliza una fórmula de visualización para la similitud: **similitud = max(0, round((1 - distancia / 30) * 100))**.
+
+Entonces, cuando una página de resultados muestra algo como "92% de coincidencia", ese número no es un intervalo de confianza psicométrico. Es **un valor de visualización derivado linealmente de la distancia**.
+
+## ¿Qué sucede si dos tipos se parecen igualmente?
+
+La lógica de clasificación en el código es aproximadamente:
+
+1. Primero compare la distancia total y prefiera el valor más pequeño.
+2. Si la distancia total coincide, compare `exact`, es decir, cuántas de las 15 dimensiones coinciden exactamente
+3. Sólo después de eso continúa usando el valor de similitud mostrado.
+
+Eso le indica que SBTI no está utilizando una regla burda de "la primera condición que pasa gana". Realiza un proceso de clasificación básico pero bastante claro.
+
+## ¿Por qué `DRUNK` es un tipo oculto?
+
+Esta es la parte de SBTI que revela más claramente el motivo personal del creador.
+
+SBTI incluye una cadena lógica específica para el consumo de alcohol:
+
+1. El sistema inserta una pregunta fija sobre tus aficiones habituales.
+2. Si eliges "beber" en esa pregunta
+3. El sistema inserta una segunda pregunta sobre su actitud hacia la bebida.
+4. Si elige una respuesta específica en esa segunda pregunta, el sistema **devuelve [[[1000]]] inmediatamente**
+
+El punto importante es este:
+
+**[[[1000]]] no se calcula mediante el proceso normal de distancia de 15 dimensiones. Anula el resultado estándar mediante una regla de activación de mayor prioridad.**
+
+Esto también coincide con el motivo creativo original que se convirtió en parte de la identidad del proyecto: el autor inicialmente quería que el cuestionario animara a un amigo a beber menos.
+
+Entonces `DRUNK` no es simplemente otra entrada ordinaria en la biblioteca de prototipos. Es más como **una rama de juicio de valor deliberadamente priorizada**.
+
+## Entonces ¿qué es `HHHH`?
+
+`HHHH` es otro resultado especial, pero funciona de manera diferente a `DRUNK`.
+
+No está provocado por el comportamiento. Es **un recurso alternativo cuando la coincidencia de prototipos es demasiado débil**.
+
+SBTI utiliza un umbral claro:
+
+- si la mejor coincidencia de personalidad estándar tiene una puntuación de similitud **por debajo del 60%**
+- el sistema no te obliga a entrar en un tipo normal
+- devuelve `HHHH` directamente en su lugar
+
+Eso significa que `HHHH` no es un prototipo de personalidad claramente definido. Significa:
+
+**La biblioteca de prototipos actual no explica muy bien su patrón de respuesta.**
+
+Desde el punto de vista experiencial, esto puede hacer que el sistema parezca más convincente. En lugar de forzar un ajuste débil, efectivamente dice: *la biblioteca actual no captura bien este patrón de respuesta*.
+
+## ¿Por qué esta estructura parece más detallada que una típica prueba de broma?
+
+Porque hace tres cosas que muchos cuestionarios de entretenimiento ligeros no hacen:
+
+- **Primero divide el comportamiento en dimensiones**
+  No pregunta simplemente "¿eres extrovertido o introvertido?" Convierte muchas escenas cotidianas en señales más pequeñas.
+
+- **Vectoriza esas señales**
+  Cada dimensión se comprime en un nivel y esos niveles se convierten en un patrón general.
+
+- **Coincide con prototipos completos**
+  Una sola pregunta no decide el resultado. El sistema compara el contorno general de sus respuestas.
+
+Eso todavía no lo convierte automáticamente en científico. Pero le da mucha más estructura que un cuestionario de "10 preguntas y recibe un animal al azar".
+
+## Los límites del sistema comienzan en el mismo punto.
+
+Incluso si el mecanismo es más completo de lo que mucha gente supone, no se debe malinterpretar su naturaleza.
+
+Todo lo siguiente sigue siendo cierto:
+
+- la biblioteca prototipo fue escrita por el creador, no construida a partir de muestras clínicamente validadas
+- las etiquetas de dimensiones son juicios editoriales del creador, no escalas psicológicas estandarizadas
+- la puntuación de similitud es una puntuación de visualización, no de confianza diagnóstica
+- los resultados especiales contienen una postura obvia del autor y una intención satírica
+
+Entonces **SBTI es entretenimiento estructurado, no una evaluación científica disfrazada de diversión.**
+
+Si le importa más por qué muchas personas todavía lo consideran exacto, continúe con [Por qué SBTI se siente preciso](/blog/why-sbti-feels-accurate). Si le importa dónde debe y no debe usarse, lea [¿Qué puede decirle SBTI y qué no?](/blog/sbti-limits-and-boundaries).
+
+## Conclusión
+
+El núcleo de SBTI se puede resumir como:
+
+- `15` dimensiones
+- `30` preguntas puntuadas estándar
+- `25` prototipos de personalidad estándar
+- `1` regla de anulación especial para `DRUNK`
+- `1` regla alternativa de baja coincidencia para `HHHH`
+- `1` proceso de comparación de prototipos basado en la distancia L1
+
+El mecanismo no es místico, pero es lo suficientemente completo y habla el lenguaje de Internet lo suficientemente bien como para crear la sensación subjetiva de que el resultado es "sorprendentemente preciso" y permite compartir capturas de pantalla posteriormente.

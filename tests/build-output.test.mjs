@@ -21,13 +21,14 @@ test('deployable static pages exist for root English and every locale folder', (
     'ja',
     'ko',
     'es',
+    'fr',
     'ru',
-    'hi',
     'de',
     'th',
     'vi',
     'id',
     'ms',
+    'ar',
   ];
 
   for (const locale of locales) {
@@ -55,4 +56,34 @@ test('generated pages keep localized type image references inside the static rep
     true
   );
   assert.equal(existsSync(path.join(repoRoot, 'sbti')), false);
+});
+
+test('generated static blog pages exist for every upstream locale', () => {
+  const rootBlogPath = path.join(repoRoot, 'blog', 'index.html');
+  assert.equal(existsSync(rootBlogPath), true);
+
+  const rootBlog = readFileSync(rootBlogPath, 'utf8');
+  assert.match(rootBlog, /SBTI Blog/);
+  assert.match(rootBlog, /what-is-sbti/);
+  assert.doesNotMatch(rootBlog, /\/Users\/yond\/Downloads\/code\//);
+
+  const rootPostPath = path.join(repoRoot, 'blog', 'what-is-sbti', 'index.html');
+  assert.equal(existsSync(rootPostPath), true);
+  const rootPost = readFileSync(rootPostPath, 'utf8');
+  assert.match(rootPost, /What Is SBTI/);
+  assert.doesNotMatch(rootPost, /\/Users\/yond\/Downloads\/code\//);
+
+  for (const locale of ['fr', 'ar']) {
+    const blogPath = path.join(repoRoot, locale, 'blog', 'index.html');
+    assert.equal(existsSync(blogPath), true, `${locale} blog index should exist`);
+    const html = readFileSync(blogPath, 'utf8');
+    assert.match(html, /what-is-sbti/);
+    assert.doesNotMatch(html, /\/Users\/yond\/Downloads\/code\//);
+
+    const detailPath = path.join(repoRoot, locale, 'blog', 'what-is-sbti', 'index.html');
+    assert.equal(existsSync(detailPath), true, `${locale} blog detail should exist`);
+    const detailHtml = readFileSync(detailPath, 'utf8');
+    assert.match(detailHtml, /SBTI/);
+    assert.doesNotMatch(detailHtml, /\/Users\/yond\/Downloads\/code\//);
+  }
 });

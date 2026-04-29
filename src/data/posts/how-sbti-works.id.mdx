@@ -1,0 +1,216 @@
+---
+title: 'Bagaimana SBTI Bekerja? 15 Dimensi, Pencocokan Prototipe, dan Aturan Tersembunyi'
+description: 'Begini cara kerja SBTI: 30 pertanyaan standar, 15 dimensi, 25 prototipe, aturan khusus DRUNK, dan jalur cadangan HHHH.'
+keywords: 'cara kerja SBTI, algoritma SBTI, SBTI 15 dimensi, tipe kepribadian SBTI, jarak Manhattan SBTI, tipe tersembunyi SBTI'
+created_at: '2026-04-13'
+author_name: 'SBTI'
+author_image: /logo.png
+image: 'https://file.sbti-test.org/imgs/blog-covers/how-sbti-works-cover.id.png'
+categories:
+  - SBTI
+tags:
+  - SBTI
+  - algoritma
+  - tes kepribadian
+---
+Saat pertama kali banyak orang mengikuti SBTI, mereka menganggap itu hanya tes acak dengan copywriting yang lebih keras. Dalam praktiknya, mesin hasil sebenarnya adalah **cukup eksplisit, dan tidak terlalu rumit**.
+
+Ini versi singkatnya:
+
+**SBTI bukanlah peramalan AI, dan bukan psikometri mendalam. Ini berperilaku lebih seperti pengklasifikasi hiburan yang dibangun berdasarkan vektor diskrit 15 dimensi dan perpustakaan prototipe yang telah ditentukan sebelumnya.**
+
+Sistem melakukan tiga hal:
+
+1. Ini memetakan jawaban Anda ke dalam 15 dimensi
+2. Ini memampatkan 15 dimensi tersebut menjadi pola `L/M/H`.
+3. Ini membandingkan pola tersebut dengan prototipe kepribadian yang telah ditetapkan dan menghasilkan kecocokan yang paling mendekati
+
+Jika yang Anda pedulikan adalah **mengapa pengaturan ini terasa sangat akurat**, lanjutkan ke [Mengapa SBTI Terasa Akurat](/blog/why-sbti-feels-accurate). Artikel ini tetap fokus pada **bagaimana mekanismenya bekerja**.
+
+## Mulailah dengan struktur dasar
+
+Pada intinya, struktur kunci memiliki tiga lapisan:
+
+- **15 dimensi**
+- **30 pertanyaan standar**
+- **25 prototipe kepribadian standar**
+
+Selain itu, ada juga:
+
+- **1 pertanyaan gerbang terkait minuman keras yang selalu muncul**
+- **1 pertanyaan minum tambahan yang muncul hanya dengan syarat**
+- **2 hasil khusus**: `DRUNK` dan `HHHH`
+
+Itulah sebabnya banyak deskripsi mengatakan "31 pertanyaan". Namun perpecahannya sebenarnya adalah:
+
+- `30` pertanyaan dengan skor standar
+- `1` memperbaiki pertanyaan gerbang khusus
+- `1` pertanyaan lanjutan yang hanya muncul untuk beberapa pengguna
+
+Jadi **sebagian besar pengguna melihat 31 pertanyaan, dan beberapa pengguna dialihkan ke 32**.
+
+## 15 dimensi tersebut tidak dilempar bersamaan secara acak
+
+15 dimensi tersebut dikelompokkan menjadi 5 model, dengan masing-masing 3 subdimensi:
+
+| Model | Dimensi |
+| --- | --- |
+| Model diri | `S1 self-esteem and confidence`, `S2 self-clarity`, `S3 core values` |
+| Model emosi | `E1 attachment security`, `E2 emotional investment`, `E3 boundaries and dependence` |
+| Model sikap | `A1 worldview tendency`, `A2 rules vs flexibility`, `A3 sense of life meaning` |
+| Model penggerak aksi | `Ac1 motivational orientation`, `Ac2 decision style`, `Ac3 execution pattern` |
+| Model sosial | `So1 social initiative`, `So2 interpersonal boundaries`, `So3 expression and authenticity` |
+
+Poin terpenting di sini adalah ini:
+
+**SBTI tidak menggunakan kembali empat sumbu biner MBTI. Sebaliknya, hal ini memecah adegan psikologis kehidupan internet menjadi sub-dimensi yang lebih kecil dan lebih sehari-hari.**
+
+Hal ini tidak menjadikannya lebih ilmiah. Tapi itu membuat keluarannya terasa lebih detail.
+
+## Bagaimana setiap dimensi dinilai?
+
+Setiap dimensi terikat pada dua pertanyaan standar. Setiap jawaban diberi nilai `1`, `2`, atau `3`.
+
+Artinya, rentang skor total untuk satu dimensi adalah:
+
+- minimal `2`
+- maksimum `6`
+
+Sistem kemudian memampatkan total tersebut menjadi tiga kelompok:
+
+- `<= 3` menjadi `L`
+- `= 4` menjadi `M`
+- `>= 5` menjadi `H`
+
+Jadi SBTI tidak mencatat skor terus menerus di akhir. Ini mendiskritisasi setiap dimensi menjadi tiga tingkatan. Hasil akhirnya adalah pola 15 karakter `L/M/H` seperti `HHH-HMH-MHH-HHH-MHM`.
+
+Pola itu adalah **vektor kepribadian** milik pengguna.
+
+## Tidak menanyakan "tipe mana yang Anda pilih?" Ia menanyakan "tipe manakah yang paling dekat dengan Anda?"
+
+Ini adalah bagian di mana SBTI paling mirip dengan pengklasifikasi sebenarnya.
+
+SBTI mencakup `25` prototipe kepribadian standar, dan masing-masing memiliki pola 15 dimensinya sendiri. Contohnya meliputi:
+
+- `CTRL`
+- `BOSS`
+- `SEXY`
+- `OJBK`
+- `MALO`
+- `THIN-K`
+- `SHIT`
+- `ZZZZ`
+- `DEAD`
+- `IMFW`
+
+Prototipe ini tidak dibuat dengan cepat untuk setiap pengguna. Mereka **pusat kepribadian yang ditentukan penulis** dipersiapkan sebelumnya. Apa yang dilakukan sistem adalah membandingkan vektor Anda dengan semuanya satu per satu.
+
+## Algoritma jaraknya sederhana
+
+Metode perbandingan mudah dijelaskan:
+
+- Peta pertama `L/M/H` ke `1/2/3`
+- Kurangi vektor pengguna dari setiap dimensi vektor prototipe dengan dimensi
+- Ambil nilai absolut setiap selisih dan jumlahkan
+
+Intinya, itu adalah **Jarak L1**, juga dikenal sebagai **Jarak Manhattan**.
+
+Dengan kata lain, maksudnya adalah:
+
+**Berapa langkah lagi Anda dari prototipe di 15 dimensi itu?**
+
+Semakin kecil jaraknya, semakin dekat pertandingannya. Semakin besar jaraknya, semakin kecil kemiripannya.
+
+SBTI juga menggunakan rumus tampilan kesamaan: **kesamaan = max(0, bulat((1 - jarak / 30) * 100))**.
+
+Jadi ketika halaman hasil menunjukkan sesuatu seperti "92% kecocokan", angka tersebut bukanlah interval kepercayaan psikometrik. Itu adalah **nilai tampilan yang diturunkan secara linier dari jarak**.
+
+## Apa yang terjadi jika dua tipe terlihat sama-sama dekat?
+
+Logika pengurutan dalam kode kira-kira:
+
+1. Bandingkan jarak total terlebih dahulu, dan pilih nilai yang lebih kecil
+2. Jika jarak totalnya sama, bandingkan `exact`, artinya berapa banyak dari 15 dimensi yang sama persis
+3. Baru setelah itu tetap menggunakan nilai kesamaan yang ditampilkan
+
+Hal ini memberitahukan Anda bahwa SBTI tidak menggunakan aturan kasar "kondisi pertama yang lolos menang". Itu melakukan proses pemeringkatan yang mendasar namun cukup jelas.
+
+## Mengapa `DRUNK` merupakan tipe tersembunyi?
+
+Bagian SBTI inilah yang paling jelas mengungkap motif pribadi penciptanya.
+
+SBTI mencakup rantai logika khusus minuman beralkohol:
+
+1. Sistem menyisipkan pertanyaan tetap yang menanyakan tentang hobi Anda yang biasa
+2. Jika Anda memilih "minum" pada pertanyaan itu
+3. Sistem memasukkan pertanyaan kedua tentang sikap Anda terhadap minuman keras
+4. Jika Anda memilih jawaban spesifik pada pertanyaan kedua tersebut, sistem **mengembalikan [[[1000]]] segera**
+
+Poin pentingnya adalah ini:
+
+**[[[1000]]] tidak dihitung melalui proses jarak 15 dimensi normal. Ini mengesampingkan hasil standar melalui aturan pemicu dengan prioritas lebih tinggi.**
+
+Hal ini juga sesuai dengan motif kreatif asli yang menjadi bagian dari identitas proyek: penulis awalnya ingin kuis ini mendorong temannya untuk mengurangi minum.
+
+Jadi `DRUNK` bukan sekadar entri biasa di perpustakaan prototipe. Ini lebih seperti **cabang penilaian nilai yang sengaja diprioritaskan**.
+
+## Lalu apa itu `HHHH`?
+
+`HHHH` adalah hasil khusus lainnya, tetapi cara kerjanya berbeda dari `DRUNK`.
+
+Hal ini tidak dipicu oleh perilaku. Itu adalah **fallback ketika pencocokan prototipe terlalu lemah**.
+
+SBTI menggunakan ambang batas yang jelas:
+
+- jika kecocokan kepribadian standar terbaik memiliki skor kesamaan **di bawah 60%**
+- sistem tidak memaksa anda menjadi tipe normal
+- ia mengembalikan `HHHH` secara langsung
+
+Itu berarti `HHHH` bukanlah prototipe kepribadian yang didefinisikan secara jelas. Artinya:
+
+**perpustakaan prototipe saat ini tidak menjelaskan pola jawaban Anda dengan baik.**
+
+Berdasarkan pengalaman, hal ini sebenarnya dapat membuat sistem terasa lebih meyakinkan. Alih-alih memaksakan kecocokan yang lemah, ini secara efektif mengatakan: *pola jawaban ini tidak ditangkap dengan baik oleh perpustakaan saat ini*.
+
+## Mengapa struktur ini terasa lebih detail dibandingkan tes lelucon pada umumnya?
+
+Karena kuis ini melakukan tiga hal yang tidak dilakukan oleh banyak kuis hiburan ringan:
+
+- **Ini memecah perilaku menjadi beberapa dimensi terlebih dahulu**
+  Pertanyaan ini tidak sekadar menanyakan "apakah Anda ekstrovert atau introvert?" Ini mengubah banyak pemandangan sehari-hari menjadi sinyal yang lebih kecil.
+
+- **Ini memvektorisasi sinyal-sinyal itu**
+  Setiap dimensi dikompres menjadi sebuah level, dan level tersebut menjadi pola keseluruhan.
+
+- **Ini cocok dengan seluruh prototipe**
+  Satu pertanyaan tidak menentukan hasilnya. Sistem membandingkan keseluruhan kontur jawaban Anda.
+
+Hal ini belum tentu menjadikannya ilmiah. Tapi itu memberikan lebih banyak struktur daripada kuis "10 pertanyaan dan menerima hewan acak".
+
+## Batasan sistem dimulai dari titik yang sama
+
+Sekalipun mekanismenya lebih lengkap dari perkiraan banyak orang, sifatnya tidak boleh disalahpahami.
+
+Semua hal berikut ini tetap benar:
+
+- perpustakaan prototipe ditulis oleh pembuatnya, bukan dibuat dari pengambilan sampel yang tervalidasi secara klinis
+- Label dimensi merupakan penilaian editorial oleh pencipta, bukan skala psikologis standar
+- skor kemiripan adalah skor tampilan, bukan keyakinan diagnostik
+- hasil khusus mengandung pendirian penulis yang jelas dan maksud menyindir
+
+Jadi **SBTI adalah hiburan terstruktur, bukan penilaian ilmiah yang dibalut kesenangan.**
+
+Jika Anda lebih peduli tentang mengapa banyak orang masih menganggapnya akurat, lanjutkan ke [Mengapa SBTI Terasa Akurat](/blog/why-sbti-feels-accurate). Jika Anda peduli di mana sebaiknya dan tidak boleh digunakan, baca [Apa yang Dapat Diberitahukan SBTI kepada Anda dan Apa yang Tidak Dapat Diberitahukan kepada Anda?](/blog/sbti-limits-and-boundaries).
+
+## Kesimpulan
+
+Inti dari SBTI dapat diringkas sebagai:
+
+- `15` dimensi
+- `30` pertanyaan dengan skor standar
+- `25` prototipe kepribadian standar
+- `1` aturan penggantian khusus untuk `DRUNK`
+- `1` aturan fallback kecocokan rendah untuk `HHHH`
+- `1` proses pencocokan prototipe berdasarkan jarak L1
+
+Mekanismenya tidak mistis, namun cukup lengkap, dan berbicara dalam bahasa internet dengan cukup baik, sehingga menciptakan perasaan subyektif bahwa hasilnya "sangat akurat" dan mendukung pembagian tangkapan layar setelahnya.

@@ -1,0 +1,18 @@
+{
+  "page": {
+    "title": "SBTI ブログ",
+    "sections": {
+      "blog": {
+        "id": "blog",
+        "title": "ブログ",
+        "description": "SBTI性格診断や SBTI と MBTI の違い、各結果の読み解き方を紹介する記事一覧です。"
+      }
+    }
+  },
+  "messages": {
+    "all": "すべて",
+    "no_content": "この言語ではまだ記事が公開されていません。",
+    "crumb": "ブログ",
+    "toc": "このページの内容"
+  }
+}

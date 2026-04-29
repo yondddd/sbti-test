@@ -1,6 +1,6 @@
 # SBTI Test: Free SBTI Personality Test
 
-[English](./README.md) | [简体中文](./README.zh-CN.md) | [繁體中文](./README.zh-Hant.md) | [日本語](./README.ja.md) | [한국어](./README.ko.md) | [Español](./README.es.md) | [Русский](./README.ru.md) | [हिन्दी](./README.hi.md) | [Deutsch](./README.de.md) | [ภาษาไทย](./README.th.md) | [Tiếng Việt](./README.vi.md) | [Bahasa Indonesia](./README.id.md) | [Bahasa Melayu](./README.ms.md)
+[English](./README.md) | [简体中文](./README.zh-CN.md) | [繁體中文](./README.zh-Hant.md) | [日本語](./README.ja.md) | [한국어](./README.ko.md) | [Español](./README.es.md) | [Français](./README.fr.md) | [Русский](./README.ru.md) | [Deutsch](./README.de.md) | [ภาษาไทย](./README.th.md) | [Tiếng Việt](./README.vi.md) | [Bahasa Indonesia](./README.id.md) | [Bahasa Melayu](./README.ms.md) | [العربية](./README.ar.md)
 
 ## Overview
 
@@ -78,13 +78,14 @@ People usually take the SBTI test for the same reasons they share memes, roast t
 | `ja` | 日本語 | `/ja/` |
 | `ko` | 한국어 | `/ko/` |
 | `es` | Español | `/es/` |
+| `fr` | Français | `/fr/` |
 | `ru` | Русский | `/ru/` |
-| `hi` | हिन्दी | `/hi/` |
 | `de` | Deutsch | `/de/` |
 | `th` | ภาษาไทย | `/th/` |
 | `vi` | Tiếng Việt | `/vi/` |
 | `id` | Bahasa Indonesia | `/id/` |
 | `ms` | Bahasa Melayu | `/ms/` |
+| `ar` | العربية | `/ar/` |
 
 ## Official Website Links
 
@@ -98,18 +99,19 @@ The README and locale manifest follow the live `sbti-test.org` URL structure ver
 | `ja` | [https://www.sbti-test.org/ja](https://www.sbti-test.org/ja) | [https://www.sbti-test.org/ja/test](https://www.sbti-test.org/ja/test) |
 | `ko` | [https://www.sbti-test.org/ko](https://www.sbti-test.org/ko) | [https://www.sbti-test.org/ko/test](https://www.sbti-test.org/ko/test) |
 | `es` | [https://www.sbti-test.org/es](https://www.sbti-test.org/es) | [https://www.sbti-test.org/es/test](https://www.sbti-test.org/es/test) |
+| `fr` | [https://www.sbti-test.org/fr](https://www.sbti-test.org/fr) | [https://www.sbti-test.org/fr/test](https://www.sbti-test.org/fr/test) |
 | `ru` | [https://www.sbti-test.org/ru](https://www.sbti-test.org/ru) | [https://www.sbti-test.org/ru/test](https://www.sbti-test.org/ru/test) |
-| `hi` | [https://www.sbti-test.org/hi](https://www.sbti-test.org/hi) | [https://www.sbti-test.org/hi/test](https://www.sbti-test.org/hi/test) |
 | `de` | [https://www.sbti-test.org/de](https://www.sbti-test.org/de) | [https://www.sbti-test.org/de/test](https://www.sbti-test.org/de/test) |
 | `th` | [https://www.sbti-test.org/th](https://www.sbti-test.org/th) | [https://www.sbti-test.org/th/test](https://www.sbti-test.org/th/test) |
 | `vi` | [https://www.sbti-test.org/vi](https://www.sbti-test.org/vi) | [https://www.sbti-test.org/vi/test](https://www.sbti-test.org/vi/test) |
 | `id` | [https://www.sbti-test.org/id](https://www.sbti-test.org/id) | [https://www.sbti-test.org/id/test](https://www.sbti-test.org/id/test) |
 | `ms` | [https://www.sbti-test.org/ms](https://www.sbti-test.org/ms) | [https://www.sbti-test.org/ms/test](https://www.sbti-test.org/ms/test) |
+| `ar` | [https://www.sbti-test.org/ar](https://www.sbti-test.org/ar) | [https://www.sbti-test.org/ar/test](https://www.sbti-test.org/ar/test) |
 
 ## Features
 
 - Standalone static site with a standard Vite dev/build workflow
-- Root English homepage plus 12 additional locale folders
+- Root English homepage plus 13 additional locale folders
 - Shared data-driven quiz engine across all locales
 - Localized quiz copy, result copy, FAQ copy, and type descriptions
 - Preserved multilingual type image filenames inside the repository
@@ -128,7 +130,9 @@ The README and locale manifest follow the live `sbti-test.org` URL structure ver
 ├── src/
 │   ├── data/
 │   │   ├── locales.json     # Locale manifest
-│   │   └── content/*.json   # Repo-local multilingual content payloads
+│   │   ├── blog/*.json      # Localized Blog UI copy
+│   │   ├── content/*.json   # Repo-local multilingual content payloads
+│   │   └── posts/*.mdx      # Synced Blog article source
 │   ├── runtime/engine.mjs   # Shared scoring engine
 │   └── template/            # Shared HTML/CSS/JS template files
 ├── tests/                   # Repo contract and output verification
@@ -171,8 +175,8 @@ npm test
 
 Notes:
 
-- `npm run sync` refreshes `src/data/**/*.json` and `public/sbti/types/**`. Set `SBTI_SOURCE_APP_DIR` first if you use this maintainer workflow.
-- `npm run build:pages` regenerates `index.html`, locale folders, and source `assets/`.
+- `npm run sync` refreshes `src/data/**/*.json`, `src/data/posts/*.mdx`, and `public/sbti/types/**`. Set `SBTI_SOURCE_APP_DIR` first if you use this maintainer workflow.
+- `npm run build:pages` regenerates `index.html`, locale folders, Blog pages, and source `assets/`.
 - `npm run dev` starts a Vite dev server and serves `public/sbti/**` at `/sbti/**`.
 - `npm run build` runs page generation and then emits the deployable Vite output into `dist/`.
 - `npm run preview` previews the built `dist/` output through Vite.
@@ -183,6 +187,7 @@ Notes:
 All runtime content required by the site is committed in this repository:
 
 - localized page payloads in `src/data/content/*.json`
+- Blog copy and articles in `src/data/blog/*.json` and `src/data/posts/*.mdx`
 - locale metadata in `src/data/locales.json`
 - public type images in `public/sbti/types/<locale>/`
 

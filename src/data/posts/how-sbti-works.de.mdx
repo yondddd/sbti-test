@@ -1,0 +1,216 @@
+---
+title: 'Wie funktioniert SBTI? 15 Dimensionen, Prototyp-Matching und versteckte Regeln'
+description: 'So funktioniert SBTI im Kern: 30 Standardfragen, 15 Dimensionen, 25 Prototypen, die DRUNK-Sonderregel und der HHHH-Fallback.'
+keywords: 'wie funktioniert SBTI, SBTI Algorithmus, SBTI 15 Dimensionen, SBTI Persönlichkeitstypen, Manhattan Distanz SBTI, versteckter SBTI Typ'
+created_at: '2026-04-13'
+author_name: 'SBTI'
+author_image: /logo.png
+image: 'https://file.sbti-test.org/imgs/blog-covers/how-sbti-works-cover.de.png'
+categories:
+  - SBTI
+tags:
+  - SBTI
+  - Algorithmus
+  - Persönlichkeitstest
+---
+Wenn viele Leute zum ersten Mal SBTI machen, gehen sie davon aus, dass es sich nur um einen Zufallstest mit strengeren Texten handelt. In der Praxis ist die Ergebnis-Engine tatsächlich **ziemlich explizit und nicht besonders kompliziert**.
+
+Hier ist die Kurzversion:
+
+**SBTI ist keine KI-Wahrsagerei und es handelt sich auch nicht um tiefgreifende Psychometrie. Es verhält sich eher wie ein Unterhaltungsklassifikator, der auf einem 15-dimensionalen diskreten Vektor und einer Bibliothek vordefinierter Prototypen basiert.**
+
+Das System macht drei Dinge:
+
+1. Es ordnet Ihre Antworten 15 Dimensionen zu
+2. Es komprimiert diese 15 Dimensionen in ein `L/M/H`-Muster
+3. Es vergleicht dieses Muster mit voreingestellten Persönlichkeitsprototypen und gibt die beste Übereinstimmung zurück
+
+Wenn Sie sich für **warum sich dieses Setup ungewöhnlich genau anfühlen kann** interessieren, fahren Sie mit [Warum sich SBTI genau anfühlt](/blog/why-sbti-feels-accurate) fort. Dieser Artikel konzentriert sich weiterhin auf **wie der Mechanismus funktioniert**.
+
+## Beginnen Sie mit der Grundstruktur
+
+Im Kern besteht die Schlüsselstruktur aus drei Schichten:
+
+- **15 Dimensionen**
+- **30 Standardfragen**
+- **25 Standard-Persönlichkeitsprototypen**
+
+Darüber hinaus gibt es noch:
+
+- **1 Einstiegsfrage zum Thema Alkohol, die immer erscheint**
+- **1 zusätzliche Trinkfrage, die nur unter einer Bedingung erscheint**
+- **2 besondere Ergebnisse**: `DRUNK` und `HHHH`
+
+Deshalb steht in vielen Beschreibungen „31 Fragen“. Aber die Spaltung ist wirklich:
+
+- `30` Standardfragen mit Bewertung
+- `1` spezielle Gate-Frage behoben
+- `1` Folgefrage, die nur für einige Benutzer angezeigt wird
+
+Also **Die meisten Benutzer sehen 31 Fragen und einige Benutzer werden zu 32 weitergeleitet**.
+
+## Die 15 Dimensionen wurden nicht zufällig zusammengewürfelt
+
+Die 15 Dimensionen sind in 5 Modelle mit jeweils 3 Unterdimensionen gruppiert:
+
+| Modell | Dimensionen |
+| --- | --- |
+| Selbstmodell | `S1 self-esteem and confidence`, `S2 self-clarity`, `S3 core values` |
+| Emotionsmodell | `E1 attachment security`, `E2 emotional investment`, `E3 boundaries and dependence` |
+| Einstellungsmodell | `A1 worldview tendency`, `A2 rules vs flexibility`, `A3 sense of life meaning` |
+| Action-Drive-Modell | `Ac1 motivational orientation`, `Ac2 decision style`, `Ac3 execution pattern` |
+| Sozialmodell | `So1 social initiative`, `So2 interpersonal boundaries`, `So3 expression and authenticity` |
+
+Der wichtigste Punkt hier ist dieser:
+
+**SBTI verwendet die vier binären Achsen von MBTI nicht wieder. Stattdessen werden psychologische Szenen des Internetlebens in kleinere, alltäglichere Unterdimensionen zerlegt.**
+
+Das macht es nicht wissenschaftlicher. Aber dadurch fühlt sich die Ausgabe detaillierter an.
+
+## Wie wird jede Dimension bewertet?
+
+Jede Dimension ist an zwei Standardfragen gebunden. Jeder Antwort wird ein Wert von `1`, `2` oder `3` zugewiesen.
+
+Das bedeutet, dass der Gesamtpunktzahlbereich für eine einzelne Dimension beträgt:
+
+- mindestens `2`
+- maximal `6`
+
+Das System komprimiert diese Summe dann in drei Buckets:
+
+- `<= 3` wird zu `L`
+- `= 4` wird zu `M`
+- `>= 5` wird zu `H`
+
+Daher führt SBTI am Ende keinen fortlaufenden Punktestand. Es diskretisiert jede Dimension in drei Ebenen. Die endgültige Ausgabe ist ein 15-stelliges `L/M/H`-Muster wie `HHH-HMH-MHH-HHH-MHM`.
+
+Dieses Muster ist das **Persönlichkeitsvektor** des Benutzers.
+
+## Es wird nicht gefragt: „Welchen Typ haben Sie ausgewählt?“ Es wird gefragt: „Welchem ​​Typ sind Sie am nächsten?“
+
+Dies ist der Teil, in dem SBTI einem echten Klassifikator am ähnlichsten ist.
+
+SBTI umfasst `25` Standard-Persönlichkeitsprototypen, und jeder hat sein eigenes 15-dimensionales Muster. Beispiele hierfür sind:
+
+- `CTRL`
+- `BOSS`
+- `SEXY`
+- `OJBK`
+- `MALO`
+- `THIN-K`
+- `SHIT`
+- `ZZZZ`
+- `DEAD`
+- `IMFW`
+
+Diese Prototypen werden nicht für jeden Benutzer spontan generiert. Sie sind **Vom Autor definierte Persönlichkeitsschwerpunkte** im Voraus vorbereitet. Das System vergleicht Ihren Vektor nacheinander mit allen.
+
+## Der Distanzalgorithmus ist einfach
+
+Die Vergleichsmethode ist einfach zu erklären:
+
+- Erste Karte `L/M/H` bis `1/2/3`
+- Subtrahieren Sie den Benutzervektor Dimension für Dimension von jedem Prototyp-Vektor
+- Nehmen Sie den absoluten Wert jeder Differenz und summieren Sie sie
+
+Im Wesentlichen ist das **L1-Distanz**, auch bekannt als **Manhattan-Entfernung**.
+
+Salopper ausgedrückt bedeutet es:
+
+**Wie viele Schritte sind Sie in allen 15 Dimensionen von diesem Prototyp entfernt?**
+
+Je kleiner der Abstand, desto enger die Übereinstimmung. Je größer die Lücke, desto weniger ähneln Sie ihr.
+
+SBTI verwendet auch eine Anzeigeformel für Ähnlichkeit: **Ähnlichkeit = max(0, rund((1 - Abstand / 30) * 100))**.
+
+Wenn also auf einer Ergebnisseite etwa „92 % Übereinstimmung“ angezeigt wird, handelt es sich bei dieser Zahl nicht um ein psychometrisches Konfidenzintervall. Es ist **ein linear aus der Entfernung abgeleiteter Anzeigewert**.
+
+## Was passiert, wenn zwei Typen gleich ähnlich aussehen?
+
+Die Sortierlogik im Code lautet ungefähr:
+
+1. Vergleichen Sie zuerst die Gesamtstrecke und bevorzugen Sie den kleineren Wert
+2. Wenn die Gesamtentfernung gleich ist, vergleichen Sie `exact`, also wie viele der 15 Dimensionen genau übereinstimmen
+3. Erst danach wird weiterhin der angezeigte Ähnlichkeitswert verwendet
+
+Das zeigt, dass SBTI keine grobe Regel verwendet, bei der die erste Bedingung, die erfüllt ist, gewinnt. Es führt einen einfachen, aber ziemlich klaren Ranking-Prozess durch.
+
+## Warum ist `DRUNK` ein versteckter Typ?
+
+Dies ist der Teil von SBTI, der das persönliche Motiv des Urhebers am deutlichsten offenbart.
+
+SBTI beinhaltet eine trinkspezifische Logikkette:
+
+1. Das System fügt eine feste Frage zu Ihren üblichen Hobbys ein
+2. Wenn Sie in dieser Frage „Trinken“ wählen
+3. Das System fügt eine zweite Frage zu Ihrer Einstellung zum Trinken ein
+4. Wenn Sie in dieser zweiten Frage eine bestimmte Antwort wählen, wird das System **gibt sofort [[[1000]]] zurück**
+
+Der wichtige Punkt ist dieser:
+
+**[[[1000]]] wird nicht durch den normalen 15-dimensionalen Abstandsprozess berechnet. Es überschreibt das Standardergebnis durch eine Triggerregel mit höherer Priorität.**
+
+Das passt auch zum ursprünglichen kreativen Motiv, das Teil der Projektidentität wurde: Ursprünglich wollte der Autor mit dem Quiz einen Freund dazu bringen, weniger zu trinken.
+
+`DRUNK` ist also nicht nur ein weiterer gewöhnlicher Eintrag in der Prototypenbibliothek. Es ist eher wie **ein bewusst priorisierter Werturteilszweig**.
+
+## Was ist dann `HHHH`?
+
+`HHHH` ist ein weiteres besonderes Ergebnis, funktioniert aber anders als `DRUNK`.
+
+Es ist nicht verhaltensbedingt. Es ist **ein Fallback, wenn die Prototypenübereinstimmung zu schwach ist**.
+
+SBTI verwendet einen klaren Schwellenwert:
+
+- wenn die beste Standard-Persönlichkeitsübereinstimmung einen Ähnlichkeitswert hat **unter 60 %**
+- Das System zwingt Sie nicht zu einem normalen Typ
+- Stattdessen wird `HHHH` direkt zurückgegeben
+
+Das bedeutet, dass `HHHH` kein klar definierter Persönlichkeitsprototyp ist. Es bedeutet:
+
+**Die aktuelle Prototypenbibliothek erklärt Ihr Antwortmuster nicht sehr gut.**
+
+Erfahrungsgemäß kann das System dadurch tatsächlich überzeugender wirken. Anstatt eine schwache Anpassung zu erzwingen, heißt es effektiv: *Dieses Antwortmuster wird von der aktuellen Bibliothek nicht gut erfasst*.
+
+## Warum fühlt sich diese Struktur detaillierter an als ein typischer Scherztest?
+
+Weil es drei Dinge tut, die viele einfache Unterhaltungsquizze nicht tun:
+
+- **Es unterteilt das Verhalten zunächst in Dimensionen**
+  Es wird nicht einfach gefragt: „Sind Sie extrovertiert oder introvertiert?“ Es verwandelt viele Alltagsszenen in kleinere Signale.
+
+- **Es vektorisiert diese Signale**
+  Jede Dimension wird zu einer Ebene komprimiert, und diese Ebenen werden zu einem Gesamtmuster.
+
+- **Es vergleicht sich mit ganzen Prototypen**
+  Eine einzelne Frage entscheidet nicht über das Ergebnis. Das System vergleicht die Gesamtkontur Ihrer Antworten.
+
+Das macht es aber noch nicht automatisch wissenschaftlich. Aber es gibt ihm viel mehr Struktur als ein „10 Fragen und erhalte ein zufälliges Tier“-Quiz.
+
+## Die Grenzen des Systems beginnen an derselben Stelle
+
+Auch wenn der Mechanismus vollständiger ist, als viele Menschen annehmen, sollte seine Natur nicht missverstanden werden.
+
+Alles Folgende bleibt wahr:
+
+- Die Prototypenbibliothek wurde vom Ersteller geschrieben und nicht aus klinisch validierten Stichproben erstellt
+- Bei den Dimensionsbezeichnungen handelt es sich um redaktionelle Beurteilungen des Erstellers, nicht um standardisierte psychologische Skalen
+- Bei der Ähnlichkeitsbewertung handelt es sich um eine Anzeigebewertung, nicht um eine diagnostische Sicherheit
+- Die Sonderergebnisse enthalten eine offensichtliche Haltung und satirische Absicht des Autors
+
+Also **SBTI ist strukturierte Unterhaltung, keine als Spaß verkleidete wissenschaftliche Bewertung.**
+
+Wenn Sie sich mehr dafür interessieren, warum viele Menschen es immer noch als genau empfinden, fahren Sie mit [Warum sich SBTI genau anfühlt](/blog/why-sbti-feels-accurate) fort. Wenn Sie sich Gedanken darüber machen, wo es verwendet werden soll und wo nicht, lesen Sie [Was kann Ihnen SBTI sagen und was nicht?](/blog/sbti-limits-and-boundaries).
+
+## Abschluss
+
+Der Kern von SBTI lässt sich wie folgt zusammenfassen:
+
+- `15` Dimensionen
+- `30` Standardfragen mit Bewertung
+- `25` Standard-Persönlichkeitsprototypen
+- `1` spezielle Überschreibungsregel für `DRUNK`
+- `1` Low-Match-Fallback-Regel für `HHHH`
+- `1` Prototyp-Matching-Prozess basierend auf der L1-Distanz
+
+Der Mechanismus ist nicht mystisch, aber vollständig genug und spricht die Sprache des Internets gut genug, um das subjektive Gefühl zu erzeugen, dass das Ergebnis „überraschend genau“ ist, und um das anschließende Teilen von Screenshots zu unterstützen.

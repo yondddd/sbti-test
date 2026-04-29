@@ -1,0 +1,18 @@
+{
+  "page": {
+    "title": "Blog SBTI",
+    "sections": {
+      "blog": {
+        "id": "blog",
+        "title": "Blog",
+        "description": "Bài viết về bài trắc nghiệm tính cách SBTI, SBTI vs MBTI và cách đọc từng kết quả."
+      }
+    }
+  },
+  "messages": {
+    "all": "Tất cả",
+    "no_content": "Chưa có bài viết nào cho ngôn ngữ này.",
+    "crumb": "Blog",
+    "toc": "Trên trang này"
+  }
+}

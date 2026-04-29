@@ -1,0 +1,18 @@
+{
+  "page": {
+    "title": "SBTI 部落格",
+    "sections": {
+      "blog": {
+        "id": "blog",
+        "title": "部落格",
+        "description": "閱讀SBTI人格測試相關文章，了解 SBTI 與 MBTI 的差異，以及如何解讀測試結果。"
+      }
+    }
+  },
+  "messages": {
+    "all": "全部",
+    "no_content": "目前這個語言尚無文章。",
+    "crumb": "部落格",
+    "toc": "本頁目錄"
+  }
+}

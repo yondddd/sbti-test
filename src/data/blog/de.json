@@ -1,0 +1,18 @@
+{
+  "page": {
+    "title": "SBTI-Blog",
+    "sections": {
+      "blog": {
+        "id": "blog",
+        "title": "Blog",
+        "description": "Artikel über den SBTI-Persönlichkeitstest, SBTI vs. MBTI und die Deutung der einzelnen Ergebnisse."
+      }
+    }
+  },
+  "messages": {
+    "all": "Alle",
+    "no_content": "In dieser Sprache sind noch keine Artikel verfügbar.",
+    "crumb": "Blog",
+    "toc": "Auf dieser Seite"
+  }
+}

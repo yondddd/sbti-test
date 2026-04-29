@@ -1,0 +1,18 @@
+{
+  "page": {
+    "title": "Blog SBTI",
+    "sections": {
+      "blog": {
+        "id": "blog",
+        "title": "Blog",
+        "description": "Artikel tentang tes kepribadian SBTI, SBTI vs MBTI, dan cara memahami setiap hasil."
+      }
+    }
+  },
+  "messages": {
+    "all": "Semua",
+    "no_content": "Belum ada artikel yang tersedia dalam bahasa ini.",
+    "crumb": "Blog",
+    "toc": "Di halaman ini"
+  }
+}

@@ -1,0 +1,216 @@
+---
+title: 'Bagaimana SBTI Berfungsi? 15 Dimensi, Padanan Prototaip dan Peraturan Tersembunyi'
+description: 'Cara kerja SBTI secara ringkas: 30 soalan standard, 15 dimensi, 25 prototaip, peraturan khas DRUNK dan laluan sandaran HHHH.'
+keywords: 'bagaimana SBTI berfungsi, algoritma SBTI, SBTI 15 dimensi, jenis personaliti SBTI, jarak Manhattan SBTI, jenis tersembunyi SBTI'
+created_at: '2026-04-13'
+author_name: 'SBTI'
+author_image: /logo.png
+image: 'https://file.sbti-test.org/imgs/blog-covers/how-sbti-works-cover.ms.png'
+categories:
+  - SBTI
+tags:
+  - SBTI
+  - algoritma
+  - ujian personaliti
+---
+Kali pertama ramai orang mengambil SBTI, mereka menganggap ia hanya ujian rawak dengan copywriting yang lebih keras. Dalam amalan, enjin hasil sebenarnya adalah **agak eksplisit, dan tidak terlalu rumit**.
+
+Berikut ialah versi pendeknya:
+
+**SBTI bukan ramalan nasib AI, dan ia bukan psikometrik yang mendalam. Ia berkelakuan lebih seperti pengelas hiburan yang dibina di sekeliling vektor diskret 15 dimensi dan perpustakaan prototaip yang telah ditetapkan.**
+
+Sistem melakukan tiga perkara:
+
+1. Ia memetakan jawapan anda kepada 15 dimensi
+2. Ia memampatkan 15 dimensi tersebut menjadi corak `L/M/H`.
+3. Ia membandingkan corak itu dengan prototaip personaliti pratetap dan mengembalikan padanan terdekat
+
+Jika perkara yang anda ambil berat ialah **mengapa persediaan ini boleh dirasakan luar biasa tepat**, teruskan ke [Kenapa SBTI Rasa Tepat](/blog/why-sbti-feels-accurate). Artikel ini kekal fokus pada **bagaimana mekanisme itu berfungsi**.
+
+## Mulakan dengan struktur asas
+
+Pada teras, struktur utama mempunyai tiga lapisan:
+
+- **15 dimensi**
+- **30 soalan standard**
+- **25 prototaip personaliti standard**
+
+Selain itu, terdapat juga:
+
+- **1 soalan pintu berkaitan minuman yang selalu muncul**
+- **1 soalan minum tambahan yang muncul hanya di bawah syarat**
+- **2 hasil istimewa**: `DRUNK` dan `HHHH`
+
+Itulah sebabnya banyak huraian mengatakan "31 soalan." Tetapi perpecahan itu sebenarnya:
+
+- `30` soalan berskor standard
+- `1` tetapkan soalan gerbang khas
+- `1` soalan susulan yang muncul hanya untuk sesetengah pengguna
+
+Jadi **kebanyakan pengguna melihat 31 soalan, dan sesetengah pengguna dihalakan ke 32**.
+
+## 15 dimensi tidak dilemparkan bersama secara rawak
+
+15 dimensi dikumpulkan kepada 5 model, dengan 3 sub-dimensi dalam setiap satu:
+
+| Model | Dimensi |
+| --- | --- |
+| Model diri | `S1 self-esteem and confidence`, `S2 self-clarity`, `S3 core values` |
+| Model emosi | `E1 attachment security`, `E2 emotional investment`, `E3 boundaries and dependence` |
+| Model sikap | `A1 worldview tendency`, `A2 rules vs flexibility`, `A3 sense of life meaning` |
+| Model pacuan aksi | `Ac1 motivational orientation`, `Ac2 decision style`, `Ac3 execution pattern` |
+| Model sosial | `So1 social initiative`, `So2 interpersonal boundaries`, `So3 expression and authenticity` |
+
+Perkara yang paling penting di sini ialah:
+
+**SBTI tidak menggunakan semula empat paksi binari MBTI. Sebaliknya, ia memecahkan adegan psikologi kehidupan internet kepada sub-dimensi yang lebih kecil dan lebih harian.**
+
+Itu tidak menjadikannya lebih saintifik. Tetapi ia menjadikan output terasa lebih terperinci.
+
+## Bagaimanakah setiap dimensi mendapat markah?
+
+Setiap dimensi terikat kepada dua soalan standard. Setiap jawapan diberikan nilai `1`, `2`, atau `3`.
+
+Ini bermakna jumlah julat skor untuk satu dimensi ialah:
+
+- minimum `2`
+- maksimum `6`
+
+Sistem kemudian memampatkan jumlah itu kepada tiga baldi:
+
+- `<= 3` menjadi `L`
+- `= 4` menjadi `M`
+- `>= 5` menjadi `H`
+
+Jadi SBTI tidak menyimpan markah berterusan pada akhir. Ia mendiskrisikan setiap dimensi kepada tiga peringkat. Output akhir ialah corak `L/M/H` 15 aksara seperti `HHH-HMH-MHH-HHH-MHM`.
+
+Corak itu ialah **vektor personaliti** pengguna.
+
+## Ia tidak bertanya "jenis mana yang anda pilih?" Ia bertanya "jenis yang manakah anda paling dekat?"
+
+Ini adalah bahagian di mana SBTI paling menyerupai pengelas sebenar.
+
+SBTI termasuk `25` prototaip personaliti standard, dan setiap satu mempunyai corak 15 dimensi sendiri. Contohnya termasuk:
+
+- `CTRL`
+- `BOSS`
+- `SEXY`
+- `OJBK`
+- `MALO`
+- `THIN-K`
+- `SHIT`
+- `ZZZZ`
+- `DEAD`
+- `IMFW`
+
+Prototaip ini tidak dijana dengan cepat untuk setiap pengguna. Mereka **centroid personaliti yang ditentukan oleh pengarang** disediakan lebih awal. Apa yang sistem lakukan ialah membandingkan vektor anda dengan kesemuanya satu demi satu.
+
+## Algoritma jarak adalah mudah
+
+Kaedah perbandingan mudah dijelaskan:
+
+- Peta pertama `L/M/H` hingga `1/2/3`
+- Kurangkan vektor pengguna daripada setiap dimensi vektor prototaip mengikut dimensi
+- Ambil nilai mutlak setiap perbezaan dan jumlahnya
+
+Pada dasarnya, iaitu **jarak L1**, juga dikenali sebagai **Jarak Manhattan**.
+
+Diletakkan dengan lebih santai, ia bermakna:
+
+**Berapa langkah lagi anda daripada prototaip itu merentas kesemua 15 dimensi?**
+
+Semakin kecil jurang, semakin rapat perlawanan. Semakin besar jurang, semakin kurang anda menyerupainya.
+
+SBTI juga menggunakan formula paparan untuk persamaan: **keserupaan = maks(0, bulat((1 - jarak / 30) * 100))**.
+
+Oleh itu, apabila halaman hasil menunjukkan sesuatu seperti "92% padanan", nombor itu bukanlah selang keyakinan psikometrik. Ia adalah **nilai paparan yang diperoleh secara linear dari jarak**.
+
+## Apa yang berlaku jika dua jenis kelihatan sama rapat?
+
+Logik pengisihan dalam kod adalah kira-kira:
+
+1. Bandingkan jumlah jarak dahulu, dan pilih nilai yang lebih kecil
+2. Jika jumlah ikatan jarak, bandingkan `exact`, bermakna berapa banyak daripada 15 dimensi sepadan dengan tepat
+3. Selepas itu barulah ia terus menggunakan nilai persamaan yang dipaparkan
+
+Itu memberitahu anda SBTI tidak menggunakan peraturan "syarat pertama yang lulus menang" mentah. Ia melakukan proses pemeringkatan asas tetapi agak jelas.
+
+## Mengapakah `DRUNK` jenis tersembunyi?
+
+Inilah bahagian SBTI yang paling jelas mendedahkan motif peribadi pencipta.
+
+SBTI termasuk rantaian logik khusus minuman:
+
+1. Sistem memasukkan soalan tetap yang menanyakan tentang hobi biasa anda
+2. Jika anda memilih "minum" dalam soalan itu
+3. Sistem memasukkan soalan kedua tentang sikap anda terhadap minum
+4. Jika anda memilih jawapan khusus dalam soalan kedua itu, sistem **mengembalikan [[[1000]]] serta-merta**
+
+Perkara penting ialah ini:
+
+**[[[1000]]] tidak dikira melalui proses jarak 15 dimensi biasa. Ia mengatasi hasil standard melalui peraturan pencetus keutamaan yang lebih tinggi.**
+
+Itu juga sepadan dengan motif kreatif asal yang menjadi sebahagian daripada identiti projek: pengarang pada mulanya mahu kuiz itu mendorong rakan untuk kurang minum.
+
+Jadi `DRUNK` bukan hanya satu lagi entri biasa dalam perpustakaan prototaip. Ia lebih seperti **cabang penilaian nilai yang diutamakan dengan sengaja**.
+
+## Kemudian apakah itu `HHHH`?
+
+`HHHH` ialah satu lagi hasil istimewa, tetapi ia berfungsi secara berbeza daripada `DRUNK`.
+
+Ia bukan dicetuskan oleh tingkah laku. Ia adalah **sandaran apabila padanan prototaip terlalu lemah**.
+
+SBTI menggunakan ambang yang jelas:
+
+- jika padanan personaliti standard terbaik mempunyai skor persamaan **bawah 60%**
+- sistem tidak memaksa anda menjadi jenis biasa
+- ia mengembalikan `HHHH` secara langsung
+
+Ini bermakna `HHHH` bukanlah prototaip personaliti yang jelas. Ia bermaksud:
+
+**perpustakaan prototaip semasa tidak menerangkan corak jawapan anda dengan baik.**
+
+Secara pengalaman, ini sebenarnya boleh menjadikan sistem berasa lebih meyakinkan. Daripada memaksa kesesuaian yang lemah, ia dengan berkesan mengatakan: *corak jawapan ini tidak ditangkap dengan baik oleh perpustakaan semasa*.
+
+## Mengapakah struktur ini terasa lebih terperinci daripada ujian jenaka biasa?
+
+Kerana ia melakukan tiga perkara yang tidak dilakukan oleh kebanyakan kuiz hiburan ringan:
+
+- **Ia memecahkan tingkah laku kepada dimensi terlebih dahulu**
+  Ia bukan sekadar bertanya "adakah anda ekstrovert atau introvert?" Ia menukar banyak adegan harian kepada isyarat yang lebih kecil.
+
+- **Ia vektorkan isyarat tersebut**
+  Setiap dimensi dimampatkan ke tahap, dan tahap tersebut menjadi corak keseluruhan.
+
+- **Ia sepadan dengan keseluruhan prototaip**
+  Satu soalan tidak menentukan keputusan. Sistem ini membandingkan kontur keseluruhan jawapan anda.
+
+Itu masih tidak secara automatik menjadikannya saintifik. Tetapi ia memberikannya lebih banyak struktur daripada kuiz "10 soalan dan menerima haiwan rawak".
+
+## Had sistem bermula pada titik yang sama
+
+Walaupun mekanisme itu lebih lengkap daripada yang diandaikan oleh ramai orang, sifatnya tidak boleh disalahertikan.
+
+Semua yang berikut kekal benar:
+
+- perpustakaan prototaip telah ditulis oleh pencipta, bukan dibina daripada pensampelan yang disahkan secara klinikal
+- label dimensi adalah pertimbangan editorial oleh pencipta, bukan skala psikologi piawai
+- skor persamaan ialah skor paparan, bukan keyakinan diagnostik
+- hasil khas mengandungi pendirian pengarang yang jelas dan niat menyindir
+
+Jadi **SBTI adalah hiburan berstruktur, bukan penilaian saintifik yang dihias sebagai menyeronokkan.**
+
+Jika anda lebih mengambil berat tentang sebab ramai orang masih mengalaminya sebagai tepat, teruskan ke [Kenapa SBTI Rasa Tepat](/blog/why-sbti-feels-accurate). Jika anda mengambil berat tentang di mana ia patut dan tidak patut digunakan, baca [Apa yang SBTI Boleh Beritahu Anda, dan Apa yang Tidak Boleh?](/blog/sbti-limits-and-boundaries).
+
+## Kesimpulan
+
+Teras SBTI boleh diringkaskan sebagai:
+
+- `15` dimensi
+- `30` soalan berskor standard
+- `25` prototaip personaliti standard
+- `1` peraturan penggantian khas untuk `DRUNK`
+- `1` peraturan sandaran padanan rendah untuk `HHHH`
+- `1` proses pemadanan prototaip berdasarkan jarak L1
+
+Mekanisme ini tidak mistik, tetapi ia cukup lengkap, dan ia bercakap bahasa internet dengan cukup baik, untuk mewujudkan perasaan subjektif bahawa hasilnya "mengejutkan tepat" dan untuk menyokong perkongsian tangkapan skrin selepas itu.

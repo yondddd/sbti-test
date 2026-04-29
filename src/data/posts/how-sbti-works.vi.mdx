@@ -1,0 +1,216 @@
+---
+title: 'SBTI hoạt động như thế nào? Mô hình 15 chiều, ghép mẫu và luật ẩn'
+description: 'Giải thích cách SBTI vận hành: 30 câu hỏi chuẩn, 15 chiều, 25 nguyên mẫu, quy tắc đặc biệt DRUNK và kết quả dự phòng HHHH.'
+keywords: 'SBTI hoạt động như thế nào, thuật toán SBTI, SBTI 15 chiều, kiểu tính cách SBTI, khoảng cách Manhattan SBTI, kiểu ẩn SBTI'
+created_at: '2026-04-13'
+author_name: 'SBTI'
+author_image: /logo.png
+image: 'https://file.sbti-test.org/imgs/blog-covers/how-sbti-works-cover.vi.png'
+categories:
+  - SBTI
+tags:
+  - SBTI
+  - thuật toán
+  - kiểm tra tính cách
+---
+Lần đầu tiên nhiều người thi SBTI, họ cho rằng đây chỉ là một bài kiểm tra ngẫu nhiên với khả năng viết quảng cáo khắc nghiệt hơn. Trong thực tế, công cụ kết quả thực sự là **khá rõ ràng và không đặc biệt phức tạp**.
+
+Đây là phiên bản ngắn:
+
+**SBTI không phải là bói toán bằng AI và cũng không phải là phép đo tâm lý sâu sắc. Nó hoạt động giống như một bộ phân loại giải trí được xây dựng xung quanh một vectơ rời rạc 15 chiều và một thư viện các nguyên mẫu được xác định trước.**
+
+Hệ thống thực hiện ba việc:
+
+1. Nó ánh xạ câu trả lời của bạn vào 15 chiều
+2. Nó nén 15 chiều đó thành mẫu `L/M/H`
+3. Nó so sánh mẫu đó với các nguyên mẫu tính cách được cài sẵn và trả về kết quả trùng khớp nhất
+
+Nếu điều bạn quan tâm là **tại sao thiết lập này có thể mang lại cảm giác chính xác một cách bất thường**, hãy tiếp tục [Tại sao SBTI cảm thấy chính xác](/blog/why-sbti-feels-accurate). Bài viết này vẫn tập trung vào **cơ chế hoạt động như thế nào**.
+
+## Bắt đầu với cấu trúc cơ bản
+
+Về cốt lõi, cấu trúc chính có ba lớp:
+
+- **15 kích thước**
+- **30 câu hỏi tiêu chuẩn**
+- **25 nguyên mẫu tính cách tiêu chuẩn**
+
+Ngoài ra còn có:
+
+- **1 câu hỏi liên quan đến uống rượu luôn xuất hiện**
+- **Thêm 1 câu hỏi về uống rượu chỉ xuất hiện với một điều kiện**
+- **2 kết quả đặc biệt**: `DRUNK` và `HHHH`
+
+Đó là lý do tại sao nhiều mô tả lại nói "31 câu hỏi". Nhưng sự phân chia thực sự là:
+
+- `30` câu hỏi tính điểm chuẩn
+- `1` đã sửa câu hỏi cổng đặc biệt
+- `1` câu hỏi tiếp theo chỉ xuất hiện đối với một số người dùng
+
+Vì vậy **hầu hết người dùng nhìn thấy 31 câu hỏi và một số người dùng được chuyển đến 32 câu hỏi**.
+
+## 15 chiều không được gộp lại một cách ngẫu nhiên
+
+15 thứ nguyên được nhóm thành 5 mô hình, trong đó có 3 thứ nguyên phụ:
+
+| Người mẫu | Kích thước |
+| --- | --- |
+| Tự làm người mẫu | `S1 self-esteem and confidence`, `S2 self-clarity`, `S3 core values` |
+| Mô hình cảm xúc | `E1 attachment security`, `E2 emotional investment`, `E3 boundaries and dependence` |
+| Mô hình thái độ | `A1 worldview tendency`, `A2 rules vs flexibility`, `A3 sense of life meaning` |
+| Mô hình truyền động hành động | `Ac1 motivational orientation`, `Ac2 decision style`, `Ac3 execution pattern` |
+| Mô hình xã hội | `So1 social initiative`, `So2 interpersonal boundaries`, `So3 expression and authenticity` |
+
+Điểm quan trọng nhất ở đây là:
+
+**SBTI không sử dụng lại bốn trục nhị phân của MBTI. Thay vào đó, nó chia các cảnh tâm lý của cuộc sống trên mạng thành các chiều nhỏ hơn, đời thường hơn.**
+
+Điều đó không làm cho nó khoa học hơn. Nhưng nó làm cho đầu ra có cảm giác chi tiết hơn.
+
+## Mỗi chiều được tính điểm như thế nào?
+
+Mỗi chiều được gắn với hai câu hỏi tiêu chuẩn. Mỗi câu trả lời được gán một giá trị `1`, `2` hoặc `3`.
+
+Điều đó có nghĩa là tổng phạm vi điểm cho một chiều là:
+
+- tối thiểu `2`
+- tối đa `6`
+
+Sau đó, hệ thống sẽ nén tổng số đó thành ba nhóm:
+
+- `<= 3` trở thành `L`
+- `= 4` trở thành `M`
+- `>= 5` trở thành `H`
+
+Vì vậy SBTI không giữ điểm liên tục ở cuối. Nó rời rạc hóa mọi chiều thành ba cấp độ. Đầu ra cuối cùng là mẫu `L/M/H` gồm 15 ký tự, chẳng hạn như `HHH-HMH-MHH-HHH-MHM`.
+
+Mẫu đó là **vectơ cá tính** của người dùng.
+
+## Nó không hỏi "bạn chọn loại nào?" Nó hỏi "bạn thân với kiểu người nào nhất?"
+
+Đây là phần mà SBTI giống một bộ phân loại thực sự nhất.
+
+SBTI bao gồm `25` nguyên mẫu tính cách tiêu chuẩn và mỗi nguyên mẫu có mẫu 15 chiều riêng. Ví dụ bao gồm:
+
+- `CTRL`
+- `BOSS`
+- `SEXY`
+- `OJBK`
+- `MALO`
+- `THIN-K`
+- `SHIT`
+- `ZZZZ`
+- `DEAD`
+- `IMFW`
+
+Những nguyên mẫu này không được tạo nhanh chóng cho mỗi người dùng. Họ đã **trung tâm tính cách do tác giả xác định** chuẩn bị trước. Những gì hệ thống làm là so sánh từng vectơ của bạn với tất cả chúng.
+
+## Thuật toán khoảng cách rất đơn giản
+
+Phương pháp so sánh rất dễ giải thích:
+
+- Bản đồ đầu tiên `L/M/H` tới `1/2/3`
+- Trừ vectơ của người dùng khỏi mỗi chiều vectơ nguyên mẫu theo chiều
+- Lấy giá trị tuyệt đối của từng hiệu rồi tính tổng
+
+Thực chất đó là **Khoảng cách L1** hay còn gọi là **khoảng cách Manhattan**.
+
+Nói một cách tình cờ hơn, nó có nghĩa là:
+
+**Bạn còn cách nguyên mẫu đó bao nhiêu bước trên tất cả 15 chiều?**
+
+Khoảng cách càng nhỏ thì trận đấu càng gần. Khoảng cách càng lớn thì bạn càng ít giống nó.
+
+SBTI cũng sử dụng công thức hiển thị độ tương tự: **tương tự = max(0, round((1 - distance / 30) * 100))**.
+
+Vì vậy, khi một trang kết quả hiển thị nội dung như "khớp 92%", con số đó không phải là khoảng tin cậy tâm lý. Đó là **một giá trị hiển thị xuất phát tuyến tính từ khoảng cách**.
+
+## Điều gì xảy ra nếu hai loại trông giống nhau?
+
+Logic sắp xếp trong mã đại khái là:
+
+1. So sánh tổng khoảng cách trước và ưu tiên giá trị nhỏ hơn
+2. Nếu tổng khoảng cách bằng nhau, hãy so sánh `exact`, nghĩa là có bao nhiêu trong số 15 chiều khớp chính xác
+3. Chỉ sau đó nó mới tiếp tục sử dụng giá trị tương tự được hiển thị
+
+Điều đó cho bạn biết SBTI không sử dụng quy tắc thô thiển "điều kiện đầu tiên vượt qua sẽ thắng". Nó thực hiện một quá trình xếp hạng cơ bản nhưng khá rõ ràng.
+
+## Tại sao `DRUNK` lại là loại ẩn?
+
+Đây là phần SBTI bộc lộ rõ ​​ràng nhất động cơ cá nhân của người sáng tạo.
+
+SBTI bao gồm chuỗi logic dành riêng cho việc uống rượu:
+
+1. Hệ thống chèn một câu hỏi cố định hỏi về sở thích thường ngày của bạn
+2. Nếu bạn chọn “uống” trong câu hỏi đó
+3. Hệ thống chèn câu hỏi thứ hai về thái độ của bạn đối với việc uống rượu
+4. Nếu bạn chọn một câu trả lời cụ thể trong câu hỏi thứ hai đó, hệ thống **trả về [[[1000]]] ngay lập tức**
+
+Điểm quan trọng là thế này:
+
+**[[[1000]]] không được tính toán thông qua quy trình khoảng cách 15 chiều thông thường. Nó ghi đè kết quả tiêu chuẩn thông qua quy tắc kích hoạt có mức độ ưu tiên cao hơn.**
+
+Điều đó cũng phù hợp với động cơ sáng tạo ban đầu đã trở thành một phần bản sắc của dự án: ban đầu tác giả muốn câu đố để thúc đẩy một người bạn uống ít hơn.
+
+Vì vậy `DRUNK` không chỉ là một mục thông thường khác trong thư viện nguyên mẫu. Nó giống **một nhánh phán đoán giá trị được ưu tiên có chủ ý** hơn.
+
+## Vậy thì `HHHH` là gì?
+
+`HHHH` là một kết quả đặc biệt khác, nhưng nó hoạt động khác với `DRUNK`.
+
+Nó không được kích hoạt bởi hành vi. Đó là **một phương án dự phòng khi kết hợp nguyên mẫu quá yếu**.
+
+SBTI sử dụng ngưỡng rõ ràng:
+
+- nếu người phù hợp nhất về tính cách tiêu chuẩn có điểm tương đồng **dưới 60%**
+- hệ thống không ép bạn vào loại bình thường
+- thay vào đó nó trả về `HHHH` trực tiếp
+
+Điều đó có nghĩa là `HHHH` không phải là một nguyên mẫu tính cách được xác định rõ ràng. Nó có nghĩa là:
+
+**thư viện nguyên mẫu hiện tại không giải thích rõ mẫu câu trả lời của bạn.**
+
+Về mặt kinh nghiệm, điều này thực sự có thể làm cho hệ thống có cảm giác thuyết phục hơn. Thay vì ép buộc phải phù hợp yếu, nó nói một cách hiệu quả: *mẫu câu trả lời này không được thư viện hiện tại nắm bắt tốt*.
+
+## Tại sao cấu trúc này có vẻ chi tiết hơn một bài kiểm tra trò đùa thông thường?
+
+Bởi vì nó thực hiện được ba điều mà nhiều câu đố giải trí nhẹ nhàng không làm được:
+
+- **Đầu tiên nó chia hành vi thành các kích thước**
+  Nó không chỉ đơn giản là hỏi “bạn là người hướng ngoại hay hướng nội?” Nó biến rất nhiều cảnh hàng ngày thành những tín hiệu nhỏ hơn.
+
+- **Nó vector hóa những tín hiệu đó**
+  Mỗi chiều được nén thành một cấp độ và các cấp độ đó trở thành một mô hình tổng thể.
+
+- **Nó phù hợp với toàn bộ nguyên mẫu**
+  Một câu hỏi không quyết định kết quả. Hệ thống so sánh đường nét tổng thể của câu trả lời của bạn.
+
+Điều đó vẫn không tự động làm cho nó trở nên khoa học. Nhưng nó mang lại cấu trúc chặt chẽ hơn nhiều so với bài kiểm tra "10 câu hỏi và nhận một con vật ngẫu nhiên".
+
+## Giới hạn của hệ thống bắt đầu tại cùng một điểm
+
+Ngay cả khi cơ chế này hoàn thiện hơn nhiều người vẫn nghĩ thì cũng không nên hiểu lầm bản chất của nó.
+
+Tất cả những điều sau đây vẫn đúng:
+
+- thư viện nguyên mẫu được viết bởi người sáng tạo, không được xây dựng từ mẫu đã được kiểm chứng lâm sàng
+- nhãn thứ nguyên là đánh giá biên tập của người sáng tạo, không phải thang đo tâm lý tiêu chuẩn
+- điểm tương đồng là điểm hiển thị, không phải điểm tự tin chẩn đoán
+- kết quả đặc biệt chứa đựng lập trường rõ ràng của tác giả và ý định châm biếm
+
+Vậy **SBTI là chương trình giải trí có cấu trúc chứ không phải đánh giá khoa học khoác lên mình sự vui vẻ.**
+
+Nếu bạn quan tâm hơn đến lý do tại sao nhiều người vẫn cho rằng nó chính xác, hãy tiếp tục [Tại sao SBTI cảm thấy chính xác](/blog/why-sbti-feels-accurate). Nếu bạn quan tâm đến việc nên và không nên sử dụng nó ở đâu, hãy đọc [SBTI có thể cho bạn biết điều gì và điều gì không thể?](/blog/sbti-limits-and-boundaries).
+
+## Phần kết luận
+
+Cốt lõi của SBTI có thể được tóm tắt như sau:
+
+- `15` kích thước
+- `30` câu hỏi tính điểm chuẩn
+- `25` nguyên mẫu tính cách tiêu chuẩn
+- `1` quy tắc ghi đè đặc biệt cho `DRUNK`
+- `1` quy tắc dự phòng có độ khớp thấp cho `HHHH`
+- `1` quá trình so khớp nguyên mẫu dựa trên khoảng cách L1
+
+Cơ chế này không phải là thần bí, nhưng nó đủ hoàn thiện và nó diễn đạt ngôn ngữ của Internet đủ tốt để tạo ra cảm giác chủ quan rằng kết quả là "chính xác một cách đáng ngạc nhiên" và hỗ trợ chia sẻ ảnh chụp màn hình sau đó.

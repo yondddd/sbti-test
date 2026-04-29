@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SBTI는 어떻게 작동할까? 15개 차원, 프로토타입 매칭, 숨은 규칙 정리</title>
+    <meta name="description" content="SBTI의 핵심 로직을 정리합니다. 기본 문항 30개, 15개 차원, 25개 프로토타입, DRUNK 특수 규칙, HHHH 폴백까지 설명합니다." />
+    <link rel="stylesheet" href="../../../assets/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="shell-header">
+        <a class="brand" href="../../../">SBTI Test</a>
+        <nav class="locale-nav" aria-label="Languages"><a href="/zh/">简体中文</a><a href="/zh-hant/">繁體中文</a><a href="/">English</a><a href="/ja/">日本語</a><a href="/ko/" aria-current="page">한국어</a><a href="/es/">Español</a><a href="/fr/">Français</a><a href="/ru/">Русский</a><a href="/de/">Deutsch</a><a href="/th/">ภาษาไทย</a><a href="/vi/">Tiếng Việt</a><a href="/id/">Bahasa Indonesia</a><a href="/ms/">Bahasa Melayu</a><a href="/ar/">العربية</a></nav>
+      </header>
+      <main class="blog-page" data-locale="ko">
+        
+    <article class="card blog-detail">
+      <a class="blog-back" href="/ko/blog/">블로그</a>
+      <header>
+        <div class="blog-date">2026년 4월 13일</div>
+        <h1>SBTI는 어떻게 작동할까? 15개 차원, 프로토타입 매칭, 숨은 규칙 정리</h1>
+        <p class="sub">SBTI의 핵심 로직을 정리합니다. 기본 문항 30개, 15개 차원, 25개 프로토타입, DRUNK 특수 규칙, HHHH 폴백까지 설명합니다.</p>
+        <img class="blog-cover" src="https://file.sbti-test.org/imgs/blog-covers/how-sbti-works-cover.ko.png" alt="" loading="lazy" />
+      </header>
+      <div class="blog-content"><p>많은 사람들은 처음 SBTI를 해보면, 그저 좀 더 독한 문구를 쓰는 랜덤 테스트라고 생각합니다. 하지만 실제 결과 엔진은 <strong>구조가 꽤 분명하고, 생각보다 복잡하지도 않습니다.</strong></p>
+<p>짧게 요약하면 이렇습니다.</p>
+<p><strong>SBTI는 AI 점술도 아니고 심층 심리측정 도구도 아닙니다. 15개 차원으로 만든 이산 벡터와, 미리 정의된 프로토타입 라이브러리를 바탕으로 작동하는 엔터테인먼트 분류기에 더 가깝습니다.</strong></p>
+<p>시스템은 세 가지 일을 합니다.</p>
+<ol><li>답변을 15개 차원에 매핑합니다.</li><li>각 차원을 <code>L/M/H</code> 패턴으로 압축합니다.</li><li>그 패턴을 미리 정해 둔 성격 프로토타입과 비교해 가장 가까운 유형을 반환합니다.</li></ol>
+<p>왜 이런 구조가 유난히 &quot;잘 맞는 느낌&quot;을 주는지가 궁금하다면 <a href="/blog/why-sbti-feels-accurate">SBTI가 정확하다고 느끼는 이유</a>를 읽어보세요. 이 글은 어디까지나 <strong>메커니즘 자체</strong>를 설명하는 데 집중합니다.</p>
+<h2>기본 구조부터 시작하세요</h2>
+<p>핵심 구조는 세 층으로 나뉩니다.</p>
+<ul><li><strong>15개 차원</strong></li><li><strong>30개 일반 문항</strong></li><li><strong>25개 표준 성격 프로토타입</strong></li></ul>
+<p>여기에 추가로 다음이 있습니다.</p>
+<ul><li><strong>항상 등장하는 음주 관련 게이트 질문 1개</strong></li><li><strong>조건에 따라 추가되는 음주 질문 1개</strong></li><li><strong>특별 결과 2개</strong>: <code>DRUNK</code>와 <code>HHHH</code></li></ul>
+<p>그래서 많은 설명에서 &quot;31문항&quot;이라고 적지만, 실제 분해는 다음과 같습니다.</p>
+<ul><li><code>30</code>개의 일반 점수 문항</li><li><code>1</code>개의 특수 게이트 문항</li><li><code>1</code>개의 일부 사용자에게만 보이는 후속 질문</li></ul>
+<p>즉 <strong>대부분의 사용자는 31문항을 보고, 일부 사용자는 32문항까지 보게 됩니다.</strong></p>
+<h2>15개 차원은 무작위로 섞어 놓은 것이 아닙니다.</h2>
+<p>15개 차원은 3개씩 묶인 5개 모델로 구성됩니다.</p>
+
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>모델</th><th>치수</th></tr></thead>
+        <tbody>
+          <tr><td>자기 모델</td><td><code>S1 self-esteem and confidence</code>, <code>S2 self-clarity</code>, <code>S3 core values</code></td></tr><tr><td>감정 모델</td><td><code>E1 attachment security</code>, <code>E2 emotional investment</code>, <code>E3 boundaries and dependence</code></td></tr><tr><td>태도 모델</td><td><code>A1 worldview tendency</code>, <code>A2 rules vs flexibility</code>, <code>A3 sense of life meaning</code></td></tr><tr><td>액션 드라이브 모델</td><td><code>Ac1 motivational orientation</code>, <code>Ac2 decision style</code>, <code>Ac3 execution pattern</code></td></tr><tr><td>소셜 모델</td><td><code>So1 social initiative</code>, <code>So2 interpersonal boundaries</code>, <code>So3 expression and authenticity</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  
+<p>여기서 핵심은 이것입니다.</p>
+<p><strong>SBTI는 MBTI의 4개 이진축을 재사용하지 않습니다. 대신 인터넷 생활에서 자주 부딪히는 심리적 장면을 더 작고 일상적인 하위 차원으로 나눕니다.</strong></p>
+<p>이렇다고 해서 더 과학적인 것은 아닙니다. 다만 결과가 훨씬 더 촘촘하고 세밀하게 느껴지게 만듭니다.</p>
+<h2>각 차원의 점수는 어떻게 매겨지나요?</h2>
+<p>각 차원은 일반 질문 2개와 연결되어 있고, 각 답변에는 <code>1</code>, <code>2</code>, <code>3</code> 중 하나의 값이 들어갑니다.</p>
+<p>즉 하나의 차원에서 가능한 총점 범위는 다음과 같습니다.</p>
+<ul><li>최소 <code>2</code></li><li>최대 <code>6</code></li></ul>
+<p>그다음 시스템은 이 합계를 세 구간으로 압축합니다.</p>
+<ul><li><code>&lt;= 3</code>이면 <code>L</code></li><li><code>= 4</code>이면 <code>M</code></li><li><code>&gt;= 5</code>이면 <code>H</code></li></ul>
+<p>즉 SBTI는 연속 점수를 끝까지 들고 가지 않고, 각 차원을 세 단계로 잘라냅니다. 최종 출력은 <code>HHH-HMH-MHH-HHH-MHM</code> 같은 15자리 <code>L/M/H</code> 패턴입니다.</p>
+<p>이 패턴이 사용자의 <strong>성격 벡터</strong>가 됩니다.</p>
+<h2>&quot;어떤 유형을 골랐나?&quot;가 아니라 &quot;어떤 유형에 가장 가까운가?&quot;를 봅니다.</h2>
+<p>SBTI가 분류기처럼 작동하는 핵심이 바로 여기 있습니다.</p>
+<p>SBTI에는 <code>25</code>개의 표준 성격 프로토타입이 있고, 각 프로토타입은 고유한 15차원 패턴을 갖습니다. 예를 들면 다음과 같습니다.</p>
+<ul><li><code>CTRL</code></li><li><code>BOSS</code></li><li><code>SEXY</code></li><li><code>OJBK</code></li><li><code>MALO</code></li><li><code>THIN-K</code></li><li><code>SHIT</code></li><li><code>ZZZZ</code></li><li><code>DEAD</code></li><li><code>IMFW</code></li></ul>
+<p>이 프로토타입들은 사용자마다 새로 만들어지는 것이 아니라, 미리 <strong>작성자가 정의해 둔 성격 중심점</strong>입니다. 시스템은 사용자의 벡터를 이들과 하나씩 비교합니다.</p>
+<h2>거리 알고리즘은 간단합니다.</h2>
+<p>비교 방식은 단순합니다.</p>
+<ul><li>먼저 <code>L/M/H</code>를 <code>1/2/3</code>으로 바꿉니다.</li><li>사용자 벡터와 프로토타입 벡터를 차원별로 뺍니다.</li><li>차이의 절대값을 모두 더합니다.</li></ul>
+<p>이 방식은 본질적으로 <strong>L1 거리</strong>, 즉 <strong>맨해튼 거리</strong>입니다.</p>
+<p>쉽게 말하면 다음 질문입니다.</p>
+<p><strong>전체 15개 차원을 기준으로, 이 프로토타입과 몇 칸 떨어져 있는가?</strong></p>
+<p>거리가 작을수록 더 가깝고, 거리가 클수록 덜 닮은 것입니다.</p>
+<p>SBTI는 여기에 표시용 유사도도 계산합니다: **유사성 = max(0, round((1 - 거리 / 30) * 100))**.</p>
+<p>따라서 결과 페이지에 &quot;92% 일치&quot;가 보이더라도, 그것은 심리측정적 신뢰구간이 아니라 <strong>거리값에서 선형적으로 계산한 표시용 숫자</strong>입니다.</p>
+<h2>두 유형이 똑같이 비슷해 보이면 어떻게 되나요?</h2>
+<p>코드의 정렬 로직은 대략 이렇습니다.</p>
+<ol><li>총 거리를 먼저 비교합니다.</li><li>총 거리가 같으면 <code>exact</code>, 즉 15개 차원 중 정확히 일치한 개수를 비교합니다.</li><li>그 다음에야 표시용 유사성 값을 참고합니다.</li></ol>
+<p>즉 SBTI는 &quot;먼저 걸린 조건이 승리&quot;하는 방식이 아니라, 기본적이지만 꽤 명확한 랭킹 과정을 거칩니다.</p>
+<h2><code>DRUNK</code>는 왜 숨겨진 유형인가요?</h2>
+<p>이 부분은 창작자의 개인적 동기가 가장 노골적으로 드러나는 지점입니다.</p>
+<p>SBTI에는 음주 관련 특수 로직이 있습니다.</p>
+<ol><li>시스템은 &quot;평소 취미&quot;를 묻는 고정 질문을 넣습니다.</li><li>여기서 &#39;음주&#39;를 고르면</li><li>술에 대한 태도를 묻는 두 번째 질문이 열리고</li><li>거기서 특정 답을 선택하면 시스템이 <strong>즉시 <code>DRUNK</code>를 반환합니다</strong></li></ol>
+<p>핵심은 이것입니다.</p>
+<p><strong><code>DRUNK</code>는 일반적인 15차원 거리 계산으로 나온 결과가 아닙니다. 더 높은 우선순위의 특수 트리거가 표준 결과를 덮어쓰는 구조입니다.</strong></p>
+<p>이건 프로젝트의 초기 동기와도 맞닿아 있습니다. 작성자는 원래 술을 많이 마시는 친구를 덜 마시게 만들고 싶어 했습니다.</p>
+<p>그래서 <code>DRUNK</code>는 평범한 프로토타입 중 하나라기보다, <strong>의도적으로 우선권을 부여한 가치판단성 분기</strong>에 가깝습니다.</p>
+<h2>그렇다면 <code>HHHH</code>는 무엇일까요?</h2>
+<p><code>HHHH</code>는 또 다른 특수 결과이지만 <code>DRUNK</code>와는 다르게 작동합니다.</p>
+<p>이건 행동 트리거가 아니라 <strong>프로토타입 일치가 너무 약할 때의 대체 결과</strong>입니다.</p>
+<p>기준은 분명합니다.</p>
+<ul><li>가장 높은 일반 유형 일치율이 <strong>60% 이하</strong>이면</li><li>시스템은 사용자를 억지로 일반 유형 중 하나에 넣지 않고</li><li>대신 <code>HHHH</code>를 직접 반환합니다</li></ul>
+<p>즉 <code>HHHH</code>는 뚜렷한 성격 원형이라기보다 이런 뜻에 가깝습니다.</p>
+<p><strong>현재 프로토타입 라이브러리로는 이 답변 패턴을 충분히 설명하지 못한다.</strong></p>
+<p>흥미로운 점은, 이 구조가 오히려 시스템을 더 설득력 있게 보이게 만들 수 있다는 것입니다. 억지로 약한 매치를 내놓는 대신, 사실상 이렇게 말하는 셈이니까요. *이 답변 패턴은 현재 라이브러리로는 잘 설명되지 않습니다.*</p>
+<h2>이 구조가 일반적인 농담 테스트보다 더 자세하게 느껴지는 이유는 무엇일까요?</h2>
+<p>많은 가벼운 엔터테인먼트 퀴즈가 하지 않는 세 가지를 하기 때문입니다.</p>
+<ul><li><strong>먼저 행동을 차원으로 쪼갭니다</strong></li></ul>
+<p>단순히 &quot;외향적이냐 내향적이냐&quot;를 묻는 것이 아니라, 일상 장면을 여러 개의 작은 신호로 나눕니다.</p>
+<ul><li><strong>그 신호를 벡터화합니다</strong></li></ul>
+<p>각 차원은 하나의 레벨이 되고, 이 레벨들이 전체 패턴을 이룹니다.</p>
+<ul><li><strong>전체 프로토타입과 맞춰 봅니다</strong></li></ul>
+<p>한 질문으로 결과가 정해지는 게 아니라, 답변의 전체 윤곽이 비교됩니다.</p>
+<p>그렇다고 자동으로 과학이 되는 것은 아니지만, 최소한 &quot;10문항 풀고 랜덤 동물 받기&quot; 식 퀴즈보다는 훨씬 많은 구조를 제공합니다.</p>
+<h2>시스템의 한계는 같은 지점에서 시작됩니다</h2>
+<p>메커니즘이 생각보다 정교하다고 해도, 본질을 오해하면 안 됩니다.</p>
+<ul><li>프로토타입 라이브러리는 임상 검증 샘플이 아니라 작성자 설계에 기반합니다.</li><li>차원 라벨도 표준화된 심리 척도가 아니라 작성자의 편집적 판단입니다.</li><li>유사성 점수는 진단 신뢰도가 아니라 표시용 값입니다.</li><li>특수 결과에는 분명한 작가의 입장과 풍자가 들어 있습니다.</li></ul>
+<p>그래서 <strong>SBTI는 과학 평가가 아니라 구조화된 엔터테인먼트</strong>입니다.</p>
+<p>왜 많은 사람이 여전히 이걸 유난히 잘 맞는다고 느끼는지가 궁금하다면 <a href="/blog/why-sbti-feels-accurate">SBTI가 정확하다고 느끼는 이유</a>를, 어디까지 사용해야 하고 어디서 멈춰야 하는지가 궁금하다면 <a href="/blog/sbti-limits-and-boundaries">SBTI가 알려줄 수 있는 것과 알 수 없는 것은 무엇입니까?</a>를 읽어보세요.</p>
+<h2>결론</h2>
+<p>SBTI의 핵심은 다음처럼 요약할 수 있습니다.</p>
+<ul><li><code>15</code>개 차원</li><li><code>30</code>개 일반 점수 문항</li><li><code>25</code>개 표준 성격 프로토타입</li><li><code>1</code>개의 <code>DRUNK</code> 특수 재정의 규칙</li><li><code>1</code>개의 <code>HHHH</code> 낮은 일치율 폴백 규칙</li><li><code>1</code>개의 L1 거리 기반 매칭 과정</li></ul>
+<p>메커니즘 자체는 신비하지 않지만, 사용자가 &quot;이상할 정도로 잘 맞는다&quot;고 느끼게 할 만큼 충분한 구조를 갖고 있고, 동시에 스크린샷 공유에 어울릴 만큼 인터넷 언어를 잘 활용하고 있습니다.</p></div>
+    </article>
+  
+      </main>
+    </div>
+  </body>
+</html>

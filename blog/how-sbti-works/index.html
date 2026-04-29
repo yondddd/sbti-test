@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Does SBTI Work? The 15-Dimension Model, Prototype Matching, and Hidden Type Rules</title>
+    <meta name="description" content="This article breaks down how SBTI actually works: 30 standard questions, 15 dimensions, 25 standard prototypes, the `DRUNK` override, and the `HHHH` fallback." />
+    <link rel="stylesheet" href="../../assets/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="shell-header">
+        <a class="brand" href="../../">SBTI Test</a>
+        <nav class="locale-nav" aria-label="Languages"><a href="/zh/">简体中文</a><a href="/zh-hant/">繁體中文</a><a href="/" aria-current="page">English</a><a href="/ja/">日本語</a><a href="/ko/">한국어</a><a href="/es/">Español</a><a href="/fr/">Français</a><a href="/ru/">Русский</a><a href="/de/">Deutsch</a><a href="/th/">ภาษาไทย</a><a href="/vi/">Tiếng Việt</a><a href="/id/">Bahasa Indonesia</a><a href="/ms/">Bahasa Melayu</a><a href="/ar/">العربية</a></nav>
+      </header>
+      <main class="blog-page" data-locale="en">
+        
+    <article class="card blog-detail">
+      <a class="blog-back" href="/blog/">Blog</a>
+      <header>
+        <div class="blog-date">Apr 13, 2026</div>
+        <h1>How Does SBTI Work? The 15-Dimension Model, Prototype Matching, and Hidden Type Rules</h1>
+        <p class="sub">This article breaks down how SBTI actually works: 30 standard questions, 15 dimensions, 25 standard prototypes, the `DRUNK` override, and the `HHHH` fallback.</p>
+        <img class="blog-cover" src="https://file.sbti-test.org/imgs/blog-covers/how-sbti-works-cover.en.png" alt="" loading="lazy" />
+      </header>
+      <div class="blog-content"><p>The first time many people take SBTI, they assume it is just a random test with harsher copywriting. In practice, the result engine is actually <strong>quite explicit, and not especially complicated</strong>.</p>
+<p>Here is the short version:</p>
+<p><strong>SBTI is not AI fortune-telling, and it is not deep psychometrics. It behaves more like an entertainment classifier built around a 15-dimension discrete vector and a library of predefined prototypes.</strong></p>
+<p>The system does three things:</p>
+<ol><li>It maps your answers onto 15 dimensions</li><li>It compresses those 15 dimensions into an <code>L/M/H</code> pattern</li><li>It compares that pattern against preset personality prototypes and returns the closest match</li></ol>
+<p>If what you care about is <strong>why this setup can feel unusually accurate</strong>, continue to <a href="/blog/why-sbti-feels-accurate">Why SBTI Feels Accurate</a>. This article stays focused on <strong>how the mechanism works</strong>.</p>
+<h2>Start with the basic structure</h2>
+<p>At the core, the key structure has three layers:</p>
+<ul><li><strong>15 dimensions</strong></li><li><strong>30 standard questions</strong></li><li><strong>25 standard personality prototypes</strong></li></ul>
+<p>On top of that, there are also:</p>
+<ul><li><strong>1 drinking-related gate question that always appears</strong></li><li><strong>1 extra drinking question that appears only under a condition</strong></li><li><strong>2 special outcomes</strong>: <code>DRUNK</code> and <code>HHHH</code></li></ul>
+<p>That is why many descriptions say &quot;31 questions.&quot; But the split is really:</p>
+<ul><li><code>30</code> standard scored questions</li><li><code>1</code> fixed special gate question</li><li><code>1</code> follow-up question that appears only for some users</li></ul>
+<p>So <strong>most users see 31 questions, and some users are routed to 32</strong>.</p>
+<h2>The 15 dimensions were not thrown together at random</h2>
+<p>The 15 dimensions are grouped into 5 models, with 3 sub-dimensions in each:</p>
+
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Model</th><th>Dimensions</th></tr></thead>
+        <tbody>
+          <tr><td>Self model</td><td><code>S1 self-esteem and confidence</code>, <code>S2 self-clarity</code>, <code>S3 core values</code></td></tr><tr><td>Emotion model</td><td><code>E1 attachment security</code>, <code>E2 emotional investment</code>, <code>E3 boundaries and dependence</code></td></tr><tr><td>Attitude model</td><td><code>A1 worldview tendency</code>, <code>A2 rules vs flexibility</code>, <code>A3 sense of life meaning</code></td></tr><tr><td>Action-drive model</td><td><code>Ac1 motivational orientation</code>, <code>Ac2 decision style</code>, <code>Ac3 execution pattern</code></td></tr><tr><td>Social model</td><td><code>So1 social initiative</code>, <code>So2 interpersonal boundaries</code>, <code>So3 expression and authenticity</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  
+<p>The most important point here is this:</p>
+<p><strong>SBTI does not reuse MBTI&#39;s four binary axes. Instead, it breaks internet-life psychological scenes into smaller, more everyday sub-dimensions.</strong></p>
+<p>That does not make it more scientific. But it does make the output feel more detailed.</p>
+<h2>How does each dimension get scored?</h2>
+<p>Each dimension is tied to two standard questions. Each answer is assigned a value of <code>1</code>, <code>2</code>, or <code>3</code>.</p>
+<p>That means the total score range for a single dimension is:</p>
+<ul><li>minimum <code>2</code></li><li>maximum <code>6</code></li></ul>
+<p>The system then compresses that total into three buckets:</p>
+<ul><li><code>&lt;= 3</code> becomes <code>L</code></li><li><code>= 4</code> becomes <code>M</code></li><li><code>&gt;= 5</code> becomes <code>H</code></li></ul>
+<p>So SBTI does not keep a continuous score at the end. It discretizes every dimension into three levels. The final output is a 15-character <code>L/M/H</code> pattern such as <code>HHH-HMH-MHH-HHH-MHM</code>.</p>
+<p>That pattern is the user&#39;s <strong>personality vector</strong>.</p>
+<h2>It does not ask &quot;which type did you pick?&quot; It asks &quot;which type are you closest to?&quot;</h2>
+<p>This is the part where SBTI most resembles a real classifier.</p>
+<p>SBTI includes <code>25</code> standard personality prototypes, and each one has its own 15-dimension pattern. Examples include:</p>
+<ul><li><code>CTRL</code></li><li><code>BOSS</code></li><li><code>SEXY</code></li><li><code>OJBK</code></li><li><code>MALO</code></li><li><code>THIN-K</code></li><li><code>SHIT</code></li><li><code>ZZZZ</code></li><li><code>DEAD</code></li><li><code>IMFW</code></li></ul>
+<p>These prototypes are not generated on the fly for each user. They are <strong>author-defined personality centroids</strong> prepared in advance. What the system does is compare your vector against all of them one by one.</p>
+<h2>The distance algorithm is simple</h2>
+<p>The comparison method is easy to explain:</p>
+<ul><li>First map <code>L/M/H</code> to <code>1/2/3</code></li><li>Subtract the user&#39;s vector from each prototype vector dimension by dimension</li><li>Take the absolute value of each difference and sum them</li></ul>
+<p>In essence, that is <strong>L1 distance</strong>, also known as <strong>Manhattan distance</strong>.</p>
+<p>Put more casually, it means:</p>
+<p><strong>How many steps away are you from that prototype across all 15 dimensions?</strong></p>
+<p>The smaller the gap, the closer the match. The larger the gap, the less you resemble it.</p>
+<p>SBTI also uses a display formula for similarity: **similarity = max(0, round((1 - distance / 30) * 100))**.</p>
+<p>So when a result page shows something like &quot;92% match,&quot; that number is not a psychometric confidence interval. It is <strong>a display value derived linearly from distance</strong>.</p>
+<h2>What happens if two types look equally close?</h2>
+<p>The sorting logic in the code is roughly:</p>
+<ol><li>Compare total distance first, and prefer the smaller value</li><li>If total distance ties, compare <code>exact</code>, meaning how many of the 15 dimensions match exactly</li><li>Only after that does it keep using the displayed similarity value</li></ol>
+<p>That tells you SBTI is not using a crude &quot;first condition that passes wins&quot; rule. It does a basic but fairly clear ranking process.</p>
+<h2>Why is <code>DRUNK</code> a hidden type?</h2>
+<p>This is the part of SBTI that most clearly reveals the creator&#39;s personal motive.</p>
+<p>SBTI includes a drinking-specific logic chain:</p>
+<ol><li>The system inserts a fixed question asking about your usual hobbies</li><li>If you choose &quot;drinking&quot; in that question</li><li>The system inserts a second question about your attitude toward drinking</li><li>If you choose a specific answer in that second question, the system <strong>returns <code>DRUNK</code> immediately</strong></li></ol>
+<p>The important point is this:</p>
+<p><strong><code>DRUNK</code> is not computed through the normal 15-dimension distance process. It overrides the standard result through a higher-priority trigger rule.</strong></p>
+<p>That also matches the original creative motive that became part of the project identity: the author initially wanted the quiz to nudge a friend toward drinking less.</p>
+<p>So <code>DRUNK</code> is not just another ordinary entry in the prototype library. It is more like <strong>a deliberately prioritized value-judgment branch</strong>.</p>
+<h2>Then what is <code>HHHH</code>?</h2>
+<p><code>HHHH</code> is another special outcome, but it works differently from <code>DRUNK</code>.</p>
+<p>It is not behavior-triggered. It is <strong>a fallback when prototype matching is too weak</strong>.</p>
+<p>SBTI uses a clear threshold:</p>
+<ul><li>if the best standard personality match has a similarity score <strong>below 60%</strong></li><li>the system does not force you into a normal type</li><li>it returns <code>HHHH</code> directly instead</li></ul>
+<p>That means <code>HHHH</code> is not a sharply defined personality prototype. It means:</p>
+<p><strong>the current prototype library does not explain your answer pattern very well.</strong></p>
+<p>Experientially, this can actually make the system feel more convincing. Instead of forcing a weak fit, it effectively says: *this answer pattern is not well captured by the current library*.</p>
+<h2>Why does this structure feel more detailed than a typical joke test?</h2>
+<p>Because it does three things that many lightweight entertainment quizzes do not:</p>
+<ul><li><strong>It breaks behavior into dimensions first</strong></li></ul>
+<p>It does not simply ask &quot;are you extroverted or introverted?&quot; It turns a lot of everyday scenes into smaller signals.</p>
+<ul><li><strong>It vectorizes those signals</strong></li></ul>
+<p>Each dimension is compressed into a level, and those levels become an overall pattern.</p>
+<ul><li><strong>It matches against whole prototypes</strong></li></ul>
+<p>A single question does not decide the result. The system compares the overall contour of your answers.</p>
+<p>That still does not automatically make it scientific. But it does give it much more structure than a &quot;10 questions and receive a random animal&quot; quiz.</p>
+<h2>The system&#39;s limits begin at the same point</h2>
+<p>Even if the mechanism is more complete than many people assume, its nature should not be misunderstood.</p>
+<p>All of the following remain true:</p>
+<ul><li>the prototype library was written by the creator, not built from clinically validated sampling</li><li>the dimension labels are editorial judgments by the creator, not standardized psychological scales</li><li>the similarity score is a display score, not diagnostic confidence</li><li>the special results contain obvious author stance and satirical intent</li></ul>
+<p>So <strong>SBTI is structured entertainment, not scientific assessment dressed up as fun.</strong></p>
+<p>If you care more about why many people still experience it as accurate, continue to <a href="/blog/why-sbti-feels-accurate">Why SBTI Feels Accurate</a>. If you care about where it should and should not be used, read <a href="/blog/sbti-limits-and-boundaries">What Can SBTI Tell You, and What Can&#39;t It?</a>.</p>
+<h2>Conclusion</h2>
+<p>The core of SBTI can be summarized as:</p>
+<ul><li><code>15</code> dimensions</li><li><code>30</code> standard scored questions</li><li><code>25</code> standard personality prototypes</li><li><code>1</code> special override rule for <code>DRUNK</code></li><li><code>1</code> low-match fallback rule for <code>HHHH</code></li><li><code>1</code> prototype-matching process based on L1 distance</li></ul>
+<p>The mechanism is not mystical, but it is complete enough, and it speaks the language of the internet well enough, to create the subjective feeling that the result is &quot;surprisingly accurate&quot; and to support screenshot sharing afterward.</p></div>
+    </article>
+  
+      </main>
+    </div>
+  </body>
+</html>

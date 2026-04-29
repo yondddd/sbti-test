@@ -1,0 +1,18 @@
+{
+  "page": {
+    "title": "SBTI 블로그",
+    "sections": {
+      "blog": {
+        "id": "blog",
+        "title": "블로그",
+        "description": "SBTI 성격 테스트 관련 글을 읽고 SBTI와 MBTI의 차이, 그리고 테스트 결과를 해석하는 방법을 알아보세요."
+      }
+    }
+  },
+  "messages": {
+    "all": "전체",
+    "no_content": "현재 언어로는 아직 글이 없습니다.",
+    "crumb": "블로그",
+    "toc": "이 페이지 목차"
+  }
+}

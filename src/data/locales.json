@@ -48,20 +48,20 @@
     "repoPath": "/es/"
   },
   {
+    "htmlLang": "fr",
+    "locale": "fr",
+    "nativeName": "Français",
+    "officialHomeUrl": "https://www.sbti-test.org/fr",
+    "officialTestUrl": "https://www.sbti-test.org/fr/test",
+    "repoPath": "/fr/"
+  },
+  {
     "htmlLang": "ru",
     "locale": "ru",
     "nativeName": "Русский",
     "officialHomeUrl": "https://www.sbti-test.org/ru",
     "officialTestUrl": "https://www.sbti-test.org/ru/test",
     "repoPath": "/ru/"
-  },
-  {
-    "htmlLang": "hi",
-    "locale": "hi",
-    "nativeName": "हिन्दी",
-    "officialHomeUrl": "https://www.sbti-test.org/hi",
-    "officialTestUrl": "https://www.sbti-test.org/hi/test",
-    "repoPath": "/hi/"
   },
   {
     "htmlLang": "de",
@@ -102,5 +102,13 @@
     "officialHomeUrl": "https://www.sbti-test.org/ms",
     "officialTestUrl": "https://www.sbti-test.org/ms/test",
     "repoPath": "/ms/"
+  },
+  {
+    "htmlLang": "ar",
+    "locale": "ar",
+    "nativeName": "العربية",
+    "officialHomeUrl": "https://www.sbti-test.org/ar",
+    "officialTestUrl": "https://www.sbti-test.org/ar/test",
+    "repoPath": "/ar/"
   }
 ]
